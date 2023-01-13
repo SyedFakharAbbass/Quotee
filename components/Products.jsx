@@ -6,7 +6,7 @@ const Products = () => {
             <div className='mx-[100px]'>
                 <h1 className='text-[#008bbf] font-bold text-[26px] mt-16 mb-[30px]'>Choose Your Product</h1>
                 <div className='flex flex-wrap mx-[30px]'>
-                    <div className='w-[250px]  bg-[#008BBF] mr-[20px] mb-[20px]  cursor-pointer rounded-[10px]' style={{ boxShadow: "10px 10px 10px #959595" }}>
+                    <div className='w-[250px]  bg-[#ECF8FD] mr-[20px] h-[300px] mb-[20px]  cursor-pointer rounded-[10px]' style={{ boxShadow: "10px 10px 10px #959595" }}>
                         <img className='w-[200px]  m-auto' src="/images/sticker.png" alt="" />
                         <div className='px-[25px]'>
                             <div className="flex items-center pl-4">
@@ -16,7 +16,7 @@ const Products = () => {
                             <p className='text-[10px] items-center text-white pb-4'>Custom plane or printed myler bags are prefect solution for your product</p>
                         </div>
                     </div>
-                    <div className='w-[250px]  bg-[#008BBF] mr-[20px] mb-[20px]  cursor-pointer rounded-[10px]' style={{ boxShadow: "10px 10px 10px #959595" }}>
+                    <div className='w-[250px] h-[300px] bg-[#008BBF] mr-[20px] mb-[20px]  cursor-pointer rounded-[10px]' style={{ boxShadow: "10px 10px 10px #959595" }}>
                         <img className='w-[200px]  m-auto' src="/images/sticker.png" alt="" />
                         <div className='px-[25px]'>
                             <div className="flex items-center pl-4">
@@ -26,7 +26,7 @@ const Products = () => {
                             <p className='text-[10px] items-center text-white pb-4'>Custom plane or printed myler bags are prefect solution for your product</p>
                         </div>
                     </div>
-                    {/* <div className='w-[250px]  bg-[#008BBF] mr-[20px] mb-[20px]  cursor-pointer rounded-[10px]' style={{ boxShadow: "10px 10px 10px #959595" }}>
+                    {/* <div className='w-[250px] h-[300px] bg-[#ECF8FD] mr-[20px] mb-[20px]  cursor-pointer rounded-[10px]' style={{ boxShadow: "10px 10px 10px #959595" }}>
                         <img className='w-[200px]  m-auto' src="/images/sticker.png" alt="" />
                         <div className='px-[25px]'>
                             <div className="flex items-center pl-4">
@@ -36,16 +36,16 @@ const Products = () => {
                             <p className='text-[10px] items-center text-white pb-4'>Custom plane or printed myler bags are prefect solution for your product</p>
                         </div>
                     </div> */}
-                    <div>
-                        <div className='w-[250px] bg-[#ECF8FD] px-[25px]'>
-                            <p className='text-center text-[#008bbf] text-[22px]'>Not Clear yet..?</p>
-                            <p className='text-center text-[#008bbf] text-[15px]'>let our team to help you</p>
-                            <p className='text-center text-[#008bbf] text-[15px]'>chat with our team to find best quote for your product</p>
+                    {/* <div className=''> */}
+                        <div className='h-[300px] w-[250px] bg-[#ECF8FD] px-[25px] cursor-pointer rounded-[10px]'>
+                            <p className='text-center text-[#008bbf] text-[22px] pb-6 pt-3 font-medium'>Not Clear yet..?</p>
+                            <p className='text-center text-[#008bbf] text-[15px] pb-8 font-medium'>let our team to help you</p>
+                            <p className='text-center text-[#008bbf] text-[15px] pb-10 font-medium'>chat with our team to find best quote for your product</p>
                             <div>
-                                <button className='w-[175px] bg-[ #008BBF] bg-[#008BBF] text-white items-center'><img src="/images/vector.png" />CHAT NOW</button>
+                                <button className='flex m-auto content-center w-[140px] bg-[ #008BBF] bg-[#008BBF] text-white items-center p-3 rounded-[10px]'><img className='pr-2' src="/images/vector.png" />CHAT NOW</button>
                             </div>
                         </div>
-                    </div>
+                    {/* </div> */}
                 </div>
             </div>
         </div>
