@@ -11,7 +11,7 @@ const Products = () => {
                         <div className='px-[25px]'>
                             <div className="flex items-center pl-4">
                                 <input type="checkbox" className="w-4 h-4 text-blue-600 rounded " />
-                                <label for="bordered-checkbox-2" className="w-full py-4 ml-2 text-sm font-medium  text-[#008bbf]">MyLar Bag/Pouch</label>
+                                <label for="bordered-checkbox-2" className="w-full py-4 ml-1 text-sm font-medium text-[20px] text-[#008bbf]">MyLar Bag/Pouch</label>
                             </div>
                             <p className='text-[10px] items-center text-[#008bbf] pb-4'>Custom plane or printed myler bags are prefect solution for your product</p>
                         </div>
@@ -21,7 +21,7 @@ const Products = () => {
                         <div className='px-[25px]'>
                             <div className="flex items-center pl-4">
                                 <input type="checkbox" className="w-4 h-4 text-blue-600 rounded " />
-                                <label for="bordered-checkbox-2" className="w-full py-4 ml-2 text-sm font-medium  text-[#008bbf]">MyLar Bag/Pouch</label>
+                                <label for="bordered-checkbox-2" className="w-full py-4 ml-2 text-sm font-medium text-[22px] text-[#008bbf]"> Label & Stickers</label>
                             </div>
                             <p className='text-[10px] items-center text-[#008bbf] pb-4'>Custom plane or printed myler bags are prefect solution for your product</p>
                         </div>
@@ -31,7 +31,7 @@ const Products = () => {
                         <div className='px-[25px]'>
                             <div className="flex items-center pl-4">
                                 <input type="checkbox" className="w-4 h-4 text-blue-600 rounded " />
-                                <label for="bordered-checkbox-2" className="w-full py-4 ml-2 text-sm font-medium  text-[#008bbf]">MyLar Bag/Pouch</label>
+                                <label for="bordered-checkbox-2" className="w-full py-4 ml-2 text-sm font-medium text-[22px] text-[#008bbf]">Boxes</label>
                             </div>
                             <p className='text-[10px] items-center text-[#008bbf] pb-4'>Custom plane or printed myler bags are prefect solution for your product</p>
                         </div>

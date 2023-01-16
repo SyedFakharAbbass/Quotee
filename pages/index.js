@@ -6,6 +6,7 @@ import styles from '@/styles/Home.module.css'
 import Products from '@/components/Products'
 import Styles from '@/components/Styles'
 import Processing from '@/components/Processing'
+import Mylar from '@/components/Mylar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -23,6 +24,7 @@ export default function Home() {
         <Products/>
         <Styles/>
         <Processing/>
+        <Mylar />
       </main>
     </>
   )
