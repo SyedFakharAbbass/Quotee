@@ -61,7 +61,7 @@ const Products = () => {
                             <p className='text-[10px] items-center text-[#008bbf] pb-4 text_data'>Custom plane or printed myler bags are prefect solution for your product</p>
                         </div>
                     </div>
-                    <div className='h-[300px] w-[250px] bg-[#ECF8FD] px-[25px] cursor-pointer rounded-[10px]' style={{ boxShadow: "10px 10px 10px #959595" }}>
+                    <div className='h-[300px] w-[250px] bg-[#ECF8FD] px-[25px] cursor-pointer rounded-[10px]'>
                         <p className='text-center text-[#008bbf] text-[22px] pb-6 pt-3 font-medium'>Not Clear yet..?</p>
                         <p className='text-center text-[#008bbf] text-[15px] pb-8 font-medium'>let our team to help you</p>
                         <p className='text-center text-[#008bbf] text-[15px] pb-10 font-medium'>chat with our team to find best quote for your product</p>

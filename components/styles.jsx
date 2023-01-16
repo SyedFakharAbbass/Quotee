@@ -58,7 +58,7 @@ const Styles = () => {
                         </div>
                     </div>
                     <div className={`w-[200px] h-[195px] bg-[#ECF8FD] mr-[20px] mb-[20px] cursor-pointer rounded-[10px] ${styles === "style2" ? "selected" : ""}`} onClick={handleClick2}>
-                        <img className='w-[150px] m-auto' src="/images/flatPouch.png" alt="" />
+                        <img className='w-[150px] m-auto' src="/images/standUp.png" alt="" />
                         <div className='px-[25px]'>
                             <div className="flex items-center pl-4">
                                 <input type="checkbox"  checked={styles === "style2" ? true : false} className="w-4 h-4 text-blue-600 rounded " />
@@ -67,7 +67,7 @@ const Styles = () => {
                         </div>
                     </div>
                     <div className={`w-[200px] h-[195px] bg-[#ECF8FD] mr-[20px] mb-[20px] cursor-pointer rounded-[10px] ${styles === "style3" ? "selected" : ""}`} onClick={handleClick3}>
-                        <img className='w-[150px] m-auto' src="/images/flatPouch.png" alt="" />
+                        <img className='w-[150px] m-auto' src="/images/roll.png" alt="" />
                         <div className='px-[25px]'>
                             <div className="flex items-center pl-4">
                                 <input type="checkbox"  checked={styles === "style3" ? true : false} className="w-4 h-4 text-blue-600 rounded " />
