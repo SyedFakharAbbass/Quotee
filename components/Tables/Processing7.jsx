@@ -5,7 +5,7 @@ function Processing7() {
     <div className='mb-[60px]'>
       <div className='container'>
         <div>
-          <h1 className='text-[#008bbf] font-bold text-[26px] mt-16 mb-[30px]'>JOB processing DATA</h1>
+          <h1 className='text-[#008bbf] font-bold text-[26px] mt-16 mb-[30px]'>JOB PROCESSING DATA</h1>
           <div className='flex justify-between'>
             <div className='flex mr-[50px]'>
               <div className='flex items-end w-[519px] justify-between'>
@@ -25,10 +25,9 @@ function Processing7() {
               <div>
                 <select className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' name='None' id='None'>
                   <option hidden>None</option>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
+                  <option>White Cad Board</option>
+                  <option>Silver Metalized Card Board</option>
+                  <option>Gold Card Board</option>
                 </select>
               </div>
 
@@ -42,10 +41,10 @@ function Processing7() {
                 <div>
                   <select className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' name='None' id='None'>
                     <option hidden>None</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
+                    <option>12 pt</option>
+                    <option>16 pt</option>
+                    <option>18 pt</option>
+                    <option>20 pt</option>
                   </select>
                 </div>
               </div>
@@ -55,10 +54,11 @@ function Processing7() {
               <div>
                 <select className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' name='None' id='None'>
                   <option hidden>None</option>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
+                  <option>Gloss</option>
+                  <option>Matte</option>
+                  <option>Matt + SpotUV</option>
+                  <option>Softtouch + SpotUV</option>
+                  <option>Soft Touch</option>
                 </select>
               </div>
             </div>
@@ -74,10 +74,8 @@ function Processing7() {
                 <div>
                   <select className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' name='None' id='None'>
                     <option hidden>None</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
+                    <option>Yes</option>
+                    <option>No</option>
                   </select>
                 </div>
               </div>
@@ -96,7 +94,7 @@ function Processing7() {
                   <option>1</option>
                   <option>2</option>
                   <option>3</option>
-                  <option>4</option>
+                  <option>Custom</option>
                 </select>
               </div>
             </div>

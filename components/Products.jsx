@@ -39,7 +39,7 @@ const Products = () => {
     return (
         <div className='container '>
             <div className='mx-[80pxpx]'>
-                <h1 className='text-[#008bbf] font-bold text-[26px] mt-16 mb-[30px]'>Choose Your Product</h1>
+                <h1 className='text-[#008bbf] font-bold text-[26px] mt-16 mb-[30px]'>CHOOSE YOUR PRODUCTS</h1>
                 <div className='flex flex-wrap mx-[30px]'>
                     <div className={`w-[250px]  bg-[#ECF8FD] mr-[20px] h-[300px] mb-[20px] cursor-pointer rounded-[10px] ${products === "one" ? "selected" : ""}`} onClick={handleClick}>
                         <img className='w-[200px]  m-auto' src="/images/lerbag.png" alt="" />

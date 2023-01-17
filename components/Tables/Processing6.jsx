@@ -5,7 +5,7 @@ function Processing6() {
     <div className='mb-[60px]'>
       <div className='container'>
         <div>
-          <h1 className='text-[#008bbf] font-bold text-[26px] mt-16 mb-[30px]'>JOB processing DATA</h1>
+          <h1 className='text-[#008bbf] font-bold text-[26px] mt-16 mb-[30px]'>JOB PROCESSING DATA</h1>
           <div className='flex justify-between'>
             <div className='flex mr-[50px]'>
               <div className='flex items-end w-[519px] justify-between'>
@@ -23,10 +23,10 @@ function Processing6() {
               <div>
                 <select className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' name='None' id='None'>
                   <option hidden>None</option>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
+                  <option>PE Clear</option>
+                  <option>PP Clear</option>
+                  <option>Chrome Silver</option>
+                  <option>White</option>
                 </select>
               </div>
 
@@ -43,10 +43,10 @@ function Processing6() {
               <div>
                 <select className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' name='None' id='None'>
                   <option hidden>None</option>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
+                  <option>Spot Foil</option>
+                  <option>Spot Matte</option>
+                  <option>Laminate</option>
+                  <option>Tactile Feel</option>
                 </select>
               </div>
             </div>
@@ -63,7 +63,7 @@ function Processing6() {
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
-                <option>4</option>
+                <option>Custom</option>
               </select>
             </div>
           </div>

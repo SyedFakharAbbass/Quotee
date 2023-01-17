@@ -5,7 +5,7 @@ function Processing2() {
     <div className='mb-[60px]'>
       <div className='container'>
         <div>
-          <h1 className='text-[#008bbf] font-bold text-[26px] mt-16 mb-[30px]'>JOB processing DATA</h1>
+          <h1 className='text-[#008bbf] font-bold text-[26px] mt-16 mb-[30px]'>JOB PROCESSING DATA</h1>
           <div className='flex justify-between'>
             <div className='flex mr-[50px]'>
               <div className='flex items-end w-[519px] justify-between'>
@@ -25,10 +25,9 @@ function Processing2() {
               <div>
                 <select className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' name='None' id='None'>
                   <option hidden>None</option>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
+                  <option>White</option>
+                                    <option>Clear- Only For non- Cannabis</option>
+                                    <option>Metalized</option>
                 </select>
               </div>
 
@@ -42,10 +41,9 @@ function Processing2() {
                 <div>
                   <select className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' name='None' id='None'>
                     <option hidden>None</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
+                    <option>Soft Touch- Velvet Like Material</option>
+                                        <option>Matte</option>
+                                        <option>Gloss</option>
                   </select>
                 </div>
               </div>
@@ -55,10 +53,10 @@ function Processing2() {
               <div>
                 <select className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' name='None' id='None'>
                   <option hidden>None</option>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
+                  <option>Spot Varnish</option>
+                                    <option>Spot Matte</option>
+                                    <option>Spot Foil</option>
+                                    <option>Tactile Feel</option>
                 </select>
               </div>
             </div>
@@ -100,7 +98,7 @@ function Processing2() {
                   <option>1</option>
                   <option>2</option>
                   <option>3</option>
-                  <option>4</option>
+                  <option>Custom</option>
                 </select>
               </div>
             </div>

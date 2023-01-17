@@ -47,7 +47,7 @@ const Styles = () => {
         <div>
             <div className='container'>
 
-                {products === "one" && <div className="w-fit"> <h1 className='text-[#008bbf] font-bold text-[26px] mb-[30px]'>Choose Your PRODUCT’S style</h1><div className='flex mx-[27px] flex-wrap w-max'>
+                {products === "one" && <div className="w-fit"> <h1 className='text-[#008bbf] font-bold text-[26px] mb-[30px]'>CHOOSE YOUR PRODUCTS’S STYLE</h1><div className='flex mx-[27px] flex-wrap w-max'>
                     <div className={`w-[200px] h-[195px] bg-[#ECF8FD] mr-[20px] mb-[20px] cursor-pointer rounded-[10px] ${styles === "style1" ? "selected" : ""}`} onClick={handleClick1}>
                         <img className='w-[150px] m-auto' src="/images/flatPouch.png" alt="" />
                         <div className='px-[25px]'>
