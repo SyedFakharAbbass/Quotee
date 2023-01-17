@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 
-const Mylar = () => {
+const Mylar = ({formsInput}) => {
 
     const { products , styles } = useSelector((state) => state.data)
 
@@ -18,9 +18,7 @@ const Mylar = () => {
                         {products === "three" && <img className='w-[280px] ' src="/images/boxes.png" alt="" />}
                     </div>
                     <div>
-                        {products === "one" && <p className='text-[#008BBF] font-medium pt-24 text-[30px]'>MyLar Bag</p>}
-                        {products === "two" && <p className='text-[#008BBF] font-medium pt-24 text-[30px]'>Label & Stickers</p>}
-                        {products === "three" && <p className='text-[#008BBF] font-medium pt-24 text-[30px]'>Boxes</p>}
+                        {products && <p className='text-[#008BBF] font-medium pt-24 text-[30px]'>{formsInput.product}</p>}
                     </div>
                 </div>
 
@@ -31,7 +29,7 @@ const Mylar = () => {
                         <label for="bordered-checkbox-2" className=" py-4 ml-2 text-sm font-medium text-[22px] mr-4 text-[#008bbf]">Product Style :</label>
                     </div>
                     <div>
-                        <p className='text-[15px]'>Child-Resistant Flat Pouch</p>
+                        <p className='text-[15px]'>{formsInput.stylesData}</p>
                     </div>
                 </div>}
                 {/* <div className='flex pt-8 pl-10'>

@@ -33,31 +33,31 @@ export default function Home() {
   useEffect(()=>{
     // style1
     if (styles === "style1"){
-      setFormsInput({product: "MyLar Bag"})
+      setFormsInput({stylesData: "Flat Pouch"})
     }
-    if (styles === "style1"){
-      setFormsInput({product: "MyLar Bag"})
+    if (styles === "style2"){
+      setFormsInput({stylesData: "Stand Up Pouch"})
     }
-    if (styles === "style1"){
-      setFormsInput({product: "MyLar Bag"})
+    if (styles === "style3"){
+      setFormsInput({stylesData: "Roll Stock"})
     }
-    if (styles === "style1"){
-      setFormsInput({product: "MyLar Bag"})
+    if (styles === "style4"){
+      setFormsInput({stylesData: "Cut-to-Size"})
     }
-    if (styles === "style1"){
-      setFormsInput({product: "MyLar Bag"})
+    if (styles === "style5"){
+      setFormsInput({stylesData: "Roll"})
     }
-    if (styles === "style1"){
-      setFormsInput({product: "MyLar Bag"})
+    if (styles === "style6"){
+      setFormsInput({stylesData: "Sheet"})
     }
-    if (styles === "style1"){
-      setFormsInput({product: "MyLar Bag"})
+    if (styles === "style7"){
+      setFormsInput({stylesData: "Tuck Box"})
     }
-    if (styles === "style1"){
-      setFormsInput({product: "MyLar Bag"})
+    if (styles === "style8"){
+      setFormsInput({stylesData: "Rigid Box"})
     }
-    if (styles === "style1"){
-      setFormsInput({product: "MyLar Bag"})
+    if (styles === "style9"){
+      setFormsInput({stylesData: "Mailer Box"})
     }
   },[styles])
 
@@ -85,7 +85,7 @@ export default function Home() {
             {styles === "style8" && <Processing8 />}
             {styles === "style9" && <Processing9 />}
           </div>
-          {products && <Mylar />}
+          {products && <Mylar formsInput={formsInput} />}
         </div>
       </main>
     </>
