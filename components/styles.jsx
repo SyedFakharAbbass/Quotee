@@ -47,7 +47,7 @@ const Styles = () => {
         <div>
             <div className='container'>
 
-                {products === "one" && <div> <h1 className='text-[#008bbf] font-bold text-[26px] mb-[30px]'>Choose Your PRODUCT’S style</h1><div className='flex flex-wrap mx-[27px]'>
+                {products === "one" && <div className="w-fit"> <h1 className='text-[#008bbf] font-bold text-[26px] mb-[30px]'>Choose Your PRODUCT’S style</h1><div className='flex mx-[27px] flex-wrap w-max'>
                     <div className={`w-[200px] h-[195px] bg-[#ECF8FD] mr-[20px] mb-[20px] cursor-pointer rounded-[10px] ${styles === "style1" ? "selected" : ""}`} onClick={handleClick1}>
                         <img className='w-[150px] m-auto' src="/images/flatPouch.png" alt="" />
                         <div className='px-[25px]'>
@@ -79,7 +79,7 @@ const Styles = () => {
                 </div>
                 </div>
                 }
-                {products === "two" && <div> <h1 className='text-[#008bbf] font-bold text-[26px] mb-[30px]'>Choose Your PRODUCT’S style</h1><div className='flex flex-wrap mx-[27px]'>
+                {products === "two" && <div className="w-fit"> <h1 className='text-[#008bbf] font-bold text-[26px] mb-[30px]'>Choose Your PRODUCT’S style</h1><div className='flex mx-[27px] flex-wrap w-max'>
                     <div className={`w-[200px] h-[195px] bg-[#ECF8FD] mr-[20px] mb-[20px] cursor-pointer rounded-[10px] ${styles === "style4" ? "selected" : ""}`} onClick={handleClick4}>
                         <img className='w-[150px] m-auto' src="/images/cutToSize.png" alt="" />
                         <div className='px-[25px]'>
@@ -111,7 +111,7 @@ const Styles = () => {
                 </div>
                 </div>
                 }
-                {products === "three" && <div> <h1 className='text-[#008bbf] font-bold text-[26px] mb-[30px]'>Choose Your PRODUCT’S style</h1><div className='flex flex-wrap mx-[27px]'>
+                {products === "three" && <div className="w-fit"> <h1 className='text-[#008bbf] font-bold text-[26px] mb-[30px]'>Choose Your PRODUCT’S style</h1><div className='flex mx-[27px] flex-wrap w-max'>
                     <div className={`w-[200px] h-[195px] bg-[#ECF8FD] mr-[20px] mb-[20px] cursor-pointer rounded-[10px] ${styles === "style7" ? "selected" : ""}`} onClick={handleClick7}>
                         <img className='w-[150px] m-auto' src="/images/tuck.png" alt="" />
                         <div className='px-[25px]'>

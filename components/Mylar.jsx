@@ -6,8 +6,8 @@ const Mylar = () => {
     const { products } = useSelector((state) => state.data)
 
     return (
-        <div>
-            <div className='border-2 border-[#008BBF] w-[510px] h-[949px] rounded-[10px] h-auto'>
+        <div className='response'>
+            <div className='border-2 border-[#008BBF] w-[510px] m-auto rounded-[10px] h-auto'> 
                 <div>
                     <h2 className='text-[#008BBF] font-medium text-[22px] text-center pt-4'>Detail configuration about your selection:</h2>
                 </div>

@@ -4,7 +4,9 @@ function Header() {
   return (
     <div>
       <div className='bg-[#ecf8fd] w-[100%] h-[72px] items-center content-center flex'>
-        <img className='w-[200px] pl-10' src="/images/logo.png" alt="" />  
+        <div className='container'>
+          <img className='w-[200px] pl-10' src="/images/logo.png" alt="" />
+        </div>
       </div>
       <div className='container'>
         <h1 className='text-[#008bbf] font-bold pt-[40px]  text-[40px]'>GET CUSTOM QUOTE</h1>
@@ -13,7 +15,7 @@ function Header() {
       </div>
       <hr className='mt-[44px]' />
     </div>
-  ) 
+  )
 }
 
 export default Header

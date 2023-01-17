@@ -14,9 +14,21 @@
 }
 
 
-.selected .changed{
+.selected .changed {
     color: #FFFFFF;
 }
+
 .selected .text_data {
     color: #FFFFFF;
+}
+
+@media screen and (max-width:1300px) {
+    .queries {
+        flex-direction: column;
+    }
+
+    .queries .response {
+        width: 90%;
+        margin: auto;
+    }
 }
