@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 
 const Mylar = () => {
 
-    const { products } = useSelector((state) => state.data)
+    const { products , styles } = useSelector((state) => state.data)
 
     return (
         <div className='response'>
@@ -25,15 +25,15 @@ const Mylar = () => {
                 </div>
 
 
-                <div className='flex pt-8 pl-10'>
+                {styles && <div className='flex pt-8 pl-10'>
                     <div>
-                        <input type="checkbox" className=" h-4 text-blue-600 rounded cursor-pointer" />
+                        <input type="checkbox" checked={true} className=" h-4 text-blue-600 rounded cursor-pointer" />
                         <label for="bordered-checkbox-2" className=" py-4 ml-2 text-sm font-medium text-[22px] mr-4 text-[#008bbf]">Product Style :</label>
                     </div>
                     <div>
                         <p className='text-[15px]'>Child-Resistant Flat Pouch</p>
                     </div>
-                </div>
+                </div>}
                 {/* <div className='flex pt-8 pl-10'>
                     <div>
                         <input type="checkbox" className=" h-4 text-blue-600 rounded cursor-pointer" />

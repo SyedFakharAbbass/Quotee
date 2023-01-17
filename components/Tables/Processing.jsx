@@ -1,7 +1,30 @@
-import React from 'react'
-import Mylar from '../Mylar'
+import { submitRequest } from '@/redux/data';
+import React, { useState } from 'react'
+import { useDispatch } from 'react-redux';
+import { setProducts, setStyles } from '../../redux/data';
 
 const Processing = () => {
+
+    const dispatch = useDispatch();
+
+    const [formData ,setFormData] = useState({});
+    
+    // dispatch(setProducts(""))
+    // dispatch(setStyles(""))
+    // dispatch(submitRequest({}))
+
+    const handleChange = (e) => {
+       setFormData({...formData , [e.target.name]: e.target.value})
+    }
+
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      console.log(formData)
+    //   dispatch(submitRequest({}))
+    // dispatch(setProducts(""))
+    // dispatch(setStyles(""))
+    }
+    
     return (
         <div className='mb-[60px]'>
             <div className='container'>
