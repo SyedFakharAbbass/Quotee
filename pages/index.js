@@ -8,12 +8,58 @@ import Styles from '@/components/Styles'
 import Mylar from '@/components/Mylar'
 import { Processing, Processing2, Processing3, Processing4, Processing5, Processing6, Processing7, Processing8, Processing9 } from '@/components/Tables'
 import { useSelector } from 'react-redux'
+import { useEffect, useState } from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
 
+  const [formsInput , setFormsInput] = useState({});
   const { styles, products } = useSelector((state) => state.data);
+
+  useEffect(()=>{
+    if (products === "one"){
+      setFormsInput({product: "MyLar Bag"})
+    }
+    if (products === "two"){
+      setFormsInput({product: "Label & Stickers"})
+    }
+    if (products === "three"){
+      setFormsInput({product: "Boxes"})
+    }
+  },[products])
+
+  
+  useEffect(()=>{
+    // style1
+    if (styles === "style1"){
+      setFormsInput({product: "MyLar Bag"})
+    }
+    if (styles === "style1"){
+      setFormsInput({product: "MyLar Bag"})
+    }
+    if (styles === "style1"){
+      setFormsInput({product: "MyLar Bag"})
+    }
+    if (styles === "style1"){
+      setFormsInput({product: "MyLar Bag"})
+    }
+    if (styles === "style1"){
+      setFormsInput({product: "MyLar Bag"})
+    }
+    if (styles === "style1"){
+      setFormsInput({product: "MyLar Bag"})
+    }
+    if (styles === "style1"){
+      setFormsInput({product: "MyLar Bag"})
+    }
+    if (styles === "style1"){
+      setFormsInput({product: "MyLar Bag"})
+    }
+    if (styles === "style1"){
+      setFormsInput({product: "MyLar Bag"})
+    }
+  },[styles])
 
   return (
     <>
