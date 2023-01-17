@@ -1,29 +1,29 @@
-import { submitRequest } from '@/redux/data';
+import { setForm, submitRequest } from '@/redux/data';
 import React, { useState } from 'react'
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { setProducts, setStyles } from '../../redux/data';
 import Modal from '../Modal';
 
 const Processing = () => {
 
+    const { products , styles ,form1 } = useSelector((state) => state.data)
     const dispatch = useDispatch();
 
     const [formData, setFormData] = useState({});
     const [showIcons, setShowIcons] = useState(false);
     const [checkedIcons, setCheckedIcons] = useState(false);
     const [checkedIcons2, setCheckedIcons2] = useState(false);
-
-    // dispatch(setProducts(""))
-    // dispatch(setStyles(""))
-    // dispatch(submitRequest({}))
+    const [tear, setTear] = useState(false);
+    const [zipper, setZipper] = useState(null);
 
     const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value })
+        setFormData({ ...formData, product: form1.product ,product_style: form1.product_style, [e.target.name]: e.target.value });
+        dispatch(setForm({ ...formData, product: form1.product ,product_style: form1.product_style, [e.target.name]: e.target.value }))
     }
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(formData)
+        console.log(formData);
         //   dispatch(submitRequest({}))
         // dispatch(setProducts(""))
         // dispatch(setStyles(""))
@@ -31,16 +31,47 @@ const Processing = () => {
     const handleCheck = () => {
         setCheckedIcons(true)
         setCheckedIcons2(false)
+        setFormData({ ...formData, hanghole: "rounded" });
+        dispatch(setForm({ ...formData, hanghole: "rounded" }))
     }
 
     const handleCheck2 = () => {
         setCheckedIcons(false)
         setCheckedIcons2(true)
+        setFormData({ ...formData, hanghole: "euro" });
+        dispatch(setForm({ ...formData, hanghole: "euro" }))
     }
-    const handleIcons = () => [
+    const handleIcons = () => {
         setShowIcons(!showIcons),
+            dispatch(setForm({ ...formData, hanghole: "" }))
         setCheckedIcons(false),
-        setCheckedIcons2(false)
+            setCheckedIcons2(false)
+    }
+
+    const handleZipper = () => {
+        setZipper(1)
+        setFormData({ ...formData, zipper: "Child Resistant" });
+        dispatch(setForm({ ...formData, zipper: "Child Resistant" }))
+    }
+    const handleZipper2 = () => {
+        setZipper(2)
+        setFormData({ ...formData, zipper: "Press to close standard powder proof" });
+        dispatch(setForm({ ...formData, zipper: "Press to close standard powder proof" }))
+    }
+    const handleTear = () => {
+        setTear(!tear);
+        if (tear) {
+            setFormData({ ...formData, tear: "" });
+            dispatch(setForm({ ...formData, tear: "" }))
+        } else {
+            setFormData({ ...formData, tear: "yes" });
+            dispatch(setForm({ ...formData, tear: "yes" }))
+        }
+    }
+    const handleSelect = () => [
+        dispatch(setProducts("")),
+        dispatch(setStyles("")),
+        dispatch(setForm({}))
     ]
 
     return (
@@ -53,10 +84,10 @@ const Processing = () => {
                             <div className='flex items-end w-[519px] justify-between'>
                                 <div className='flex flex-col'>
                                     <p className='text-[#008bbf]'>Size <span className='text-black'> (Inches/mm)</span></p>
-                                    <input className='bg-[#ECF8FD] p-2 w-[219.13px] outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' name="height" onChange={handleChange} value={formData.height} type="text" placeholder='Height' />
+                                    <input className='bg-[#ECF8FD] p-2 w-[219.13px] outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' name="height" onChange={handleChange} value={formData.height} type="number" placeholder='Height' />
                                 </div>
                                 <p className='font-bold pt-1 mb-4'>x</p>
-                                <input className='bg-[#ECF8FD] p-2 outline-none w-[219.13px] border-none hover:#008bbf rounded-[10px] h-[55px]' name="width" onChange={handleChange} value={formData.width} type="text" placeholder='Width' />
+                                <input className='bg-[#ECF8FD] p-2 outline-none w-[219.13px] border-none hover:#008bbf rounded-[10px] h-[55px]' name="width" onChange={handleChange} value={formData.width} type="number" placeholder='Width' />
                             </div>
                         </div>
 
@@ -110,20 +141,20 @@ const Processing = () => {
                         <div className=' w-[519px] mr-[50px]'>
                             <div className='bg-[#ECF8FD] w-[519px] rounded-[10px]'>
                                 <div className="flex items-center pl-4">
-                                    <input type="checkbox" className="w-4 h-4 text-blue-600 pr-[10px]" />
+                                    <input type="checkbox" checked={zipper === 1 ? true : false} onClick={handleZipper} className="w-4 h-4 text-blue-600 pr-[10px]" />
                                     <label for="bordered-checkbox-2" className=" py-4 text-sm font-medium px-4  text-[#008bbf] ">Child Resistant</label>
-                                    <input type="checkbox" className="w-4 h-4 text-blue-600 " />
+                                    <input type="checkbox" checked={zipper === 2 ? true : false} onClick={handleZipper2} className="w-4 h-4 text-blue-600 " />
                                     <label for="bordered-checkbox-2" className=" py-4 text-sm font-medium  px-4 text-[#008bbf]">Press to close standard powder proof</label>
                                 </div>
                             </div>
                         </div>
                         <div className='flex items-center w-[381px] justify-between'>
-                            <div className='bg-[#ECF8FD] h-[55px] items-center flex justify-center rounded-[10px] w-[160px]'>
+                            <div className='bg-[#ECF8FD] h-[55px] items-center flex justify-center rounded-[10px] w-[160px] pl-[8px]'>
                                 <input type="checkbox" onClick={handleIcons} className=" h-4 text-blue-600 rounded" />
-                                <label for="bordered-checkbox-2" className=" py-4 text-sm font-medium  px-2 text-[#008bbf] ">Hang Hole{showIcons && <div>{!checkedIcons ? <img src="/images/img1.png" alt="" onClick={handleCheck} /> : <img src="/images/img2.png" alt="" onClick={handleCheck} />} {!checkedIcons2 ? <img src="/images/img4.png" alt="" onClick={handleCheck2} /> : <img src="/images/img3.png" alt="" onClick={handleCheck2} />} </div>}</label>
+                                <label for="bordered-checkbox-2" className="flex labled py-4 text-sm font-medium  px-2 text-[#008bbf] "><span className='text-[14px]'>Hang Hole</span>{showIcons && <div className='flex items-center'>{!checkedIcons ? <img src="/images/img1.png" className='unckecked' alt="" onClick={handleCheck} /> : <img src="/images/img2.png" className='ckecked' alt="" onClick={handleCheck} />} {!checkedIcons2 ? <img src="/images/img4.png" className='unckecked' alt="" onClick={handleCheck2} /> : <img src="/images/img3.png" className='ckecked' alt="" onClick={handleCheck2} />} </div>}</label>
                             </div>
                             <div className='bg-[#ECF8FD] h-[55px] items-center flex justify-center rounded-[10px]  w-[120px]'>
-                                <input type="checkbox" className=" h-4 text-blue-600 rounded" />
+                                <input type="checkbox" checked={tear} onClick={handleTear} className=" h-4 text-blue-600 rounded" />
                                 <label for="bordered-checkbox-2" className=" py-4 text-sm font-medium px-2  text-[#008bbf] ">Tear Notch</label>
                             </div>
                         </div>
@@ -138,14 +169,17 @@ const Processing = () => {
                                     <option>1</option>
                                     <option>2</option>
                                     <option>3</option>
-                                    <option>Custom</option>
+                                    {/* <option>Custom</option> */}
                                 </select>
+                                {/* {formData.total_design === "Custom" && <div>
+                                    <input name="total_design" onChange={handleChange} value={formData.total_qty} className='w-full text-[#008bbf] bg-[#ECF8FD] h-[55px] rounded-[10px] px-3' type="text" placeholder='Enter...' />
+                                </div>} */}
                             </div>
                         </div>
                         <div className=' pt-5 w-[381px]'>
                             <p className='text-[#008bbf]'>Total Quantity</p>
                             <div>
-                                <input name="total_qty" onChange={handleChange} value={formData.total_qty} className='w-full text-[#008bbf] bg-[#ECF8FD] h-[55px] rounded-[10px] px-3' type="text" placeholder='Enter...' />
+                                <input name="total_qty" onChange={handleChange} value={formData.total_qty} className='w-full text-[#008bbf] bg-[#ECF8FD] h-[55px] rounded-[10px] px-3' type="number" placeholder='Enter...' />
                             </div>
                         </div>
                     </div>
@@ -156,12 +190,15 @@ const Processing = () => {
                 <div className='mt-[-38px]'>
                     <h1 className='text-[#008bbf] font-bold text-[26px] mt-16 mb-[30px]'>ANY SPECIAL REQUIREMENT</h1>
                     <div>
-                        <textarea name="special_requirement" onChange={handleChange} value={formData.special_requirement} className='h-[300px] w-full border-4 border-[#ECF8FD] rounded-[10px]' cols="30" rows="10"></textarea>
+                        <textarea placeholder='Type.......' name="special_requirement" onChange={handleChange} value={formData.special_requirement} className='h-[300px] w-full px-3 py-[20px] border-4 border-[#ECF8FD] rounded-[10px]' cols="30" rows="10"></textarea>
                     </div>
                 </div>
-
+                 <div className='flex absolute left-[50%] setDatas mt-[60px] gap-[35px]'>
+                    <div className='cursor-pointer w-[200px] text-[#008BBF] font-medium bg-[#ECF8FD] flex items-center justify-center h-[55px] rounded-[10px]' onClick={handleSelect} style={{boxShadow : "0px 4px 4px rgba(0, 0, 0, 0.25)"}}>Select Again</div>
+                    <button className='w-[200px] text-[#FFFFFF] font-medium bg-[#008BBF] flex items-center justify-center h-[55px] rounded-[10px]' style={{boxShadow : "0px 4px 4px rgba(0, 0, 0, 0.25)"}} type='submit'>SUBMIT</button>
+                 </div>
             </form>
-            <Modal />
+            {/* <Modal /> */}
         </div>
     )
 }

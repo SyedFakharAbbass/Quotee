@@ -26,8 +26,8 @@ function Processing2() {
                 <select className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' name='None' id='None'>
                   <option hidden>None</option>
                   <option>White</option>
-                                    <option>Clear- Only For non- Cannabis</option>
-                                    <option>Metalized</option>
+                  <option>Clear- Only For non- Cannabis</option>
+                  <option>Metalized</option>
                 </select>
               </div>
 
@@ -42,8 +42,8 @@ function Processing2() {
                   <select className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' name='None' id='None'>
                     <option hidden>None</option>
                     <option>Soft Touch- Velvet Like Material</option>
-                                        <option>Matte</option>
-                                        <option>Gloss</option>
+                    <option>Matte</option>
+                    <option>Gloss</option>
                   </select>
                 </div>
               </div>
@@ -54,9 +54,9 @@ function Processing2() {
                 <select className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' name='None' id='None'>
                   <option hidden>None</option>
                   <option>Spot Varnish</option>
-                                    <option>Spot Matte</option>
-                                    <option>Spot Foil</option>
-                                    <option>Tactile Feel</option>
+                  <option>Spot Matte</option>
+                  <option>Spot Foil</option>
+                  <option>Tactile Feel</option>
                 </select>
               </div>
             </div>
