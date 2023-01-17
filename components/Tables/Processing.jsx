@@ -71,21 +71,21 @@ const Processing = () => {
                         <div className=' w-[519px] mr-[50px]'>
                             <div className='bg-[#ECF8FD] w-[519px] rounded-[10px]'>
                                 <div className="flex items-center pl-4">
+                                    <input type="checkbox" className="w-4 h-4 text-blue-600 pr-[10px]"/>
+                                    <label for="bordered-checkbox-2" className=" py-4 text-sm font-medium px-4  text-[#008bbf] ">Child Resistant</label>
                                     <input type="checkbox" className="w-4 h-4 text-blue-600 " />
-                                    <label for="bordered-checkbox-2" className=" py-4 text-sm font-medium  text-[#008bbf] ">Child Resistant</label>
-                                    <input type="checkbox" className="w-4 h-4 text-blue-600 " />
-                                    <label for="bordered-checkbox-2" className=" py-4 text-sm font-medium  text-[#008bbf]">Press to close standard powder proof</label>
+                                    <label for="bordered-checkbox-2" className=" py-4 text-sm font-medium  px-4 text-[#008bbf]">Press to close standard powder proof</label>
                                 </div>
                             </div>
                         </div>
                         <div className='flex items-center w-[381px] justify-between'>
                             <div className='bg-[#ECF8FD] h-[55px] items-center flex justify-center rounded-[10px] w-[160px]'>
                                 <input type="checkbox" className=" h-4 text-blue-600 rounded" />
-                                <label for="bordered-checkbox-2" className=" py-4 text-sm font-medium  text-[#008bbf] ">Hang Hole</label>
+                                <label for="bordered-checkbox-2" className=" py-4 text-sm font-medium  px-2 text-[#008bbf] ">Hang Hole</label>
                             </div>
                             <div className='bg-[#ECF8FD] h-[55px] items-center flex justify-center rounded-[10px]  w-[120px]'>
                                 <input type="checkbox" className=" h-4 text-blue-600 rounded" />
-                                <label for="bordered-checkbox-2" className=" py-4 text-sm font-medium  text-[#008bbf] ">Tear Notch</label>
+                                <label for="bordered-checkbox-2" className=" py-4 text-sm font-medium px-2  text-[#008bbf] ">Tear Notch</label>
                             </div>
                         </div>
                     </div>
