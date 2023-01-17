@@ -56,7 +56,7 @@ const Products = () => {
                         <div className='px-[25px]'>
                             <div className="flex items-center pl-4 ">
                                 <input type="checkbox" checked={products === "two" ? true : false} className="w-4 h-4 cursor-pointer text-blue-600 rounded " />
-                                <label for="bordered-checkbox-2" className="w-full py-4 ml-2 text-sm font-medium text-[22px]  cursor-pointer text-[#008bbf] changed"> Label & Stickers</label>
+                                <label for="bordered-checkbox-2" className="w-full py-4 ml-2 text-sm font-medium text-[22px] cursor-pointer text-[#008bbf] changed"> Label & Stickers</label>
                             </div>
                             <p className='text-[10px] items-center text-[#008bbf] pb-4  text_data'>Custom plane or printed myler bags are prefect solution for your product</p>
                         </div>

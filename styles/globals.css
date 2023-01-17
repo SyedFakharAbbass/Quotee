@@ -13,6 +13,10 @@
     color: #FFFFFF;
 }
 
+input{
+    outline: none;
+}
+
 
 .selected .changed {
     color: #FFFFFF;
