@@ -13,7 +13,7 @@ function Processing4() {
                   <p className='text-[#008bbf]'>Size <span className='text-black'> (Inches/mm)</span></p>
                   <input className='bg-[#ECF8FD] w-[219.13px] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' type="text" placeholder='Height' />
                 </div>
-                <p className='font-bold pt-1 mb-4 px-2'>x</p>
+                <p className='font-bold pt-1 mb-4 px-4'>x</p>
                 <input className='bg-[#ECF8FD] w-[219.13px] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' type="text" placeholder='Width' />
               </div>
             </div>
@@ -33,11 +33,11 @@ function Processing4() {
             </div>
           </div>
 
-          <div className='flex'>
+          <div className='flex pt-[15px]'>
             <div>
               <p className='text-[#008bbf]'>Embellishment</p>
               <div>
-                <select className='bg-[#ECF8FD] w-[519px] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' name='None' id='None'>
+                <select className='bg-[#ECF8FD] w-[519px] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px] px-2' name='None' id='None'>
                   <option hidden>None</option>
                   <option>1</option>
                   <option>2</option>
@@ -85,8 +85,8 @@ function Processing4() {
                 </div>
             </div> */}
 
-          <div className='flex'>
-            <div className='w-[519px] pt-5'>
+          <div className='flex pt-[50px]'>
+            <div className='w-[519px] '>
               <p className='text-[#008bbf]'>Total Number of Design</p>
               <div>
                 <select className='bg-[#ECF8FD] w-[519px] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' name='None' id='None'>
@@ -99,7 +99,7 @@ function Processing4() {
               </div>
             </div>
 
-            <div className='ml-[25px] pt-5'>
+            <div className='ml-[25px] '>
               <p className='text-[#008bbf]'>Total Quantity</p>
               <div>
                 <input className='text-[#008bbf] bg-[#ECF8FD] w-[381px] h-[55px] rounded-[10px] px-3' type="text" placeholder='Enter...' />
