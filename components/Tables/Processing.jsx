@@ -24,10 +24,9 @@ const Processing = () => {
                             <div>
                                 <select className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' name='None' id='None'>
                                     <option hidden>None</option>
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
+                                    <option>White</option>
+                                    <option>Clear- Only For non- Cannabis</option>
+                                    <option>Metalized</option>
                                 </select>
                             </div>
 

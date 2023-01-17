@@ -6,7 +6,7 @@ function Processing3() {
       <div className='container'>
         <div>
           <h1 className='text-[#008bbf] font-bold text-[26px] mt-16 mb-[30px]'>JOB processing DATA</h1>
-          <div className='flex justify-between'>
+          <div className='flex justify-between items-end'>
             <div className='flex mr-[50px]'>
               <div className='flex items-end w-[519px] justify-between'>
                 <div className='flex flex-col'>
