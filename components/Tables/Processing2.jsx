@@ -90,12 +90,12 @@ function Processing2() {
               <div className='flex items-end w-[519px] justify-between'>
                 <div className='flex flex-col'>
                   <p className='text-[#008bbf]'>Size <span className='text-black'> (Inches/mm)</span></p>
-                  <input className='bg-[#ECF8FD] p-2 w-[139.08px] outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' type="text" placeholder='Height' />
+                  <input name="height" onChange={handleChange} value={formData.height} className='bg-[#ECF8FD] p-2 w-[139.08px] outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' type="text" placeholder='Height' />
                 </div>
-                <p className='font-medium pt-1 mb-4 text-[22px]'>x</p>
-                <input className='bg-[#ECF8FD] p-2 outline-none w-[139.08px] border-none hover:#008bbf rounded-[10px] h-[55px]' type="text" placeholder='Width' />
-                <p className='font-medium pt-1 mb-4  text-[22px]'>x</p>
-                <input className='bg-[#ECF8FD] p-2 outline-none w-[139.08px] border-none hover:#008bbf rounded-[10px] h-[55px]' type="text" placeholder='Gusset' />
+                <p className='font-bold pt-1 mb-4'>x</p>
+                <input name="width" onChange={handleChange} value={formData.width} className='bg-[#ECF8FD] p-2 outline-none w-[139.08px] border-none hover:#008bbf rounded-[10px] h-[55px]' type="text" placeholder='Width' />
+                <p className='font-bold pt-1 mb-4'>x</p>
+                <input name="length" onChange={handleChange} value={formData.length} className='bg-[#ECF8FD] p-2 outline-none w-[139.08px] border-none hover:#008bbf rounded-[10px] h-[55px]' type="text" placeholder='Gusset' />
               </div>
             </div>
 

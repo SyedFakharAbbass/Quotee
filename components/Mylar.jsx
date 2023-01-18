@@ -5,7 +5,7 @@ const Mylar = () => {
 
     const { products  ,form1 } = useSelector((state) => state.data)
 
-    const main = form1.width || form1.height ? true : false
+    const main = form1.width || form1.height || form1.length ? true : false
 
     return (
         <div className='response'>
@@ -40,7 +40,7 @@ const Mylar = () => {
                         <label for="bordered-checkbox-2" className=" py-4 ml-2 text-sm font-medium text-[22px] mr-4 text-[#008bbf]">Dimensions :</label>
                     </div>
                     <div className='items-center flex'>
-                        <p className='text-[15px]'>{`${form1?.height === undefined ? "" : form1.height} x ${form1?.width === undefined ? "" : form1.width}`}</p>
+                        <p className='text-[15px]'>{`${form1?.height === undefined || form1?.height === "" ? "" : form1.height} ${form1?.width === undefined || form1?.width === "" ? "" : "x" +  " " + form1.width} ${form1?.length === undefined ? "" : "x" + " " + form1.length}`}</p>
                     </div>
                 </div>}
                 {form1.barrier_material && <div className='flex pl-10'>
@@ -61,6 +61,33 @@ const Mylar = () => {
                         <p className='text-[15px]'>{form1.print_material}</p>
                     </div>
                 </div>}
+                {form1.paper_thickness && <div className='flex pl-10'>
+                    <div className='items-center flex'>
+                        <input type="checkbox" checked={true} className=" h-4 text-blue-600 rounded cursor-pointer" />
+                        <label for="bordered-checkbox-2" className=" py-4 ml-2 text-sm font-medium text-[22px] mr-4 text-[#008bbf]">Paper Thickness :</label>
+                    </div>
+                    <div className='items-center flex'>
+                        <p className='text-[15px]'>{form1.paper_thickness}</p>
+                    </div>
+                </div>}
+                {form1.finishing && <div className='flex pl-10'>
+                    <div className='items-center flex'>
+                        <input type="checkbox" checked={true} className=" h-4 text-blue-600 rounded cursor-pointer" />
+                        <label for="bordered-checkbox-2" className=" py-4 ml-2 text-sm font-medium text-[22px] mr-4 text-[#008bbf]">Finishing :</label>
+                    </div>
+                    <div className='items-center flex'>
+                        <p className='text-[15px]'>{form1.finishing}</p>
+                    </div>
+                </div>}
+                {form1.spot_foiling && <div className='flex pl-10'>
+                    <div className='items-center flex'>
+                        <input type="checkbox" checked={true} className=" h-4 text-blue-600 rounded cursor-pointer" />
+                        <label for="bordered-checkbox-2" className=" py-4 ml-2 text-sm font-medium text-[22px] mr-4 text-[#008bbf]">Spot Foiling :</label>
+                    </div>
+                    <div className='items-center flex'>
+                        <p className='text-[15px]'>{form1.spot_foiling}</p>
+                    </div>
+                </div>}
                 {form1.embellishment && <div className='flex pl-10'>
                     <div className='items-center flex'>
                         <input type="checkbox" checked={true} className=" h-4 text-blue-600 rounded cursor-pointer" />
@@ -68,6 +95,15 @@ const Mylar = () => {
                     </div>
                     <div className='items-center flex'>
                         <p className='text-[15px]'>{form1.embellishment}</p>
+                    </div>
+                </div>}
+                {form1.direction && <div className='flex pl-10'>
+                    <div className='items-center flex'>
+                        <input type="checkbox" checked={true} className=" h-4 text-blue-600 rounded cursor-pointer" />
+                        <label for="bordered-checkbox-2" className=" py-4 ml-2 text-sm font-medium text-[22px] mr-4 text-[#008bbf]">Direction :</label>
+                    </div>
+                    <div className='items-center flex'>
+                        <p className='text-[15px]'>{form1.direction}</p>
                     </div>
                 </div>}
                 {form1.zipper && <div className='flex pl-10'>

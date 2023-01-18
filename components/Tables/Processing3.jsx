@@ -79,10 +79,10 @@ function Processing3() {
               <div className='flex items-end w-[519px] justify-between'>
                 <div className='flex flex-col'>
                   <p className='text-[#008bbf]'>Size <span className='text-black'> (Inches/mm)</span></p>
-                  <input className='bg-[#ECF8FD] p-2 w-[219.13px] outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' type="text" placeholder='Height' />
+                  <input className='bg-[#ECF8FD] p-2 w-[219.13px] outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' name="height" onChange={handleChange} value={formData.height}  type="text" placeholder='Height' />
                 </div>
-                <p className='font-medium pt-1 mb-4 text-[22px]'>x</p>
-                <input className='bg-[#ECF8FD] p-2 outline-none w-[219.13px] border-none hover:#008bbf rounded-[10px] h-[55px]' type="text" placeholder='Width' />
+                <p className='font-bold pt-1 mb-4'>x</p>
+                <input className='bg-[#ECF8FD] p-2 outline-none w-[219.13px] border-none hover:#008bbf rounded-[10px] h-[55px]' name="width" onChange={handleChange} value={formData.width} type="text" placeholder='Width' />
               </div>
             </div>
 
@@ -148,7 +148,7 @@ function Processing3() {
               <div className='w-[519px]'>
                 <p className='text-[#008bbf]'>Direction</p>
                 <div>
-                  <select className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' name='None' id='None'>
+                  <select name='direction' onChange={handleChange} value={formData.direction} className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' >
                     <option hidden>None</option>
                     <option>Top</option>
                     <option>Bottom</option>
