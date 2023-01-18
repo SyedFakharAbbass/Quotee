@@ -95,7 +95,7 @@ function Processing2() {
                 <p className='font-bold pt-1 mb-4'>x</p>
                 <input className='bg-[#ECF8FD] p-2 outline-none w-[139.08px] border-none hover:#008bbf rounded-[10px] h-[55px]' type="text" placeholder='Width' />
                 <p className='font-bold pt-1 mb-4'>x</p>
-                <input className='bg-[#ECF8FD] p-2 outline-none w-[139.08px] border-none hover:#008bbf rounded-[10px] h-[55px]' type="text" placeholder='Width' />
+                <input className='bg-[#ECF8FD] p-2 outline-none w-[139.08px] border-none hover:#008bbf rounded-[10px] h-[55px]' type="text" placeholder='Gusset' />
               </div>
             </div>
 

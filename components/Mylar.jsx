@@ -25,7 +25,7 @@ const Mylar = () => {
                 </div>
 
 
-                {form1.product_style && <div className='flex pt-8 pl-10'>
+                {form1.product_style && <div className='flex pl-10'>
                     <div className='items-center flex'>
                         <input type="checkbox" checked={true} className=" h-4 text-blue-600 rounded cursor-pointer" />
                         <label for="bordered-checkbox-2" className=" py-4 ml-2 text-sm font-medium text-[22px] mr-4 text-[#008bbf]">Product Style :</label>
@@ -34,7 +34,7 @@ const Mylar = () => {
                         <p className='text-[15px]'>{form1.product_style}</p>
                     </div>
                 </div>}
-                {main && <div className='flex pt-8 pl-10'>
+                {main && <div className='flex pl-10'>
                     <div className='items-center flex'>
                         <input type="checkbox" checked={true} className=" h-4 text-blue-600 rounded cursor-pointer" />
                         <label for="bordered-checkbox-2" className=" py-4 ml-2 text-sm font-medium text-[22px] mr-4 text-[#008bbf]">Dimensions :</label>
@@ -43,7 +43,7 @@ const Mylar = () => {
                         <p className='text-[15px]'>{`${form1?.height === undefined ? "" : form1.height} x ${form1?.width === undefined ? "" : form1.width}`}</p>
                     </div>
                 </div>}
-                {form1.barrier_material && <div className='flex pt-8 pl-10'>
+                {form1.barrier_material && <div className='flex pl-10'>
                     <div className='items-center flex'>
                         <input type="checkbox" checked={true} className=" h-4 text-blue-600 rounded cursor-pointer" />
                         <label for="bordered-checkbox-2" className=" py-4 ml-2 text-sm font-medium text-[22px] mr-4 text-[#008bbf]">Barrier Material :</label>
@@ -52,7 +52,7 @@ const Mylar = () => {
                         <p className='text-[15px]'>{form1.barrier_material}</p>
                     </div>
                 </div>}
-                {form1.print_material && <div className='flex pt-8 pl-10'>
+                {form1.print_material && <div className='flex pl-10'>
                     <div className='items-center flex'>
                         <input type="checkbox" checked={true} className=" h-4 text-blue-600 rounded cursor-pointer" />
                         <label for="bordered-checkbox-2" className=" py-4 ml-2 text-sm font-medium text-[22px] mr-4 text-[#008bbf]">Print Material :</label>
@@ -61,7 +61,7 @@ const Mylar = () => {
                         <p className='text-[15px]'>{form1.print_material}</p>
                     </div>
                 </div>}
-                {form1.embellishment && <div className='flex pt-8 pl-10'>
+                {form1.embellishment && <div className='flex pl-10'>
                     <div className='items-center flex'>
                         <input type="checkbox" checked={true} className=" h-4 text-blue-600 rounded cursor-pointer" />
                         <label for="bordered-checkbox-2" className=" py-4 ml-2 text-sm font-medium text-[22px] mr-4 text-[#008bbf]">Embellishment :</label>
@@ -70,7 +70,7 @@ const Mylar = () => {
                         <p className='text-[15px]'>{form1.embellishment}</p>
                     </div>
                 </div>}
-                {form1.zipper && <div className='flex pt-8 pl-10'>
+                {form1.zipper && <div className='flex pl-10'>
                     <div className='items-center flex'>
                         <input type="checkbox" checked={true} className=" h-4 text-blue-600 rounded cursor-pointer" />
                         <label for="bordered-checkbox-2" className=" py-4 ml-2 text-sm font-medium text-[22px] mr-4 text-[#008bbf]">Zipper :</label>
@@ -79,7 +79,7 @@ const Mylar = () => {
                         <p className='text-[15px]'>{form1.zipper}</p>
                     </div>
                 </div>}
-                {form1.hanghole && <div className='flex pt-8 pl-10'>
+                {form1.hanghole && <div className='flex pl-10'>
                     <div className='items-center flex'>
                         <input type="checkbox" checked={true} className=" h-4 text-blue-600 rounded cursor-pointer" />
                         <label for="bordered-checkbox-2" className=" py-4 ml-2 text-sm font-medium text-[22px] mr-4 text-[#008bbf]">Hang Hole :</label>
@@ -88,7 +88,7 @@ const Mylar = () => {
                         <p className='text-[15px]'>{form1.hanghole}</p>
                     </div>
                 </div>}
-                {form1.tear && <div className='flex pt-8 pl-10'>
+                {form1.tear && <div className='flex pl-10'>
                     <div className='items-center flex'>
                         <input type="checkbox" checked={true} className=" h-4 text-blue-600 rounded cursor-pointer" />
                         <label for="bordered-checkbox-2" className=" py-4 ml-2 text-sm font-medium text-[22px] mr-4 text-[#008bbf]">Tear :</label>
@@ -97,7 +97,7 @@ const Mylar = () => {
                         <p className='text-[15px]'>{form1.tear}</p>
                     </div>
                 </div>}
-                {form1.total_design && <div className='flex pt-8 pl-10'>
+                {form1.total_design && <div className='flex pl-10'>
                     <div className='items-center flex'>
                         <input type="checkbox" checked={true} className=" h-4 text-blue-600 rounded cursor-pointer" />
                         <label for="bordered-checkbox-2" className=" py-4 ml-2 text-sm font-medium text-[22px] mr-4 text-[#008bbf]">Total Design :</label>
@@ -106,7 +106,7 @@ const Mylar = () => {
                         <p className='text-[15px]'>{form1.total_design}</p>
                     </div>
                 </div>}
-                {form1.total_qty && <div className='flex pt-8 pl-10'>
+                {form1.total_qty && <div className='flex pl-10'>
                     <div className='items-center flex'>
                         <input type="checkbox" checked={true} className=" h-4 text-blue-600 rounded cursor-pointer" />
                         <label for="bordered-checkbox-2" className=" py-4 ml-2 text-sm font-medium text-[22px] mr-4 text-[#008bbf]">Total Quantity :</label>
