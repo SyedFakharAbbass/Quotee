@@ -53,7 +53,7 @@ function Processing5() {
                         <div className='w-[381px]'>
                             <p className='text-[#008bbf]'>Material</p>
                             <div>
-                                <select className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' name='None' id='None'>
+                                <select className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' >
                                     <option hidden>None</option>
                                     <option>PE Clear</option>
                                     <option>PP Clear</option>
@@ -73,7 +73,7 @@ function Processing5() {
                             <div className='w-[519px]'>
                                 <p className='text-[#008bbf]'>Embellishment</p>
                                 <div>
-                                    <select className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' name='None' id='None'>
+                                    <select  name='embellishment' onChange={handleChange} value={formData.embellishment} className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' >
                                         <option hidden>None</option>
                                         <option>Spot Foil</option>
                                         <option>Spot Matte</option>
@@ -86,7 +86,7 @@ function Processing5() {
                         <div className=' w-[381px]'>
                             <p className='text-[#008bbf]'>Direction</p>
                             <div>
-                                <select className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' name='None' id='None'>
+                                <select className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' >
                                     <option hidden>None</option>
                                     <option>Top</option>
                                     <option>Bottom</option>
@@ -103,7 +103,7 @@ function Processing5() {
                         <div className='pt-5 w-[519px] mr-[50px]'>
                             <p className='text-[#008bbf]'>Total Number of Design</p>
                             <div className='w-[519px]'>
-                                <select className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' name='None' id='None'>
+                                <select className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' >
                                     <option className='text-[#008bbf]' hidden>Select</option>
                                     <option>1</option>
                                     <option>2</option>
