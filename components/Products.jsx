@@ -52,11 +52,11 @@ const Products = () => {
                                     <input type="checkbox" checked={products === "one" ? true : false} className="w-4 h-4 cursor-pointer accent-white text-blue-600 rounded  tickbox" />
                                 </div>
                                 <div>
-                                    <label for="bordered-checkbox-2" className="w-full py-4 ml-1 text-sm font-medium text-[20px] cursor-pointer text-[#008bbf] changed">MyLar Bag/Pouch</label>
+                                    <label for="bordered-checkbox-2" className="w-full py-4 ml-1 text-sm font-medium text-[20px] cursor-pointer text-[#008bbf] changed">Mylar Bag/Pouch</label>
                                 </div>
                             </div>
                             <div></div>
-                            <p className='text-[10px] items-center text-[#008bbf] py-4 px-[39px] text_data'>Custom plane or printed myler bags are prefect solution for your product</p>
+                            <p className='text-[10px] items-center text-[#008bbf] py-4 px-[39px] text_data'>Custom plane or printed mylar bags are prefect solution for your product</p>
                         </div>
                     </div>
                     <div className={`w-[250px]  bg-[#ECF8FD] mr-[20px] h-[300px] mb-[20px] cursor-pointer rounded-[10px] ${products === "two" ? "selected" : ""}`} onClick={handleClick2} >
@@ -71,7 +71,7 @@ const Products = () => {
                                 </div>
                             </div>
                             <div></div>
-                            <p className='text-[10px] items-center text-[#008bbf] py-4 px-[39px] text_data'>Custom plane or printed myler bags are prefect solution for your product</p>
+                            <p className='text-[10px] items-center text-[#008bbf] py-4 px-[39px] text_data'>Custom plane or printed mylar bags are prefect solution for your product</p>
                         </div>
                     </div>
                     <div className={`w-[250px]  bg-[#ECF8FD] mr-[20px] h-[300px] mb-[20px] cursor-pointer rounded-[10px] ${products === "three" ? "selected" : ""}`} onClick={handleClick3} >
@@ -86,7 +86,7 @@ const Products = () => {
                                 </div>
                             </div>
                             <div></div>
-                            <p className='text-[10px] items-center text-[#008bbf] py-4 px-[39px] text_data'>Custom plane or printed myler bags are prefect solution for your product</p>
+                            <p className='text-[10px] items-center text-[#008bbf] py-4 px-[39px] text_data'>Custom plane or printed mylar bags are prefect solution for your product</p>
                         </div>
                     </div>
                     <div className='h-[300px] w-[250px] bg-[#ECF8FD] px-[25px] cursor-pointer rounded-[10px]'>

@@ -18,7 +18,7 @@ export default function Home() {
 
   useEffect(() => {
     if (products === "one") {
-      dispatch(setForm({ product: "MyLar Bag" }));
+      dispatch(setForm({ product: "Mylar Bag" }));
     }
     if (products === "two") {
       dispatch(setForm({ product: "Label & Stickers" }))
