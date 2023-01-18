@@ -12,27 +12,27 @@ function Processing5() {
 
     const [formData, setFormData] = useState({});
 
-    const dispatch = useDispatch(); 
+    const dispatch = useDispatch();
 
     const handleChange = (e) => {
         // setFormData({ ...formData, [e.target.name]: e.target.value });
         dispatch(setForm({ ...formData, [e.target.name]: e.target.value }))
     }
-    useEffect(()=>{
-        setFormData({ ...form1});
-    },[form1]);
+    useEffect(() => {
+        setFormData({ ...form1 });
+    }, [form1]);
 
     const handleSelect = () => {
         dispatch(setProducts("")),
-        dispatch(setStyles("")),
-        dispatch(setForm({}))
-}
+            dispatch(setStyles("")),
+            dispatch(setForm({}))
+    }
 
     const handleModalClick = () => {
         setShow(true)
-        setError({email: "" ,phone: ""})
+        setError({ email: "", phone: "" })
     }
-    
+
     return (
         <div className='mb-[60px]'>
             <div className='container'>
@@ -127,17 +127,17 @@ function Processing5() {
                 <div className='mt-[-38px]'>
                     <h1 className='text-[#008bbf] font-bold text-[26px] mt-16 mb-[30px]'>ANY SPECIAL REQUIREMENT</h1>
                     <div>
-                        <textarea className='h-[300px] w-full border-4 border-[#ECF8FD] rounded-[10px]' name="" id="" cols="30" rows="10"></textarea>
+                        <textarea placeholder='Type.......' name="special_requirement" onChange={handleChange} value={formData.special_requirement} className='h-[300px] w-full px-3 py-[20px] border-4 border-[#ECF8FD] rounded-[10px]' cols="30" rows="10"></textarea>
                     </div>
                 </div>
 
                 <div className='flex absolute left-[50%] setDatas mt-[60px] gap-[35px]'>
-                    <div className='cursor-pointer w-[200px] text-[#008BBF] font-medium bg-[#ECF8FD] flex items-center justify-center h-[55px] rounded-[10px]' onClick={handleSelect} style={{boxShadow : "0px 4px 4px rgba(0, 0, 0, 0.25)"}}>Select Again</div>
-                    <button className='w-[200px] text-[#FFFFFF] font-medium bg-[#008BBF] flex items-center justify-center h-[55px] rounded-[10px]' style={{boxShadow : "0px 4px 4px rgba(0, 0, 0, 0.25)"}} onClick={handleModalClick}>SUBMIT</button>
-                 </div>
+                    <div className='cursor-pointer w-[200px] text-[#008BBF] font-medium bg-[#ECF8FD] flex items-center justify-center h-[55px] rounded-[10px]' onClick={handleSelect} style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }}>Select Again</div>
+                    <button className='w-[200px] text-[#FFFFFF] font-medium bg-[#008BBF] flex items-center justify-center h-[55px] rounded-[10px]' style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }} onClick={handleModalClick}>SUBMIT</button>
+                </div>
 
             </div>
-            <Modal show={show} error={error} setError={setError}  setShow={setShow} handleModalClick={handleModalClick}/>
+            <Modal show={show} error={error} setError={setError} setShow={setShow} handleModalClick={handleModalClick} />
         </div>
     )
 }

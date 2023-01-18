@@ -21,10 +21,10 @@ function Processing3() {
   const handleChange = (e) => {
     // setFormData({ ...formData, [e.target.name]: e.target.value });
     dispatch(setForm({ ...formData, [e.target.name]: e.target.value }))
-}
-useEffect(()=>{
-    setFormData({ ...form1});
-},[form1]);
+  }
+  useEffect(() => {
+    setFormData({ ...form1 });
+  }, [form1]);
 
   const handleSelect = () => {
     dispatch(setProducts("")),
@@ -37,14 +37,14 @@ useEffect(()=>{
     setCheckedIcons2(false)
     setFormData({ ...formData, hanghole: "rounded" });
     dispatch(setForm({ ...formData, hanghole: "rounded" }))
-}
+  }
 
-const handleCheck2 = () => {
+  const handleCheck2 = () => {
     setCheckedIcons(false)
     setCheckedIcons2(true)
     setFormData({ ...formData, hanghole: "euro" });
     dispatch(setForm({ ...formData, hanghole: "euro" }))
-}
+  }
 
   const handleIcons = () => {
     setShowIcons(!showIcons),
@@ -203,7 +203,7 @@ const handleCheck2 = () => {
         <div className='mt-[-38px]'>
           <h1 className='text-[#008bbf] font-bold text-[26px] mt-16 mb-[30px]'>ANY SPECIAL REQUIREMENT</h1>
           <div>
-            <textarea className='h-[300px] w-full border-4 border-[#ECF8FD] rounded-[10px]' name="" id="" cols="30" rows="10"></textarea>
+            <textarea placeholder='Type.......' name="special_requirement" onChange={handleChange} value={formData.special_requirement} className='h-[300px] w-full px-3 py-[20px] border-4 border-[#ECF8FD] rounded-[10px]' cols="30" rows="10"></textarea>
           </div>
         </div>
 
