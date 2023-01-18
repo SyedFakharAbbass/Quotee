@@ -62,3 +62,9 @@ textarea{
 .setDatas {
     transform: translate(-50%,-50%);
 }
+
+.main_class{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}

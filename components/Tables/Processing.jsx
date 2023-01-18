@@ -6,6 +6,7 @@ import Modal from '../Modal';
 
 const Processing = () => {
 
+    const [show, setShow] = useState(false);
     const { products , styles ,form1 } = useSelector((state) => state.data)
     const dispatch = useDispatch();
 
@@ -19,6 +20,11 @@ const Processing = () => {
     const handleChange = (e) => {
         setFormData({ ...formData, product: form1.product ,product_style: form1.product_style, [e.target.name]: e.target.value });
         dispatch(setForm({ ...formData, product: form1.product ,product_style: form1.product_style, [e.target.name]: e.target.value }))
+    }
+
+    
+    const handleModalClick = () => {
+        setShow(true)
     }
 
     const handleSubmit = (e) => {
@@ -68,11 +74,11 @@ const Processing = () => {
             dispatch(setForm({ ...formData, tear: "yes" }))
         }
     }
-    const handleSelect = () => [
+    const handleSelect = () => {
         dispatch(setProducts("")),
         dispatch(setStyles("")),
         dispatch(setForm({}))
-    ]
+    }
 
     return (
         <div className='mb-[60px]'>
@@ -195,10 +201,10 @@ const Processing = () => {
                 </div>
                  <div className='flex absolute left-[50%] setDatas mt-[60px] gap-[35px]'>
                     <div className='cursor-pointer w-[200px] text-[#008BBF] font-medium bg-[#ECF8FD] flex items-center justify-center h-[55px] rounded-[10px]' onClick={handleSelect} style={{boxShadow : "0px 4px 4px rgba(0, 0, 0, 0.25)"}}>Select Again</div>
-                    <button className='w-[200px] text-[#FFFFFF] font-medium bg-[#008BBF] flex items-center justify-center h-[55px] rounded-[10px]' style={{boxShadow : "0px 4px 4px rgba(0, 0, 0, 0.25)"}} type='submit'>SUBMIT</button>
+                    <button className='w-[200px] text-[#FFFFFF] font-medium bg-[#008BBF] flex items-center justify-center h-[55px] rounded-[10px]' style={{boxShadow : "0px 4px 4px rgba(0, 0, 0, 0.25)"}} onClick={handleModalClick}>SUBMIT</button>
                  </div>
             </form>
-            {/* <Modal /> */}
+            <Modal show={show} setShow={setShow} handleModalClick={handleModalClick}/>
         </div>
     )
 }
