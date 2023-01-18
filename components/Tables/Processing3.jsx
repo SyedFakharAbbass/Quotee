@@ -1,10 +1,14 @@
+import { setForm, setProducts, setStyles } from '@/redux/data';
 import React, { useState } from 'react'
+import { useDispatch } from 'react-redux';
 import Modal from '../Modal'
 
 function Processing3() {
 
   const [show, setShow] = useState(false);
   const [error, setError] = useState({});
+
+  const dispatch = useDispatch();
 
   const handleSelect = () => {
     dispatch(setProducts("")),
