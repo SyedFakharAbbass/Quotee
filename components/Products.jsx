@@ -49,7 +49,7 @@ const Products = () => {
                         <div className='mt-2'>
                             <div className="flex items-center justify-center">
                                 <div>
-                                    <input type="checkbox" checked={products === "one" ? true : false} className="w-4 h-4 cursor-pointer text-blue-600 rounded " />
+                                    <input type="checkbox" checked={products === "one" ? true : false} className="w-4 h-4 cursor-pointer accent-white text-blue-600 rounded  tickbox" />
                                 </div>
                                 <div>
                                     <label for="bordered-checkbox-2" className="w-full py-4 ml-1 text-sm font-medium text-[20px] cursor-pointer text-[#008bbf] changed">MyLar Bag/Pouch</label>
