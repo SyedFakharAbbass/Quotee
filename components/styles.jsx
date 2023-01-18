@@ -45,9 +45,9 @@ const Styles = () => {
 
     return (
         <div>
-            <div className='container'>
+            {/* <div className='container'> */}
 
-                {products === "one" && <div className="w-fit"> <h1 className='text-[#008bbf] font-bold text-[26px] mb-[30px]'>CHOOSE YOUR PRODUCTS’S STYLE</h1><div className='flex mx-[27px] flex-wrap w-max'>
+                {products === "one" && <div className="w-fit"> <h1 className='text-[#008bbf] font-bold text-[26px] mb-[30px]'>CHOOSE YOUR PRODUCTS’S STYLE</h1><div className='flex mr-[27px] flex-wrap w-max'>
                     <div className={`w-[200px] h-[195px] bg-[#ECF8FD] mr-[20px] mb-[20px] cursor-pointer rounded-[10px] ${styles === "style1" ? "selected" : ""}`} onClick={handleClick1}>
                         <img className='w-[150px] m-auto' src="/images/flatPouch.png" alt="" />
                         <div className='px-[25px]'>
@@ -79,7 +79,7 @@ const Styles = () => {
                 </div>
                 </div>
                 }
-                {products === "two" && <div className="w-fit"> <h1 className='text-[#008bbf] font-bold text-[26px] mb-[30px]'>CHOOSE YOUR PRODUCTS’S STYLE</h1><div className='flex mx-[27px] flex-wrap w-max'>
+                {products === "two" && <div className="w-fit"> <h1 className='text-[#008bbf] font-bold text-[26px] mb-[30px]'>CHOOSE YOUR PRODUCTS’S STYLE</h1><div className='flex mr-[27px] flex-wrap w-max'>
                     <div className={`w-[200px] h-[195px] bg-[#ECF8FD] mr-[20px] mb-[20px] cursor-pointer rounded-[10px] ${styles === "style4" ? "selected" : ""}`} onClick={handleClick4}>
                         <img className='w-[150px] m-auto' src="/images/cutToSize.png" alt="" />
                         <div className='px-[25px]'>
@@ -111,7 +111,7 @@ const Styles = () => {
                 </div>
                 </div>
                 }
-                {products === "three" && <div className="w-fit"> <h1 className='text-[#008bbf] font-bold text-[26px] mb-[30px]'>CHOOSE YOUR PRODUCTS’S STYLE</h1><div className='flex mx-[27px] flex-wrap w-max'>
+                {products === "three" && <div className="w-fit"> <h1 className='text-[#008bbf] font-bold text-[26px] mb-[30px]'>CHOOSE YOUR PRODUCTS’S STYLE</h1><div className='flex mr-[27px] flex-wrap w-max'>
                     <div className={`w-[200px] h-[195px] bg-[#ECF8FD] mr-[20px] mb-[20px] cursor-pointer rounded-[10px] ${styles === "style7" ? "selected" : ""}`} onClick={handleClick7}>
                         <img className='w-[150px] m-auto' src="/images/tuck.png" alt="" />
                         <div className='px-[25px]'>
@@ -143,7 +143,7 @@ const Styles = () => {
                 </div>
                 </div>
                 }
-            </div>
+            {/* </div> */}
         </div>
     )
 }

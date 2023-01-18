@@ -91,7 +91,7 @@ const Processing = () => {
 
     return (
         <div className='mb-[60px]'>
-            <form className='container' onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>
                 <div>
                     <h1 className='text-[#008bbf] font-bold text-[26px] mt-16 mb-[30px]'>JOB PROCESSING DATA</h1>
                     <div className='flex justify-between'>

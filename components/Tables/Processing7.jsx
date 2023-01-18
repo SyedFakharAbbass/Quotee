@@ -35,7 +35,7 @@ useEffect(()=>{
 
   return (
     <div className='mb-[60px]'>
-      <div className='container'>
+      <div>
         <div>
           <h1 className='text-[#008bbf] font-bold text-[26px] mt-16 mb-[30px]'>JOB PROCESSING DATA</h1>
           <div className='flex justify-between'>
@@ -55,7 +55,7 @@ useEffect(()=>{
             <div className='w-[381px]'>
               <p className='text-[#008bbf]'>Material</p>
               <div>
-                <select className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' name='None' id='None'>
+                <select name='print_material' onChange={handleChange} value={formData.print_material} className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]'>
                   <option hidden>None</option>
                   <option>White Cad Board</option>
                   <option>Silver Metalized Card Board</option>
@@ -121,7 +121,7 @@ useEffect(()=>{
             <div className='pt-5 w-[519px] mr-[50px]'>
               <p className='text-[#008bbf]'>Total Number of Design</p>
               <div className='w-[519px]'>
-                <select className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' name='None' id='None'>
+                <select name="total_design" onChange={handleChange} value={formData.total_design} className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' >
                   <option className='text-[#008bbf]' hidden>Select</option>
                   <option>1</option>
                   <option>2</option>
@@ -134,7 +134,7 @@ useEffect(()=>{
             <div className=' pt-5 w-[381px]'>
               <p className='text-[#008bbf]'>Total Quantity</p>
               <div>
-                <input className='w-full text-[#008bbf] bg-[#ECF8FD] h-[55px] rounded-[10px] px-3' type="text" placeholder='Enter...' />
+                <input name="total_qty" onChange={handleChange} value={formData.total_qty}  className='w-full text-[#008bbf] bg-[#ECF8FD] h-[55px] rounded-[10px] px-3' type="text" placeholder='Enter...' />
               </div>
             </div>
           </div>

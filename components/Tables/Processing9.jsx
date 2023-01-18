@@ -35,7 +35,7 @@ useEffect(()=>{
 
   return (
     <div>
-      <div className='container'>
+      <div >
         <div>
           <h1 className='text-[#008bbf] font-bold text-[26px] mt-16 mb-[30px]'>JOB PROCESSING DATA</h1>
           <div>
