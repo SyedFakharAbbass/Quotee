@@ -9,11 +9,11 @@ const Mylar = () => {
 
     return (
         <div className='response'>
-            <div className='border-2 border-[#008BBF] w-[510px] m-auto rounded-[10px] h-auto'> 
+            <div className='border-2 border-[#008BBF] w-[510px] m-auto rounded-[10px] h-auto pb-10 px-4'> 
                 <div>
                     <h2 className='text-[#008BBF] font-medium text-[22px] text-center pt-4'>Detail configuration about your selection:</h2>
                 </div>
-                <div className='flex pt-3'>
+                <div className='flex pt-3 pb-5'>
                     <div>
                         {products === "one" && <img className='w-[280px] ' src="/images/lerbag.png" alt="" />}
                         {products === "two" && <img className='w-[280px] ' src="/images/sticker.png" alt="" />}

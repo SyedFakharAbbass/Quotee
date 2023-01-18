@@ -1,6 +1,12 @@
 import React from 'react'
 
 function Processing4() {
+
+  const handleSelect = () => [
+    dispatch(setProducts("")),
+    dispatch(setStyles("")),
+    dispatch(setForm({}))
+  ]
   return (
     <div className='mb-[60px]'>
       <div className='container'>
@@ -84,6 +90,11 @@ function Processing4() {
         <div>
           <textarea className='h-[300px] w-full border-4 border-[#ECF8FD] rounded-[10px]' name="" id="" cols="30" rows="10"></textarea>
         </div>
+      </div>
+
+      <div className='flex absolute left-[50%] setDatas mt-[60px] gap-[35px]'>
+        <div className='cursor-pointer w-[200px] text-[#008BBF] font-medium bg-[#ECF8FD] flex items-center justify-center h-[55px] rounded-[10px]' onClick={handleSelect} style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }}>Select Again</div>
+        <button className='w-[200px] text-[#FFFFFF] font-medium bg-[#008BBF] flex items-center justify-center h-[55px] rounded-[10px]' style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }} type='submit'>SUBMIT</button>
       </div>
 
     </div>
