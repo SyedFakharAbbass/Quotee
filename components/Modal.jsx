@@ -1,18 +1,35 @@
+import { setForm, submitRequest } from '@/redux/data';
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 function Modal({ show, setShow, handleModalClick }) {
 
     const [data, setData] = useState({});
-    
-    const { products , styles ,form1 } = useSelector((state) => state.data)
+    const [error, setError] = useState({})
+    const dispatch = useDispatch();
+
+    const { products, styles, form1 } = useSelector((state) => state.data)
     const mainSubmit = (e) => {
-        setShow(false)
+        let error = {};
+        if (!data.email) {
+            error.email = "Email is required"
+        }
+        if (!data.phone) {
+            error.phone = "Phone Number is required"
+        }
+        if (Object.keys(error).length > 0) {
+            setError(error)
+        } else {
+            dispatch(submitRequest({ ...form1 })).then((res) => {
+                setShow(false);
+            })
+        }
     }
 
     const handleChange = (e) => {
-        setFormData({ ...formData, product: form1.product ,product_style: form1.product_style, [e.target.name]: e.target.value });
-        dispatch(setForm({ ...formData, product: form1.product ,product_style: form1.product_style, [e.target.name]: e.target.value }))
+        setData({ ...data, [e.target.name]: e.target.value });
+        const subData = { ...form1, ...data,  [e.target.name]: e.target.value }
+        dispatch(setForm({ ...form1, ...data,  [e.target.name]: e.target.value }))
     }
 
     return (
@@ -24,10 +41,12 @@ function Modal({ show, setShow, handleModalClick }) {
                     <div className='flex flex-col mb-[15px]'>
                         <label className='mr-auto text-[#008BBF] font-medium'>Email Address</label>
                         <input type="email" name="email" value={data.email} onChange={handleChange} className='px-[12px] h-[60px] rounded-[10px] border-[1px] border-[#008BBF]' />
-                    </div> 
+                        {error.email && <p>{error.email}</p>}
+                    </div>
                     <div className='flex flex-col mb-[15px]'>
                         <label className='mr-auto text-[#008BBF] font-medium'>Phone Number</label>
                         <input type="number" name="phone" value={data.phone} onChange={handleChange} className='px-[12px] h-[60px] rounded-[10px] border-[1px] border-[#008BBF]' />
+                        {error.phone && <p>{error.phone}</p>}
                     </div>
                     <div className='flex justify-center'>
                         <button onClick={mainSubmit} className='w-[200px] text-[#FFFFFF] font-medium bg-[#008BBF] flex items-center justify-center h-[55px] rounded-[10px]' style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }}>SUBMIT</button>

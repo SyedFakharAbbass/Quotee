@@ -14,12 +14,12 @@ const initialState = {
 
 export const submitRequest = createAsyncThunk(
     "data/submitRequest",
-    async (_, thunkAPI) => {
+    async (payload, thunkAPI) => {
         try {
             let response;
             thunkAPI.dispatch(setLoading(true));
             response = await axios
-                .post(`${baseURL}order`)
+                .post(`${baseURL}order`,payload)
                 .then((response) => response.data);
             thunkAPI.dispatch(setLoading(false));
             thunkAPI.dispatch(setProducts(""));
