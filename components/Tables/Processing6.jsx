@@ -73,7 +73,7 @@ useEffect(()=>{
             <div className='w-[519px]'>
               <p className='text-[#008bbf]'>Embellishment</p>
               <div>
-                <select className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' name='None' id='None'>
+                <select  name='embellishment' onChange={handleChange} value={formData.embellishment} className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]'>
                   <option hidden>None</option>
                   <option>Spot Foil</option>
                   <option>Spot Matte</option>

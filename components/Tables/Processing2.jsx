@@ -102,7 +102,7 @@ function Processing2() {
             <div className='w-[381px]'>
               <p className='text-[#008bbf]'>Barrier Material</p>
               <div>
-                <select className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' name='None' id='None'>
+                <select name='barrier_material' onChange={handleChange} value={formData.barrier_material} className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]'>
                   <option hidden>None</option>
                   <option>White</option>
                   <option>Clear- Only For non- Cannabis</option>
@@ -118,7 +118,7 @@ function Processing2() {
               <div className='w-[519px]'>
                 <p className='text-[#008bbf]'>Print material</p>
                 <div>
-                  <select className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' name='None' id='None'>
+                  <select  name='print_material' onChange={handleChange} value={formData.print_material} className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]'>
                     <option hidden>None</option>
                     <option>Soft Touch- Velvet Like Material</option>
                     <option>Matte</option>
@@ -130,7 +130,7 @@ function Processing2() {
             <div className=' w-[381px]'>
               <p className='text-[#008bbf]'>Embellishment</p>
               <div>
-                <select className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' name='None' id='None'>
+                <select  name='embellishment' onChange={handleChange} value={formData.embellishment} className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]'>
                   <option hidden>None</option>
                   <option>Spot Varnish</option>
                   <option>Spot Matte</option>
