@@ -7,6 +7,7 @@ import Modal from '../Modal';
 const Processing = () => {
 
     const [show, setShow] = useState(false);
+    const [error, setError] = useState({});
     const { products , styles ,form1 } = useSelector((state) => state.data)
     const dispatch = useDispatch();
 
@@ -25,6 +26,7 @@ const Processing = () => {
     
     const handleModalClick = () => {
         setShow(true)
+        setError({email: "" ,phone: ""})
     }
 
     const handleSubmit = (e) => {
@@ -204,7 +206,7 @@ const Processing = () => {
                     <button className='w-[200px] text-[#FFFFFF] font-medium bg-[#008BBF] flex items-center justify-center h-[55px] rounded-[10px]' style={{boxShadow : "0px 4px 4px rgba(0, 0, 0, 0.25)"}} onClick={handleModalClick}>SUBMIT</button>
                  </div>
             </form>
-            <Modal show={show} setShow={setShow} handleModalClick={handleModalClick}/>
+            <Modal show={show} setShow={setShow} error={error} setError={setError} handleModalClick={handleModalClick}/>
         </div>
     )
 }

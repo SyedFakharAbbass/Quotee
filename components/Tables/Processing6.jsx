@@ -4,6 +4,7 @@ import Modal from '../Modal'
 function Processing6() {
 
   const [show, setShow] = useState(false);
+  const [error, setError] = useState({});
 
   const handleSelect = () => {
     dispatch(setProducts("")),
@@ -13,6 +14,7 @@ function Processing6() {
 
   const handleModalClick = () => {
     setShow(true)
+    setError({email: "" ,phone: ""})
 }
 
   return (
@@ -105,7 +107,7 @@ function Processing6() {
         <div className='cursor-pointer w-[200px] text-[#008BBF] font-medium bg-[#ECF8FD] flex items-center justify-center h-[55px] rounded-[10px]' onClick={handleSelect} style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }}>Select Again</div>
         <button className='w-[200px] text-[#FFFFFF] font-medium bg-[#008BBF] flex items-center justify-center h-[55px] rounded-[10px]' style={{boxShadow : "0px 4px 4px rgba(0, 0, 0, 0.25)"}} onClick={handleModalClick}>SUBMIT</button>
       </div>
-      <Modal show={show} setShow={setShow} handleModalClick={handleModalClick}/>
+      <Modal show={show} error={error} setError={setError}  setShow={setShow} handleModalClick={handleModalClick}/>
     </div>
   )
 }

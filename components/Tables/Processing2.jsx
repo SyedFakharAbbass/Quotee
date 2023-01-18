@@ -4,6 +4,7 @@ import Modal from '../Modal'
 function Processing2() {
 
   const [show, setShow] = useState(false);
+  const [error, setError] = useState({});
   
   const handleSelect = () => {
     dispatch(setProducts("")),
@@ -14,6 +15,7 @@ function Processing2() {
       
   const handleModalClick = () => {
     setShow(true)
+    setError({email: "" ,phone: ""})
 }
 
   return (
@@ -143,7 +145,7 @@ function Processing2() {
         
 
       </div>
-      <Modal show={show} setShow={setShow} handleModalClick={handleModalClick}/>
+      <Modal show={show} setShow={setShow} error={error} setError={setError}  handleModalClick={handleModalClick}/>
     </div>
   )
 }
