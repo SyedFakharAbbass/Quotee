@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 
-const Mylar = ({formsInput}) => {
+const Mylar = () => {
 
     const { products  ,form1 } = useSelector((state) => state.data)
 
@@ -40,7 +40,7 @@ const Mylar = ({formsInput}) => {
                         <label for="bordered-checkbox-2" className=" py-4 ml-2 text-sm font-medium text-[22px] mr-4 text-[#008bbf]">Dimensions :</label>
                     </div>
                     <div>
-                        <p className='text-[15px]'>{`${form1.height} x ${form1.width && form1.width}`}</p>
+                        <p className='text-[15px]'>{`${form1?.height === undefined ? "" : form1.height} x ${form1?.width === undefined ? "" : form1.width}`}</p>
                     </div>
                 </div>}
                 {form1.barrier_material && <div className='flex pt-8 pl-10'>

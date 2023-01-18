@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { setProducts, setStyles } from '../redux/data';
+import { setForm, setProducts, setStyles } from '../redux/data';
 
 const Products = () => {
 
-    const { products } = useSelector((state) => state.data);
+    const { products ,form1 } = useSelector((state) => state.data);
     const [colors, setColors] = useState(true)
 
     const dispatch = useDispatch();
@@ -16,25 +16,28 @@ const Products = () => {
     const handleClick = () => {
         dispatch(setProducts("one"))
         dispatch(setStyles(""))
+        dispatch(setForm({ ...form1 , product: "MyLar Bag" }));
     }
 
     const handleClick2 = () => {
         dispatch(setProducts("two"))
         dispatch(setStyles(""))
+        dispatch(setForm({ ...form1 ,product: "Label & Stickers" }))
     }
 
     const handleClick3 = () => {
         dispatch(setProducts("three"))
         dispatch(setStyles(""))
+        dispatch(setForm({ ...form1 ,product: "Boxes" }))
     }
 
     useEffect(() => {
         const intervalId = setInterval(() => {
-          setColors(!colors);
+            setColors(!colors);
         }, 500);
         return () => clearInterval(intervalId);
-      }, [colors]);
-    
+    }, [colors]);
+
 
     return (
         <div className='container '>
@@ -79,7 +82,7 @@ const Products = () => {
                             {
                                 colors ?
                                     <button className='flex m-auto content-center w-[175px] h-[60px] bg-[#008BBF] justify-center text-white items-center p-3 rounded-[10px]'><img className='pr-2' src="/images/vector.png" />CHAT NOW</button>
-                                    : <button className='flex m-auto content-center w-[175px] h-[60px] justify-center bg-[#DBF4FF] text-[#008BBF] font-extrabold items-center p-3 rounded-[10px]' style={{boxShadow :  "0px 4px 4px rgba(0, 0, 0, 0.25)"}}><img className='pr-2' src="/images/vector1.png" />CHAT NOW</button>
+                                    : <button className='flex m-auto content-center w-[175px] h-[60px] justify-center bg-[#DBF4FF] text-[#008BBF] font-extrabold items-center p-3 rounded-[10px]' style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }}><img className='pr-2' src="/images/vector1.png" />CHAT NOW</button>
                             }
                         </div>
                     </div>
