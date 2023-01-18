@@ -1,12 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Modal from '../Modal'
 
 function Processing9() {
 
-  const handleSelect = () => [
+  const [show, setShow] = useState(false);
+
+  const handleSelect = () => {
     dispatch(setProducts("")),
     dispatch(setStyles("")),
     dispatch(setForm({}))
-  ]
+}
+
+  const handleModalClick = () => {
+    setShow(true)
+}
+
   return (
     <div>
       <div className='container'>
@@ -30,10 +38,11 @@ function Processing9() {
 
         <div className='flex absolute left-[50%] setDatas mt-[60px] gap-[35px]'>
           <div className='cursor-pointer w-[200px] text-[#008BBF] font-medium bg-[#ECF8FD] flex items-center justify-center h-[55px] rounded-[10px]' onClick={handleSelect} style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }}>Select Again</div>
-          <button className='w-[200px] text-[#FFFFFF] font-medium bg-[#008BBF] flex items-center justify-center h-[55px] rounded-[10px]' style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }} type='submit'>SUBMIT</button>
+          <button className='w-[200px] text-[#FFFFFF] font-medium bg-[#008BBF] flex items-center justify-center h-[55px] rounded-[10px]' style={{boxShadow : "0px 4px 4px rgba(0, 0, 0, 0.25)"}} onClick={handleModalClick}>SUBMIT</button>
         </div>
 
       </div>
+      <Modal show={show} setShow={setShow} handleModalClick={handleModalClick}/>
     </div>
   )
 }
