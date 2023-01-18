@@ -42,7 +42,7 @@ function Processing5() {
                         <div className='flex mr-[50px]'>
                             <div className='flex items-end w-[519px] justify-between'>
                                 <div className='flex flex-col'>
-                                    <p className='text-[#008bbf]'>Size <span className='text-black'> (Inches/mm)</span></p>
+                                    <p className='text-[#008bbf] font-medium'>Size <span className='text-black'> (Inches/mm)</span></p>
                                     <input className='bg-[#ECF8FD] p-2 w-[219.13px] outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' name="height" onChange={handleChange} value={formData.height}  type="text" placeholder='Height' />
                                 </div>
                                 <p className='font-bold pt-1 mb-4'>x</p>
@@ -51,7 +51,7 @@ function Processing5() {
                         </div>
 
                         <div className='w-[381px]'>
-                            <p className='text-[#008bbf]'>Material</p>
+                            <p className='text-[#008bbf] font-medium'>Material</p>
                             <div>
                                 <select name='print_material' onChange={handleChange} value={formData.print_material} className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' >
                                     <option hidden>None</option>
@@ -71,7 +71,7 @@ function Processing5() {
                     <div className='flex justify-between mt-[30px]'>
                         <div className='mr-[50px]'>
                             <div className='w-[519px]'>
-                                <p className='text-[#008bbf]'>Embellishment</p>
+                                <p className='text-[#008bbf] font-medium'>Embellishment</p>
                                 <div>
                                     <select  name='embellishment' onChange={handleChange} value={formData.embellishment} className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' >
                                         <option hidden>None</option>
@@ -84,7 +84,7 @@ function Processing5() {
                             </div>
                         </div>
                         <div className=' w-[381px]'>
-                            <p className='text-[#008bbf]'>Direction</p>
+                            <p className='text-[#008bbf] font-medium'>Direction</p>
                             <div>
                                 <select name='direction' onChange={handleChange} value={formData.direction}  className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' >
                                     <option hidden>None</option>
@@ -101,7 +101,7 @@ function Processing5() {
 
                     <div className='flex justify-between'>
                         <div className='pt-5 w-[519px] mr-[50px]'>
-                            <p className='text-[#008bbf]'>Total Number of Design</p>
+                            <p className='text-[#008bbf] font-medium'>Total Number of Design</p>
                             <div className='w-[519px]'>
                                 <input name="total_design" onChange={handleChange} placeholder='Add total number of design' type='number' value={formData.total_design} className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf px-3 rounded-[10px] h-[55px]'>
                                     
@@ -113,7 +113,7 @@ function Processing5() {
                         </div>
 
                         <div className=' pt-5 w-[381px]'>
-                            <p className='text-[#008bbf]'>Total Quantity</p>
+                            <p className='text-[#008bbf] font-medium'>Total Quantity</p>
                             <div>
                                 <input name="total_qty" onChange={handleChange} value={formData.total_qty}  className='w-full text-[#008bbf] bg-[#ECF8FD] h-[55px] rounded-[10px] px-3' type="text" placeholder='Enter...' />
                             </div>

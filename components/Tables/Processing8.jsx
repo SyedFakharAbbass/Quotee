@@ -59,7 +59,7 @@ function Processing8() {
             </div>
           </div>
 
-          <p className='text-[15px] pt-1'>Let our experts to discuss about your quote</p>
+          <p className='text-[15px] pt-1'>Let Our Experts To Discuss About Your Quote</p>
         </div>
 
         <div className='flex absolute left-[50%] setDatas mt-[60px] gap-[35px] pb-12'>

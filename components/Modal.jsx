@@ -40,7 +40,7 @@ function Modal({ show, setShow, handleModalClick ,setError ,error}) {
             {show && <div><div className="bg-opacity-50 flex h-[100vh] fixed justify-center items-center top-0 right-0 bottom-0 left-0" onClick={() => setShow(false)} style={{ background: "rgba(12, 11, 11, 0.8)" }}>
             </div>
                 <div className="bg-white min-w-[650px] max-w-[100%] pt-[30px] pb-[25px] px-[60px] rounded-[10px] text-center fixed main_class">
-                    <h1 className="mb-[30px] font-bold text-[26px] text-[#008BBF]">You are Just one step ahead..!</h1>
+                    <h1 className="mb-[30px] font-bold text-[26px] text-[#008BBF]">You Are Just One Step Ahead..!</h1>
                     <div className='flex flex-col mb-[15px]'>
                         <label className='mr-auto text-[#008BBF] font-medium'>Email Address</label>
                         <input type="email" name="email" value={data.email} onChange={handleChange} className='px-[12px] h-[60px] rounded-[10px] border-[1px] border-[#008BBF]' />

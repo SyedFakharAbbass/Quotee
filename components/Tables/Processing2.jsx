@@ -47,15 +47,15 @@ function Processing2() {
   const handleCheck = () => {
     setCheckedIcons(true)
     setCheckedIcons2(false)
-    setFormData({ ...formData, hanghole: "rounded" });
-    dispatch(setForm({ ...formData, hanghole: "rounded" }))
+    setFormData({ ...formData, hanghole: "Rounded" });
+    dispatch(setForm({ ...formData, hanghole: "Rounded" }))
   }
 
   const handleCheck2 = () => {
     setCheckedIcons(false)
     setCheckedIcons2(true)
-    setFormData({ ...formData, hanghole: "euro" });
-    dispatch(setForm({ ...formData, hanghole: "euro" }))
+    setFormData({ ...formData, hanghole: "Euro" });
+    dispatch(setForm({ ...formData, hanghole: "Euro" }))
   }
 
   const handleIcons = () => {
@@ -76,8 +76,8 @@ function Processing2() {
       setFormData({ ...formData, tear: "" });
       dispatch(setForm({ ...formData, tear: "" }))
     } else {
-      setFormData({ ...formData, tear: "yes" });
-      dispatch(setForm({ ...formData, tear: "yes" }))
+      setFormData({ ...formData, tear: "Yes" });
+      dispatch(setForm({ ...formData, tear: "Yes" }))
     }
   }
   return (
@@ -89,7 +89,7 @@ function Processing2() {
             <div className='flex mr-[50px]'>
               <div className='flex items-end w-[519px] justify-between'>
                 <div className='flex flex-col'>
-                  <p className='text-[#008bbf]'>Size <span className='text-black'> (Inches/mm)</span></p>
+                  <p className='text-[#008bbf] font-medium'>Size <span className='text-black'> (Inches/mm)</span></p>
                   <input name="height" onChange={handleChange} value={formData.height} className='bg-[#ECF8FD] p-2 w-[139.08px] outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' type="text" placeholder='Height' />
                 </div>
                 <p className='font-bold pt-1 mb-4'>x</p>
@@ -100,7 +100,7 @@ function Processing2() {
             </div>
 
             <div className='w-[381px]'>
-              <p className='text-[#008bbf]'>Barrier Material</p>
+              <p className='text-[#008bbf] font-medium'>Barrier Material</p>
               <div>
                 <select name='barrier_material' onChange={handleChange} value={formData.barrier_material} className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]'>
                   <option hidden>None</option>
@@ -116,7 +116,7 @@ function Processing2() {
           <div className='flex justify-between mt-[30px]'>
             <div className='mr-[50px]'>
               <div className='w-[519px]'>
-                <p className='text-[#008bbf]'>Print material</p>
+                <p className='text-[#008bbf] font-medium'>Print material</p>
                 <div>
                   <select name='print_material' onChange={handleChange} value={formData.print_material} className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]'>
                     <option hidden>None</option>
@@ -128,7 +128,7 @@ function Processing2() {
               </div>
             </div>
             <div className=' w-[381px]'>
-              <p className='text-[#008bbf]'>Embellishment</p>
+              <p className='text-[#008bbf] font-medium'>Embellishment</p>
               <div>
                 <select name='embellishment' onChange={handleChange} value={formData.embellishment} className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]'>
                   <option hidden>None</option>
@@ -170,7 +170,7 @@ function Processing2() {
 
           <div className='flex justify-between'>
             <div className='pt-5 w-[519px] mr-[50px]'>
-              <p className='text-[#008bbf]'>Total Number of Design</p>
+              <p className='text-[#008bbf] font-medium'>Total Number of Design</p>
 
               <div className='w-[519px]'>
                 <input name="total_design" onChange={handleChange} placeholder='Add total number of design' type='number' value={formData.total_design} className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf px-3 rounded-[10px] h-[55px]'>
@@ -184,7 +184,7 @@ function Processing2() {
             </div>
 
             <div className=' pt-5 w-[381px]'>
-              <p className='text-[#008bbf]'>Total Quantity</p>
+              <p className='text-[#008bbf] font-medium'>Total Quantity</p>
               <div>
                 <input name="total_qty" onChange={handleChange} value={formData.total_qty} className='w-full text-[#008bbf] bg-[#ECF8FD] h-[55px] rounded-[10px] px-3' type="text" placeholder='Enter...' />
               </div>
