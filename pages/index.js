@@ -35,31 +35,40 @@ export default function Home() {
 
   useEffect(() => {
     if (styles === "style1") {
-      dispatch(setForm({ ...form1, product: form1.product, product_style: "Flat Pouch" }))
+      const data = form1.product
+      dispatch(setForm({ data , product: form1.product, product_style: "Flat Pouch" }))
     }
     if (styles === "style2") {
-      dispatch(setForm({ ...form1, product: form1.product, product_style: "Stand Up Pouch" }))
+      const data = form1.product
+      dispatch(setForm({ data , product: form1.product, product_style: "Stand Up Pouch" }))
     }
     if (styles === "style3") {
-      dispatch(setForm({ ...form1, product: form1.product, product_style: "Roll Stock" }))
+      const data = form1.product
+      dispatch(setForm({ data , product: form1.product, product_style: "Roll Stock" }))
     }
     if (styles === "style4") {
-      dispatch(setForm({ ...form1, product: form1.product, product_style: "Cut-to-Size" }))
+      const data = form1.product
+      dispatch(setForm({ data , product: form1.product, product_style: "Cut-to-Size" }))
     }
     if (styles === "style5") {
-      dispatch(setForm({ ...form1, product: form1.product, product_style: "Roll" }))
+      const data = form1.product
+      dispatch(setForm({ data , product: form1.product, product_style: "Roll" }))
     }
     if (styles === "style6") {
-      dispatch(setForm({ ...form1, product: form1.product, product_style: "Sheet" }))
+      const data = form1.product
+      dispatch(setForm({ data , product: form1.product, product_style: "Sheet" }))
     }
     if (styles === "style7") {
-      dispatch(setForm({ ...form1, product: form1.product, product_style: "Tuck Box" }))
+      const data = form1.product
+      dispatch(setForm({ data , product: form1.product, product_style: "Tuck Box" }))
     }
     if (styles === "style8") {
-      dispatch(setForm({ ...form1, product: form1.product, product_style: "Rigid Box" }))
+      const data = form1.product
+      dispatch(setForm({ data , product: form1.product, product_style: "Rigid Box" }))
     }
     if (styles === "style9") {
-      dispatch(setForm({ ...form1, product: form1.product, product_style: "Mailer Box" }))
+      const data = form1.product
+      dispatch(setForm({ data , product: form1.product, product_style: "Mailer Box" }))
     }
   }, [styles])
 
