@@ -45,13 +45,8 @@ function Processing6() {
                   <p className='text-[#008bbf]'>Size <span className='text-black'> (Inches/mm)</span></p>
                   <input name="height" onChange={handleChange} value={formData.height} className='bg-[#ECF8FD] p-2 w-[219.13px] outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' type="text" placeholder='Height' />
                 </div>
-<<<<<<< Updated upstream
-                <p className='font-medium pt-1 mb-4  text-[22px]'>x</p>
-                <input className='bg-[#ECF8FD] p-2 outline-none w-[219.13px] border-none hover:#008bbf rounded-[10px] h-[55px]' type="text" placeholder='Width' />
-=======
                 <p className='font-bold pt-1 mb-4'>x</p>
                 <input name="width" onChange={handleChange} value={formData.width} className='bg-[#ECF8FD] p-2 outline-none w-[219.13px] border-none hover:#008bbf rounded-[10px] h-[55px]' type="text" placeholder='Width' />
->>>>>>> Stashed changes
               </div>
             </div>
 

@@ -27,7 +27,6 @@ function Modal({ show, setShow, handleModalClick ,setError ,error}) {
 
     const handleChange = (e) => {
         setData({ ...data, [e.target.name]: e.target.value });
-        const subData = { ...form1, ...data,  [e.target.name]: e.target.value }
         dispatch(setForm({ ...form1, ...data,  [e.target.name]: e.target.value }))
     }
     useEffect(()=>{
