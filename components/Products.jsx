@@ -4,7 +4,7 @@ import { setForm, setProducts, setStyles } from '../redux/data';
 
 const Products = () => {
 
-    const { products ,form1 } = useSelector((state) => state.data);
+    const { products, form1 } = useSelector((state) => state.data);
     const [colors, setColors] = useState(true)
 
     const dispatch = useDispatch();
@@ -16,19 +16,19 @@ const Products = () => {
     const handleClick = () => {
         dispatch(setProducts("one"))
         dispatch(setStyles(""))
-        dispatch(setForm({ ...form1 , product: "MyLar Bag" }));
+        dispatch(setForm({ ...form1, product: "MyLar Bag" }));
     }
 
     const handleClick2 = () => {
         dispatch(setProducts("two"))
         dispatch(setStyles(""))
-        dispatch(setForm({ ...form1 ,product: "Label & Stickers" }))
+        dispatch(setForm({ ...form1, product: "Label & Stickers" }))
     }
 
     const handleClick3 = () => {
         dispatch(setProducts("three"))
         dispatch(setStyles(""))
-        dispatch(setForm({ ...form1 ,product: "Boxes" }))
+        dispatch(setForm({ ...form1, product: "Boxes" }))
     }
 
     useEffect(() => {
@@ -46,32 +46,47 @@ const Products = () => {
                 <div className='flex flex-wrap mx-[30px]'>
                     <div className={`w-[250px]  bg-[#ECF8FD] mr-[20px] h-[300px] mb-[20px] cursor-pointer rounded-[10px] ${products === "one" ? "selected" : ""}`} onClick={handleClick}>
                         <img className='w-[200px]  m-auto' src="/images/lerbag.png" alt="" />
-                        <div className='px-[25px]'>
-                            <div className="flex items-center pl-4">
-                                <input type="checkbox" checked={products === "one" ? true : false} className="w-4 h-4 cursor-pointer text-blue-600 rounded " />
-                                <label for="bordered-checkbox-2" className="w-full py-4 ml-1 text-sm font-medium text-[20px] cursor-pointer text-[#008bbf] changed">MyLar Bag/Pouch</label>
+                        <div className='mt-2'>
+                            <div className="flex items-center justify-center">
+                                <div>
+                                    <input type="checkbox" checked={products === "one" ? true : false} className="w-4 h-4 cursor-pointer text-blue-600 rounded " />
+                                </div>
+                                <div>
+                                    <label for="bordered-checkbox-2" className="w-full py-4 ml-1 text-sm font-medium text-[20px] cursor-pointer text-[#008bbf] changed">MyLar Bag/Pouch</label>
+                                </div>
                             </div>
-                            <p className='text-[10px] items-center text-[#008bbf] pb-4 text_data'>Custom plane or printed myler bags are prefect solution for your product</p>
+                            <div></div>
+                            <p className='text-[10px] items-center text-[#008bbf] py-4 px-[39px] text_data'>Custom plane or printed myler bags are prefect solution for your product</p>
                         </div>
                     </div>
                     <div className={`w-[250px]  bg-[#ECF8FD] mr-[20px] h-[300px] mb-[20px] cursor-pointer rounded-[10px] ${products === "two" ? "selected" : ""}`} onClick={handleClick2} >
                         <img className='w-[200px]  m-auto' src="/images/sticker.png" alt="" />
-                        <div className='px-[25px]'>
-                            <div className="flex items-center pl-4 ">
-                                <input type="checkbox" checked={products === "two" ? true : false} className="w-4 h-4 cursor-pointer text-blue-600 rounded " />
-                                <label for="bordered-checkbox-2" className="w-full py-4 ml-2 text-sm font-medium text-[22px] cursor-pointer text-[#008bbf] changed"> Label & Stickers</label>
+                        <div className='mt-2'>
+                            <div className="flex items-center justify-center">
+                                <div>
+                                    <input type="checkbox" checked={products === "two" ? true : false} className="w-4 h-4 cursor-pointer text-blue-600 rounded " />
+                                </div>
+                                <div>
+                                    <label for="bordered-checkbox-2" className="w-full py-4 ml-2 font-medium text-[20px] cursor-pointer text-[#008bbf] changed"> Label & Stickers</label>
+                                </div>
                             </div>
-                            <p className='text-[10px] items-center text-[#008bbf] pb-4  text_data'>Custom plane or printed myler bags are prefect solution for your product</p>
+                            <div></div>
+                            <p className='text-[10px] items-center text-[#008bbf] py-4 px-[39px] text_data'>Custom plane or printed myler bags are prefect solution for your product</p>
                         </div>
                     </div>
                     <div className={`w-[250px]  bg-[#ECF8FD] mr-[20px] h-[300px] mb-[20px] cursor-pointer rounded-[10px] ${products === "three" ? "selected" : ""}`} onClick={handleClick3} >
                         <img className='w-[200px]  m-auto' src="/images/boxes.png" alt="" />
-                        <div className='px-[25px]'>
-                            <div className="flex items-center pl-4 ">
-                                <input type="checkbox" checked={products === "three" ? true : false} className="w-4 h-4 cursor-pointer text-blue-600 rounded " />
-                                <label for="bordered-checkbox-2" className="w-full py-4 ml-2 text-sm font-medium text-[22px] cursor-pointer text-[#008bbf] changed">Boxes</label>
+                        <div className='mt-2'>
+                            <div className="flex items-center justify-center ">
+                                <div>
+                                    <input type="checkbox" checked={products === "three" ? true : false} className="w-4 h-4 mt-2 cursor-pointer text-blue-600 rounded " />
+                                </div>
+                                <div>
+                                    <label for="bordered-checkbox-2" className="w-full py-4 ml-2 font-medium text-[20px] cursor-pointer text-[#008bbf] changed">Boxes</label>
+                                </div>
                             </div>
-                            <p className='text-[10px] items-center text-[#008bbf] pb-4 text_data'>Custom plane or printed myler bags are prefect solution for your product</p>
+                            <div></div>
+                            <p className='text-[10px] items-center text-[#008bbf] py-4 px-[39px] text_data'>Custom plane or printed myler bags are prefect solution for your product</p>
                         </div>
                     </div>
                     <div className='h-[300px] w-[250px] bg-[#ECF8FD] px-[25px] cursor-pointer rounded-[10px]'>

@@ -103,13 +103,12 @@ function Processing5() {
                         <div className='pt-5 w-[519px] mr-[50px]'>
                             <p className='text-[#008bbf]'>Total Number of Design</p>
                             <div className='w-[519px]'>
-                                <select  name="total_design" onChange={handleChange} value={formData.total_design} className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' >
-                                    <option className='text-[#008bbf]' hidden>Select</option>
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>Custom</option>
-                                </select>
+                                <input name="total_design" onChange={handleChange} placeholder='Add total number of design' type='number' value={formData.total_design} className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf px-3 rounded-[10px] h-[55px]'>
+                                    
+                                </input>
+                                {/* {formData.total_design === "Custom" && <div>
+                                    <input name="total_design" onChange={handleChange} value={formData.total_qty} className='w-full text-[#008bbf] bg-[#ECF8FD] h-[55px] rounded-[10px] px-3' type="text" placeholder='Enter...' />
+                                </div>} */}
                             </div>
                         </div>
 
