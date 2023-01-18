@@ -13,29 +13,40 @@ function Processing2() {
   const [checkedIcons2, setCheckedIcons2] = useState(false);
   const [tear, setTear] = useState(false);
   const [formData, setFormData] = useState({});
+  const [zipper, setZipper] = useState(null);
 
   const dispatch = useDispatch();
-  
+
   const handleSelect = () => {
     dispatch(setProducts("")),
-    dispatch(setStyles("")),
-    dispatch(setForm({}))
+      dispatch(setStyles("")),
+      dispatch(setForm({}))
   }
 
-      
+  const handleZipper = () => {
+    setZipper(1)
+    setFormData({ ...formData, zipper: "Child Resistant" });
+    dispatch(setForm({ ...formData, zipper: "Child Resistant" }))
+}
+const handleZipper2 = () => {
+    setZipper(2)
+    setFormData({ ...formData, zipper: "Press to close standard powder proof" });
+    dispatch(setForm({ ...formData, zipper: "Press to close standard powder proof" }))
+}
+
   const handleCheck = () => {
     setCheckedIcons(true)
     setCheckedIcons2(false)
     setFormData({ ...formData, hanghole: "rounded" });
     dispatch(setForm({ ...formData, hanghole: "rounded" }))
-}
+  }
 
-const handleCheck2 = () => {
+  const handleCheck2 = () => {
     setCheckedIcons(false)
     setCheckedIcons2(true)
     setFormData({ ...formData, hanghole: "euro" });
     dispatch(setForm({ ...formData, hanghole: "euro" }))
-}
+  }
 
   const handleIcons = () => {
     setShowIcons(!showIcons),
@@ -128,9 +139,9 @@ const handleCheck2 = () => {
             <div className=' w-[519px] mr-[50px]'>
               <div className='bg-[#ECF8FD] w-[519px] rounded-[10px]'>
                 <div className="flex items-center pl-4">
-                  <input type="checkbox" className="w-4 h-4 text-blue-600 pr-[10px]" />
+                  <input type="checkbox" checked={zipper === 1 ? true : false} onClick={handleZipper} className="w-4 h-4 text-blue-600 pr-[10px]" />
                   <label for="bordered-checkbox-2" className=" py-4 text-sm font-medium px-4  text-[#008bbf] ">Child Resistant</label>
-                  <input type="checkbox" className="w-4 h-4 text-blue-600 " />
+                  <input type="checkbox" checked={zipper === 2 ? true : false} onClick={handleZipper2} className="w-4 h-4 text-blue-600 " />
                   <label for="bordered-checkbox-2" className=" py-4 text-sm font-medium  px-4 text-[#008bbf]">Press to close standard powder proof</label>
                 </div>
               </div>
@@ -181,12 +192,12 @@ const handleCheck2 = () => {
 
         <div className='flex absolute left-[50%] setDatas mt-[60px] gap-[35px]'>
           <div className='cursor-pointer w-[200px] text-[#008BBF] font-medium bg-[#ECF8FD] flex items-center justify-center h-[55px] rounded-[10px]' onClick={handleSelect} style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }}>Select Again</div>
-          <button className='w-[200px] text-[#FFFFFF] font-medium bg-[#008BBF] flex items-center justify-center h-[55px] rounded-[10px]' style={{boxShadow : "0px 4px 4px rgba(0, 0, 0, 0.25)"}} onClick={handleModalClick}>SUBMIT</button>
+          <button className='w-[200px] text-[#FFFFFF] font-medium bg-[#008BBF] flex items-center justify-center h-[55px] rounded-[10px]' style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }} onClick={handleModalClick}>SUBMIT</button>
         </div>
-        
+
 
       </div>
-      <Modal show={show} setShow={setShow} error={error} setError={setError}  handleModalClick={handleModalClick}/>
+      <Modal show={show} setShow={setShow} error={error} setError={setError} handleModalClick={handleModalClick} />
     </div>
   )
 }
