@@ -8,19 +8,56 @@ function Processing3() {
   const [show, setShow] = useState(false);
   const [error, setError] = useState({});
 
+  const [showIcons, setShowIcons] = useState(false);
+  const [checkedIcons, setCheckedIcons] = useState(false);
+  const [checkedIcons2, setCheckedIcons2] = useState(false);
+  const [tear, setTear] = useState(false);
+  const [formData, setFormData] = useState({});
+
   const dispatch = useDispatch();
 
   const handleSelect = () => {
     dispatch(setProducts("")),
-    dispatch(setStyles("")),
-    dispatch(setForm({}))
+      dispatch(setStyles("")),
+      dispatch(setForm({}))
+  }
+
+  const handleCheck = () => {
+    setCheckedIcons(true)
+    setCheckedIcons2(false)
+    setFormData({ ...formData, hanghole: "rounded" });
+    dispatch(setForm({ ...formData, hanghole: "rounded" }))
 }
 
-  
+const handleCheck2 = () => {
+    setCheckedIcons(false)
+    setCheckedIcons2(true)
+    setFormData({ ...formData, hanghole: "euro" });
+    dispatch(setForm({ ...formData, hanghole: "euro" }))
+}
+
+  const handleIcons = () => {
+    setShowIcons(!showIcons),
+      dispatch(setForm({ ...formData, hanghole: "" }))
+    setCheckedIcons(false),
+      setCheckedIcons2(false)
+  }
+
   const handleModalClick = () => {
     setShow(true)
-    setError({email: "" ,phone: ""})
-}
+    setError({ email: "", phone: "" })
+  }
+
+  const handleTear = () => {
+    setTear(!tear);
+    if (tear) {
+      setFormData({ ...formData, tear: "" });
+      dispatch(setForm({ ...formData, tear: "" }))
+    } else {
+      setFormData({ ...formData, tear: "yes" });
+      dispatch(setForm({ ...formData, tear: "yes" }))
+    }
+  }
 
   return (
     <div className='mb-[60px]'>
@@ -40,12 +77,12 @@ function Processing3() {
             </div>
 
             <div className='flex items-center w-[381px] justify-between'>
-              <div className='bg-[#ECF8FD] h-[55px] items-center flex justify-center rounded-[10px] w-[160px]'>
-                <input type="checkbox" className=" h-4 text-blue-600 rounded" />
-                <label for="bordered-checkbox-2" className=" py-4 text-sm font-medium  px-2 text-[#008bbf] ">Hang Hole</label>
+              <div className='bg-[#ECF8FD] h-[55px] items-center flex justify-center rounded-[10px] w-[160px] pl-[8px]'>
+                <input type="checkbox" onClick={handleIcons} className=" h-4 text-blue-600 rounded" />
+                <label for="bordered-checkbox-2" className="flex labled py-4 text-sm font-medium  px-2 text-[#008bbf] "><span className='text-[14px]'>Hang Hole</span>{showIcons && <div className='flex items-center'>{!checkedIcons ? <img src="/images/img1.png" className='unckecked' alt="" onClick={handleCheck} /> : <img src="/images/img2.png" className='ckecked' alt="" onClick={handleCheck} />} {!checkedIcons2 ? <img src="/images/img4.png" className='unckecked' alt="" onClick={handleCheck2} /> : <img src="/images/img3.png" className='ckecked' alt="" onClick={handleCheck2} />} </div>}</label>
               </div>
               <div className='bg-[#ECF8FD] h-[55px] items-center flex justify-center rounded-[10px]  w-[120px]'>
-                <input type="checkbox" className=" h-4 text-blue-600 rounded" />
+                <input type="checkbox" checked={tear} onClick={handleTear} className=" h-4 text-blue-600 rounded" />
                 <label for="bordered-checkbox-2" className=" py-4 text-sm font-medium px-2  text-[#008bbf] ">Tear Notch</label>
               </div>
             </div>
@@ -162,10 +199,10 @@ function Processing3() {
 
         <div className='flex absolute left-[50%] setDatas mt-[60px] gap-[35px]'>
           <div className='cursor-pointer w-[200px] text-[#008BBF] font-medium bg-[#ECF8FD] flex items-center justify-center h-[55px] rounded-[10px]' onClick={handleSelect} style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }}>Select Again</div>
-          <button className='w-[200px] text-[#FFFFFF] font-medium bg-[#008BBF] flex items-center justify-center h-[55px] rounded-[10px]' style={{boxShadow : "0px 4px 4px rgba(0, 0, 0, 0.25)"}} onClick={handleModalClick}>SUBMIT</button>
+          <button className='w-[200px] text-[#FFFFFF] font-medium bg-[#008BBF] flex items-center justify-center h-[55px] rounded-[10px]' style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }} onClick={handleModalClick}>SUBMIT</button>
         </div>
       </div>
-      <Modal show={show} setShow={setShow} error={error} setError={setError}  handleModalClick={handleModalClick}/>
+      <Modal show={show} setShow={setShow} error={error} setError={setError} handleModalClick={handleModalClick} />
     </div>
   )
 }

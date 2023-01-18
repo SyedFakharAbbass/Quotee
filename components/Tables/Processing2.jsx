@@ -8,6 +8,12 @@ function Processing2() {
   const [show, setShow] = useState(false);
   const [error, setError] = useState({});
 
+  const [showIcons, setShowIcons] = useState(false);
+  const [checkedIcons, setCheckedIcons] = useState(false);
+  const [checkedIcons2, setCheckedIcons2] = useState(false);
+  const [tear, setTear] = useState(false);
+  const [formData, setFormData] = useState({});
+
   const dispatch = useDispatch();
   
   const handleSelect = () => {
@@ -17,11 +23,42 @@ function Processing2() {
   }
 
       
-  const handleModalClick = () => {
-    setShow(true)
-    setError({email: "" ,phone: ""})
+  const handleCheck = () => {
+    setCheckedIcons(true)
+    setCheckedIcons2(false)
+    setFormData({ ...formData, hanghole: "rounded" });
+    dispatch(setForm({ ...formData, hanghole: "rounded" }))
 }
 
+const handleCheck2 = () => {
+    setCheckedIcons(false)
+    setCheckedIcons2(true)
+    setFormData({ ...formData, hanghole: "euro" });
+    dispatch(setForm({ ...formData, hanghole: "euro" }))
+}
+
+  const handleIcons = () => {
+    setShowIcons(!showIcons),
+      dispatch(setForm({ ...formData, hanghole: "" }))
+    setCheckedIcons(false),
+      setCheckedIcons2(false)
+  }
+
+  const handleModalClick = () => {
+    setShow(true)
+    setError({ email: "", phone: "" })
+  }
+
+  const handleTear = () => {
+    setTear(!tear);
+    if (tear) {
+      setFormData({ ...formData, tear: "" });
+      dispatch(setForm({ ...formData, tear: "" }))
+    } else {
+      setFormData({ ...formData, tear: "yes" });
+      dispatch(setForm({ ...formData, tear: "yes" }))
+    }
+  }
   return (
     <div className='mb-[60px]'>
       <div className='container'>
@@ -99,12 +136,12 @@ function Processing2() {
               </div>
             </div>
             <div className='flex items-center w-[381px] justify-between'>
-              <div className='bg-[#ECF8FD] h-[55px] items-center flex justify-center rounded-[10px] w-[160px]'>
-                <input type="checkbox" className=" h-4 text-blue-600 rounded" />
-                <label for="bordered-checkbox-2" className=" py-4 text-sm font-medium  px-2 text-[#008bbf] ">Hang Hole</label>
+              <div className='bg-[#ECF8FD] h-[55px] items-center flex justify-center rounded-[10px] w-[160px] pl-[8px]'>
+                <input type="checkbox" onClick={handleIcons} className=" h-4 text-blue-600 rounded" />
+                <label for="bordered-checkbox-2" className="flex labled py-4 text-sm font-medium  px-2 text-[#008bbf] "><span className='text-[14px]'>Hang Hole</span>{showIcons && <div className='flex items-center'>{!checkedIcons ? <img src="/images/img1.png" className='unckecked' alt="" onClick={handleCheck} /> : <img src="/images/img2.png" className='ckecked' alt="" onClick={handleCheck} />} {!checkedIcons2 ? <img src="/images/img4.png" className='unckecked' alt="" onClick={handleCheck2} /> : <img src="/images/img3.png" className='ckecked' alt="" onClick={handleCheck2} />} </div>}</label>
               </div>
               <div className='bg-[#ECF8FD] h-[55px] items-center flex justify-center rounded-[10px]  w-[120px]'>
-                <input type="checkbox" className=" h-4 text-blue-600 rounded" />
+                <input type="checkbox" checked={tear} onClick={handleTear} className=" h-4 text-blue-600 rounded" />
                 <label for="bordered-checkbox-2" className=" py-4 text-sm font-medium px-2  text-[#008bbf] ">Tear Notch</label>
               </div>
             </div>
