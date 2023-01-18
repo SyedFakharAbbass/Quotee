@@ -37,7 +37,7 @@ function Processing8() {
           <p className='text-[15px] pt-1'>Let our experts to discuss about your quote</p>
         </div>
 
-        <div className='flex absolute left-[50%] setDatas mt-[60px] gap-[35px]'>
+        <div className='flex absolute left-[50%] setDatas mt-[60px] gap-[35px] pb-12'>
           <div className='cursor-pointer w-[200px] text-[#008BBF] font-medium bg-[#ECF8FD] flex items-center justify-center h-[55px] rounded-[10px]' onClick={handleSelect} style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }}>Select Again</div>
           <button className='w-[200px] text-[#FFFFFF] font-medium bg-[#008BBF] flex items-center justify-center h-[55px] rounded-[10px]' style={{boxShadow : "0px 4px 4px rgba(0, 0, 0, 0.25)"}} onClick={handleModalClick}>SUBMIT</button>
         </div>
