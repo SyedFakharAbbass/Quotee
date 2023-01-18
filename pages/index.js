@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Header from '@/components/Header'
 import Image from 'next/image'
-import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 import Products from '@/components/Products'
 import Styles from '@/components/Styles'
@@ -36,39 +35,39 @@ export default function Home() {
   useEffect(() => {
     if (styles === "style1") {
       const data = form1.product
-      dispatch(setForm({ data , product: form1.product, product_style: "Flat Pouch" }))
+      dispatch(setForm({ product: data, product_style: "Flat Pouch" }))
     }
     if (styles === "style2") {
       const data = form1.product
-      dispatch(setForm({ data , product: form1.product, product_style: "Stand Up Pouch" }))
+      dispatch(setForm({ product: data, product_style: "Stand Up Pouch" }))
     }
     if (styles === "style3") {
       const data = form1.product
-      dispatch(setForm({ data , product: form1.product, product_style: "Roll Stock" }))
+      dispatch(setForm({ product: data, product_style: "Roll Stock" }))
     }
     if (styles === "style4") {
       const data = form1.product
-      dispatch(setForm({ data , product: form1.product, product_style: "Cut-to-Size" }))
+      dispatch(setForm({ product: data, product_style: "Cut-to-Size" }))
     }
     if (styles === "style5") {
       const data = form1.product
-      dispatch(setForm({ data , product: form1.product, product_style: "Roll" }))
+      dispatch(setForm({ product: data, product_style: "Roll" }))
     }
     if (styles === "style6") {
       const data = form1.product
-      dispatch(setForm({ data , product: form1.product, product_style: "Sheet" }))
+      dispatch(setForm({ product: data, product_style: "Sheet" }))
     }
     if (styles === "style7") {
       const data = form1.product
-      dispatch(setForm({ data , product: form1.product, product_style: "Tuck Box" }))
+      dispatch(setForm({ product: data, product_style: "Tuck Box" }))
     }
     if (styles === "style8") {
       const data = form1.product
-      dispatch(setForm({ data , product: form1.product, product_style: "Rigid Box" }))
+      dispatch(setForm({ product: data, product_style: "Rigid Box" }))
     }
     if (styles === "style9") {
       const data = form1.product
-      dispatch(setForm({ data , product: form1.product, product_style: "Mailer Box" }))
+      dispatch(setForm({ product: data, product_style: "Mailer Box" }))
     }
   }, [styles])
 

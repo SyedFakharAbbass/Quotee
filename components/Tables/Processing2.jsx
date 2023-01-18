@@ -1,12 +1,14 @@
 import { setForm, setProducts, setStyles } from '@/redux/data';
-import React, { useState } from 'react'
-import { useDispatch } from 'react-redux';
+import React, { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
 import Modal from '../Modal'
 
 function Processing2() {
 
   const [show, setShow] = useState(false);
   const [error, setError] = useState({});
+
+  const { form1 } = useSelector((state) => state.data)
 
   const [showIcons, setShowIcons] = useState(false);
   const [checkedIcons, setCheckedIcons] = useState(false);
@@ -16,6 +18,14 @@ function Processing2() {
   const [zipper, setZipper] = useState(null);
 
   const dispatch = useDispatch();
+
+  const handleChange = (e) => {
+    // setFormData({ ...formData, [e.target.name]: e.target.value });
+    dispatch(setForm({ ...formData, [e.target.name]: e.target.value }))
+  }
+  useEffect(() => {
+    setFormData({ ...form1 });
+  }, [form1]);
 
   const handleSelect = () => {
     dispatch(setProducts("")),
@@ -27,12 +37,12 @@ function Processing2() {
     setZipper(1)
     setFormData({ ...formData, zipper: "Child Resistant" });
     dispatch(setForm({ ...formData, zipper: "Child Resistant" }))
-}
-const handleZipper2 = () => {
+  }
+  const handleZipper2 = () => {
     setZipper(2)
     setFormData({ ...formData, zipper: "Press to close standard powder proof" });
     dispatch(setForm({ ...formData, zipper: "Press to close standard powder proof" }))
-}
+  }
 
   const handleCheck = () => {
     setCheckedIcons(true)

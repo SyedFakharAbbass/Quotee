@@ -1,5 +1,5 @@
 import { setForm, submitRequest } from '@/redux/data';
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { setProducts, setStyles } from '../../redux/data';
 import Modal from '../Modal';
@@ -8,7 +8,7 @@ const Processing = () => {
 
     const [show, setShow] = useState(false);
     const [error, setError] = useState({});
-    const { products , styles ,form1 } = useSelector((state) => state.data)
+    const { form1 } = useSelector((state) => state.data)
     const dispatch = useDispatch();
 
     const [formData, setFormData] = useState({});
@@ -19,10 +19,17 @@ const Processing = () => {
     const [zipper, setZipper] = useState(null);
 
     const handleChange = (e) => {
-        setFormData({ ...formData, product: form1.product ,product_style: form1.product_style, [e.target.name]: e.target.value });
-        dispatch(setForm({ ...formData, product: form1.product ,product_style: form1.product_style, [e.target.name]: e.target.value }))
+        // setFormData({ ...formData, [e.target.name]: e.target.value });
+        dispatch(setForm({ ...formData, [e.target.name]: e.target.value }))
     }
+    useEffect(()=>{
+        setFormData({ ...form1});
+    },[form1]);
 
+    console.log("form1",form1)
+     useEffect(()=>{
+       console.log("formData",formData)
+     },[formData])
     
     const handleModalClick = () => {
         setShow(true)
@@ -51,9 +58,9 @@ const Processing = () => {
     }
     const handleIcons = () => {
         setShowIcons(!showIcons),
-            dispatch(setForm({ ...formData, hanghole: "" }))
+        // dispatch(setForm({ ...formData, hanghole: "" }))
         setCheckedIcons(false),
-            setCheckedIcons2(false)
+        setCheckedIcons2(false)
     }
 
     const handleZipper = () => {

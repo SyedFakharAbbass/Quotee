@@ -1,6 +1,6 @@
 import { setForm, setProducts, setStyles } from '@/redux/data';
-import React, { useState } from 'react'
-import { useDispatch } from 'react-redux';
+import React, { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
 import Modal from '../Modal'
 
 function Processing9() {
@@ -8,7 +8,19 @@ function Processing9() {
   const [show, setShow] = useState(false);
   const [error, setError] = useState({});
 
+  const { form1 } = useSelector((state) => state.data)
+
+  const [formData, setFormData] = useState({});
+
   const dispatch = useDispatch();
+
+  const handleChange = (e) => {
+    // setFormData({ ...formData, [e.target.name]: e.target.value });
+    dispatch(setForm({ ...formData, [e.target.name]: e.target.value }))
+}
+useEffect(()=>{
+    setFormData({ ...form1});
+},[form1]);
 
   const handleSelect = () => {
     dispatch(setProducts("")),
@@ -44,7 +56,7 @@ function Processing9() {
 
         <div className='flex absolute left-[50%] setDatas mt-[60px] gap-[35px] pb-12'>
           <div className='cursor-pointer w-[200px] text-[#008BBF] font-medium bg-[#ECF8FD] flex items-center justify-center h-[55px] rounded-[10px]' onClick={handleSelect} style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }}>Select Again</div>
-          <button className='w-[200px] text-[#FFFFFF] font-medium bg-[#008BBF] flex items-center justify-center h-[55px] rounded-[10px]' style={{boxShadow : "0px 4px 4px rgba(0, 0, 0, 0.25)"}} onClick={handleModalClick}>SUBMIT</button>
+          <button className='w-[200px] text-[#FFFFFF] font-medium bg-[#008BBF] flex items-center justify-center h-[55px] rounded-[10px]' style={{boxShadow : "0px 4px 4px rgba(0, 0, 0, 0.25)"}} >SUBMIT</button>
         </div>
 
       </div>

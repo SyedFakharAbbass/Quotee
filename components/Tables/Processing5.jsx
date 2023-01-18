@@ -1,6 +1,6 @@
 import { setForm, setProducts, setStyles } from '@/redux/data';
-import React, { useState } from 'react'
-import { useDispatch } from 'react-redux';
+import React, { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
 import Modal from '../Modal'
 
 function Processing5() {
@@ -8,7 +8,19 @@ function Processing5() {
     const [show, setShow] = useState(false);
     const [error, setError] = useState({});
 
+    const { form1 } = useSelector((state) => state.data)
+
+    const [formData, setFormData] = useState({});
+
     const dispatch = useDispatch(); 
+
+    const handleChange = (e) => {
+        // setFormData({ ...formData, [e.target.name]: e.target.value });
+        dispatch(setForm({ ...formData, [e.target.name]: e.target.value }))
+    }
+    useEffect(()=>{
+        setFormData({ ...form1});
+    },[form1]);
 
     const handleSelect = () => {
         dispatch(setProducts("")),
