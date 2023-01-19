@@ -38,6 +38,17 @@ const Products = () => {
         return () => clearInterval(intervalId);
     }, [colors]);
 
+    const handleChat = () => {
+        // <script>
+        (function(w,d,u){
+                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+        })(window,document,'https://cdn.bitrix24.com/b24127555/crm/site_button/loader_1_rzvzu1.js');
+{/* </script> */}
+    }
+    useEffect(()=>{
+        document.getElementById("abcd").click();
+    },[])
 
     return (
         <div className='container '>
@@ -96,8 +107,8 @@ const Products = () => {
                         <div>
                             {
                                 colors ?
-                                    <button className='flex m-auto content-center w-[175px] h-[60px] bg-[#008BBF] justify-center text-white items-center p-3 rounded-[10px]'><img className='pr-2' src="/images/vector.png" />CHAT NOW</button>
-                                    : <button className='flex m-auto content-center w-[175px] h-[60px] justify-center bg-[#DBF4FF] text-[#008BBF] font-extrabold items-center p-3 rounded-[10px]' style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }}><img className='pr-2' src="/images/vector1.png" />CHAT NOW</button>
+                                    <button id="abcd" onClick={handleChat} className='flex m-auto content-center w-[175px] h-[60px] bg-[#008BBF] justify-center text-white items-center p-3 rounded-[10px]'><img className='pr-2' src="/images/vector.png" />CHAT NOW</button>
+                                    : <button id="abcd" onClick={handleChat} className='flex m-auto content-center w-[175px] h-[60px] justify-center bg-[#DBF4FF] text-[#008BBF] font-extrabold items-center p-3 rounded-[10px]' style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }}><img className='pr-2' src="/images/vector1.png" />CHAT NOW</button>
                             }
                         </div>
                     </div>

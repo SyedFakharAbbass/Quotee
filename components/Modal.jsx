@@ -2,7 +2,7 @@ import { setForm, submitRequest } from '@/redux/data';
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-function Modal({ show, setShow, handleModalClick ,setError ,error}) {
+function Modal({ show, setShow, handleModalClick, setError, error }) {
 
     const [data, setData] = useState({});
     const dispatch = useDispatch();
@@ -19,7 +19,16 @@ function Modal({ show, setShow, handleModalClick ,setError ,error}) {
         if (Object.keys(error).length > 0) {
             setError(error)
         } else {
-            dispatch(submitRequest({ ...form1 })).then((res) => {
+            const abcdd = { dimension: `${form1.height} x ${form1.width} x ${form1.length}`, email: form1.email, product: form1.product, product_style: form1.product_style, phone: form1.phone, barrier_material: form1.barrier_material, print_material: form1.print_material, embellishment: form1.embellishment, total_design: form1.total_design, special_requirement: form1.special_requirement, total_qty: form1.total_qty ,extra: {
+                hanghole: form1.hanghole,
+                tear: form1.tear,
+                zipper: form1.zipper,
+                direction: form1.direction,
+                finishing: form1.finishing,
+                paper_thickness: form1.paper_thickness,
+                spot_foiling: form1.spot_foiling
+            }}
+            dispatch(submitRequest({ ...abcdd })).then((res) => {
                 setShow(false);
             })
         }
@@ -27,13 +36,13 @@ function Modal({ show, setShow, handleModalClick ,setError ,error}) {
 
     const handleChange = (e) => {
         setData({ ...data, [e.target.name]: e.target.value });
-        dispatch(setForm({ ...form1, ...data,  [e.target.name]: e.target.value }))
+        dispatch(setForm({ ...form1, ...data, [e.target.name]: e.target.value }))
     }
-    useEffect(()=>{
+    useEffect(() => {
         return () => {
-            setError({email: "" ,phone: ""})
+            setError({ email: "", phone: "" })
         }
-    },[])
+    }, [])
 
     return (
         <div className=''>

@@ -48,7 +48,7 @@ function Processing9() {
           <div>
             <p className='text-[#008bbf] text-[18px] font-medium'>Email Address</p>
             <div>
-              <input name="email" value={formData.email} onChange={handleChange} className='bg-[#ECF8FD]  change_res p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' type="email" />
+              <input name="email" value={formData.email} onChange={handleChange} className='bg-[#ECF8FD] w-[519px] change_res p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' type="email" />
             </div>
             {error.email && <p className='text-left text-[red] text-[13px] m-[0px]'>{error.email}</p>}
           </div>
