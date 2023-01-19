@@ -3,6 +3,9 @@ import axios from "axios";
 import { HYDRATE } from "next-redux-wrapper";
 import request, { baseURL } from "../request";
 import { setLoading } from "../global";
+import { Router } from "next/router";
+import { toast } from "react-toastify";
+import RequestMessage from "@/components/Request";
 
 const initialState = {
     products: "",
@@ -24,6 +27,7 @@ export const submitRequest = createAsyncThunk(
             thunkAPI.dispatch(setLoading(false));
             thunkAPI.dispatch(setProducts(""));
             thunkAPI.dispatch(setStyles(""));
+            toast(<RequestMessage message="Message sent successfully!" />);
             return response;
         } catch (error) {
             console.log("Error", error);
