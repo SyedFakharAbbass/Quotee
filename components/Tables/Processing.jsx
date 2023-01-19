@@ -26,10 +26,10 @@ const Processing = () => {
         setFormData({ ...form1});
     },[form1]);
 
-    console.log("form1",form1)
-     useEffect(()=>{
-       console.log("formData",formData)
-     },[formData])
+    // console.log("form1",form1)
+    //  useEffect(()=>{
+    //    console.log("formData",formData)
+    //  },[formData])
     
     const handleModalClick = () => {
         setShow(true)
@@ -38,7 +38,7 @@ const Processing = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(formData);
+        // console.log(formData);
         //   dispatch(submitRequest({}))
         // dispatch(setProducts(""))
         // dispatch(setStyles(""))
@@ -94,7 +94,7 @@ const Processing = () => {
             <form onSubmit={handleSubmit}>
                 <div>
                     <h1 className='text-[#008bbf] font-bold text-[26px] mt-16 mb-[30px]'>JOB PROCESSING DATA</h1>
-                    <div className='flex justify-between'>
+                    <div className='flex justify-between new_class'>
                         <div className='flex mr-[50px]'>
                             <div className='flex items-end w-[519px] justify-between'>
                                 <div className='flex flex-col'>
@@ -120,7 +120,7 @@ const Processing = () => {
                         </div>
                     </div>
 
-                    <div className='flex justify-between mt-[30px]'>
+                    <div className='flex justify-between mt-[30px] new_class'>
                         <div className='mr-[50px]'>
                             <div className='w-[519px]'>
                                 <p className='text-[#008bbf] font-medium'>Print material</p>
@@ -152,7 +152,7 @@ const Processing = () => {
 
                 <div className='mt-[-38px]'>
                     <h1 className='text-[#008bbf] font-bold text-[26px] mt-16 mb-[30px]'>Zipper</h1>
-                    <div className='flex justify-between'>
+                    <div className='flex justify-between new_class'>
                         <div className=' w-[519px] mr-[50px]'>
                             <div className='bg-[#ECF8FD] w-[519px] rounded-[10px]'>
                                 <div className="flex items-center pl-4">
@@ -175,7 +175,7 @@ const Processing = () => {
                         </div>
                     </div>
 
-                    <div className='flex justify-between'>
+                    <div className='flex justify-between new_class'>
                         <div className='pt-5 w-[519px] mr-[50px]'>
                             <p className='text-[#008bbf] font-medium'>Total Number of Design</p>
                             <div className='w-[519px]'>

@@ -13,7 +13,7 @@
     color: #FFFFFF;
 }
 
-input{
+input {
     outline: none;
 }
 
@@ -46,29 +46,32 @@ input{
     height: 17.5px;
     margin-left: 8px;
 }
+
 .ckecked {
     width: 20px;
     height: 20px;
     margin-left: 8px;
 }
-input{
+
+input {
     outline: none;
 }
 
-textarea{
+textarea {
     outline: none;
     resize: none;
 }
 
 .setDatas {
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
 
-.main_class{
+.main_class {
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
+
 ::placeholder {
         color: #008BBF !important;
         opacity: 1 !important; 
@@ -82,4 +85,20 @@ textarea{
 
 input[type="checkbox"]{
     accent-color: white;
+}
+    /* color: #008BBF !important;
+    opacity: 1 !important;
+} */
+
+@media screen and (max-width:1300px) {
+    .main_div {
+        flex-direction: column;
+    }
+}
+
+
+@media screen and (max-width:1024px) {
+    .new_class {
+        flex-direction: column;
+    }
 }

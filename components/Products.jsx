@@ -9,9 +9,9 @@ const Products = () => {
 
     const dispatch = useDispatch();
 
-    useEffect(() => {
-        console.log("products", products)
-    }, [products])
+    // useEffect(() => {
+    //     console.log("products", products)
+    // }, [products])
 
     const handleClick = () => {
         dispatch(setProducts("one"))

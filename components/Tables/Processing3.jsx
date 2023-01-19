@@ -74,7 +74,7 @@ function Processing3() {
       <div >
         <div>
           <h1 className='text-[#008bbf] font-bold text-[26px] mt-16 mb-[30px]'>JOB PROCESSING DATA</h1>
-          <div className='flex justify-between items-end'>
+          <div className='flex justify-between new_class items-end'>
             <div className='flex mr-[50px]'>
               <div className='flex items-end w-[519px] justify-between'>
                 <div className='flex flex-col'>
@@ -98,7 +98,7 @@ function Processing3() {
             </div>
           </div>
 
-          <div className='flex justify-between mt-[30px]'>
+          <div className='flex justify-between new_class mt-[30px]'>
             <div className='mr-[50px]'>
               <div className='w-[519px]'>
                 <p className='text-[#008bbf] font-medium'>Barrier material</p>
@@ -143,7 +143,7 @@ function Processing3() {
 
         <div>
 
-          <div className='flex justify-between mt-[30px]'>
+          <div className='flex justify-between new_class mt-[30px]'>
             <div className='mr-[50px]'>
               <div className='w-[519px]'>
                 <p className='text-[#008bbf] font-medium'>Direction</p>
@@ -175,7 +175,7 @@ function Processing3() {
 
           </div>
 
-          <div className='flex justify-between'>
+          <div className='flex justify-between new_class'>
             <div className='pt-5 w-[519px] mr-[50px]'>
               <p className='text-[#008bbf] font-medium'>Total Number of Design</p>
               <div className='w-[519px]'>

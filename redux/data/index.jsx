@@ -18,8 +18,8 @@ export const submitRequest = createAsyncThunk(
         try {
             let response;
             thunkAPI.dispatch(setLoading(true));
-            response = await axios
-                .post(`${baseURL}order`,payload)
+            response = await request
+                .post(`order`,payload)
                 .then((response) => response.data);
             thunkAPI.dispatch(setLoading(false));
             thunkAPI.dispatch(setProducts(""));

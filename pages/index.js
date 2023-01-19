@@ -37,10 +37,6 @@ export default function Home() {
   }, [products]);
 
   useEffect(() => {
-    console.log(form1);
-  }, [form1]);
-
-  useEffect(() => {
     if (styles === "style1") {
       const data = form1.product;
       dispatch(setForm({ product: data, product_style: "Flat Pouch" }));
@@ -96,7 +92,7 @@ export default function Home() {
       <main>
         <Header />
         <Products />
-        <div className="flex justify-between gap-[60px] container pt-16 queries pb-[80px]">
+        <div className="flex justify-between gap-[60px] container pt-16 queries pb-[80px] main_div">
           <div className="w-full">
             <Styles />
             {styles === "style1" && (

@@ -50,6 +50,7 @@ function Processing9() {
             <div>
               <input name="email" value={formData.email} onChange={handleChange} className='bg-[#ECF8FD] w-[519px] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' type="email" />
             </div>
+            {error.email && <p className='text-left text-[red] text-[13px] m-[0px]'>{error.email}</p>}
           </div>
           <div className='pt-7'>
             <p className='text-[#008bbf] text-[18px] font-medium'>Mobile Number</p>

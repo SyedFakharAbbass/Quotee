@@ -85,7 +85,7 @@ function Processing2() {
       <div >
         <div>
           <h1 className='text-[#008bbf] font-bold text-[26px] mt-16 mb-[30px]'>JOB PROCESSING DATA</h1>
-          <div className='flex justify-between'>
+          <div className='flex justify-between new_class'>
             <div className='flex mr-[50px]'>
               <div className='flex items-end w-[519px] justify-between'>
                 <div className='flex flex-col'>
@@ -113,7 +113,7 @@ function Processing2() {
             </div>
           </div>
 
-          <div className='flex justify-between mt-[30px]'>
+          <div className='flex justify-between new_class mt-[30px]'>
             <div className='mr-[50px]'>
               <div className='w-[519px]'>
                 <p className='text-[#008bbf] font-medium'>Print material</p>
@@ -145,7 +145,7 @@ function Processing2() {
 
         <div className='mt-[-38px]'>
           <h1 className='text-[#008bbf] font-bold text-[26px] mt-16 mb-[30px]'>Zipper</h1>
-          <div className='flex justify-between'>
+          <div className='flex justify-between new_class'>
             <div className=' w-[519px] mr-[50px]'>
               <div className='bg-[#ECF8FD] w-[519px] rounded-[10px]'>
                 <div className="flex items-center pl-4">
@@ -168,7 +168,7 @@ function Processing2() {
             </div>
           </div>
 
-          <div className='flex justify-between'>
+          <div className='flex justify-between new_class'>
             <div className='pt-5 w-[519px] mr-[50px]'>
               <p className='text-[#008bbf] font-medium'>Total Number of Design</p>
 

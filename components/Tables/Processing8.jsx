@@ -57,6 +57,7 @@ function Processing8() {
             <div>
               <input name="phone" value={formData.phone} onChange={handleChange} className='bg-[#ECF8FD] w-[519px] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' type="number" />
             </div>
+            {error.phone && <p className='text-left text-[red] text-[13px] m-[0px]'>{error.phone}</p>}
           </div>
 
           <p className='text-[15px] pt-1'>Let Our Experts To Discuss About Your Quote</p>
