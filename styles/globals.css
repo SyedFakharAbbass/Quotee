@@ -69,5 +69,9 @@ textarea{
     left: 50%;
     transform: translate(-50%,-50%);
 }
+::placeholder {
+        color: #008BBF !important;
+        opacity: 1 !important; 
+}
 
 

@@ -42,7 +42,7 @@ const Products = () => {
     return (
         <div className='container '>
             <div className='mx-[80pxpx]'>
-                <h1 className='text-[#008bbf] font-bold text-[26px] mt-16 mb-[30px]'>CHOOSE YOUR PRODUCTS</h1>
+                <h1 className='text-[#008bbf] font-bold text-[26px] mt-16 mb-[30px]'>CHOOSE YOUR PRODUCT</h1>
                 <div className='flex flex-wrap mx-[30px]'>
                     <div className={`w-[250px]  bg-[#ECF8FD] mr-[20px] h-[300px] mb-[20px] cursor-pointer rounded-[10px] ${products === "one" ? "selected" : ""}`} onClick={handleClick}>
                         <img className='w-[200px]  m-auto' src="/images/lerbag.png" alt="" />
@@ -90,9 +90,9 @@ const Products = () => {
                         </div>
                     </div>
                     <div className='h-[300px] w-[250px] bg-[#ECF8FD] px-[25px] cursor-pointer rounded-[10px]'>
-                        <p className='text-center text-[#008bbf] text-[22px] pb-6 pt-3 font-medium'>Not Clear yet..?</p>
-                        <p className='text-center text-[#008bbf] text-[15px] pb-8 font-medium'>let our team to help you</p>
-                        <p className='text-center text-[#008bbf] text-[15px] pb-10 font-medium'>chat with our team to find best quote for your product</p>
+                        <p className='text-center text-[#008bbf] text-[22px] pb-6 pt-3 font-medium capitalize'>Not Clear yet..?</p>
+                        <p className='text-center text-[#008bbf] text-[15px] pb-8 font-medium capitalize'>let our team to help you</p>
+                        <p className='text-center text-[#008bbf] text-[15px] pb-10 font-medium capitalize'>chat with our team to find best quote for your product</p>
                         <div>
                             {
                                 colors ?

@@ -14,7 +14,7 @@ const Mylar = () => {
                     <h2 className='text-[#008BBF] font-medium text-[22px] text-center pt-4'>Detail configuration about your selection:</h2>
                 </div>
                 <div className='flex pt-3 pb-5'>
-                    <div>
+                    <div className='h-[280px]'>
                         {products === "one" && <img className='w-[280px] ' src="/images/lerbag.png" alt="" />}
                         {products === "two" && <img className='w-[280px] ' src="/images/sticker.png" alt="" />}
                         {products === "three" && <img className='w-[280px] ' src="/images/boxes.png" alt="" />}
