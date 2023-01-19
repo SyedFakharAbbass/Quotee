@@ -154,7 +154,7 @@ const Processing = () => {
                     <h1 className='text-[#008bbf] font-bold text-[26px] mt-16 mb-[30px]'>Zipper</h1>
                     <div className='flex justify-between new_class'>
                         <div className=' w-[519px] mr-[50px] change_res'>
-                            <div className='bg-[#ECF8FD] w-[519px] change_res rounded-[10px]'>
+                            <div className='bg-[#ECF8FD] w-[519px] change_res rounded-[10px] hov-inp'>
                                 <div className="flex items-center pl-4">
                                     <input type="checkbox" checked={zipper === 1 ? true : false} onClick={handleZipper} className="w-4 h-4 text-blue-600 pr-[10px]" />
                                     <label for="bordered-checkbox-2" className=" py-4 text-sm font-medium px-4  text-[#008bbf] ">Child Resistant</label>
@@ -164,11 +164,11 @@ const Processing = () => {
                             </div>
                         </div>
                         <div className='flex items-center w-[381px] res_data justify-between'>
-                            <div className='bg-[#ECF8FD] h-[55px] items-center flex justify-center rounded-[10px] w-[205px] pl-[8px]'>
+                            <div className='bg-[#ECF8FD] h-[55px] items-center flex justify-center rounded-[10px] w-[205px] pl-[8px] hov-inp'>
                                 <input type="checkbox" onClick={handleIcons} className=" h-4 text-blue-600 rounded" />
                                 <label for="bordered-checkbox-2" className="flex labled py-4 text-sm font-medium  px-2 text-[#008bbf] "><span className='text-[14px]'>Hang Hole</span>{showIcons && <div className='flex items-center'>{!checkedIcons ? <img src="/images/img1.png" className='unckecked' alt="" onClick={handleCheck} /> : <img src="/images/img2.png" className='ckecked' alt="" onClick={handleCheck} />} {!checkedIcons2 ? <img src="/images/img4.png" className='unckecked' alt="" onClick={handleCheck2} /> : <img src="/images/img3.png" className='ckecked' alt="" onClick={handleCheck2} />} </div>}</label>
                             </div>
-                            <div className='bg-[#ECF8FD] h-[55px] items-center flex justify-center rounded-[10px]  w-[160px]'>
+                            <div className='bg-[#ECF8FD] h-[55px] items-center flex justify-center rounded-[10px]  w-[160px] hov-inp'>
                                 <input type="checkbox" checked={tear} onClick={handleTear} className=" h-4 text-blue-600 rounded" />
                                 <label for="bordered-checkbox-2" className=" py-4 text-sm font-medium px-2  text-[#008bbf] ">Tear Notch</label>
                             </div>
