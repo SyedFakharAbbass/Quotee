@@ -52,7 +52,7 @@ const Styles = () => {
                         <img className='w-[150px] m-auto' src="/images/flatPouch.png" alt="" />
                         <div className='px-[25px] flex justify-center'>
                             <div className="flex items-center ">
-                                <input type="checkbox" checked={styles === "style1" ? true : false} className="w-4 h-4 text-blue-600 rounded " />
+                                <input type="checkbox" checked={styles === "style1" ? true : false} className="w-4 h-4 text-blue-600 rounded accent-white tickbox  " />
                                 <label for="bordered-checkbox-2" className="w-full py-4 ml-2 text-sm font-medium  text-[#008bbf] changed">Flat Pouch</label>
                             </div>
                         </div>
@@ -61,7 +61,7 @@ const Styles = () => {
                         <img className='w-[150px] m-auto' src="/images/standUp.png" alt="" />
                         <div className='px-[25px] flex justify-center'>
                             <div className="flex items-center ">
-                                <input type="checkbox"  checked={styles === "style2" ? true : false} className="w-4 h-4 text-blue-600 rounded " />
+                                <input type="checkbox"  checked={styles === "style2" ? true : false} className="w-4 h-4 text-blue-600 rounded accent-white tickbox  " />
                                 <label for="bordered-checkbox-2" className="w-full py-4 ml-2 text-sm font-medium  text-[#008bbf] changed">Stand Up Pouch</label>
                             </div>
                         </div>
@@ -70,7 +70,7 @@ const Styles = () => {
                         <img className='w-[150px] m-auto' src="/images/roll.png" alt="" />
                         <div className='px-[25px] flex justify-center'>
                             <div className="flex items-center ">
-                                <input type="checkbox"  checked={styles === "style3" ? true : false} className="w-4 h-4 text-blue-600 rounded " />
+                                <input type="checkbox"  checked={styles === "style3" ? true : false} className="w-4 h-4 text-blue-600 rounded accent-white tickbox  " />
                                 <label for="bordered-checkbox-2" className="w-full py-4 ml-2 text-sm font-medium  text-[#008bbf] changed">Roll Stock</label>
                             </div>
                         </div>
@@ -84,7 +84,7 @@ const Styles = () => {
                         <img className='w-[150px] m-auto' src="/images/cutToSize.png" alt="" />
                         <div className='px-[25px] flex justify-center'>
                             <div className="flex items-center ">
-                                <input type="checkbox"  checked={styles === "style4" ? true : false} className="w-4 h-4 text-blue-600 rounded " />
+                                <input type="checkbox"  checked={styles === "style4" ? true : false} className="w-4 h-4  rounded accent-white tickbox " />
                                 <label for="bordered-checkbox-2" className="w-full py-4 ml-2 text-sm font-medium  text-[#008bbf] changed">Cut-to-Size</label>
                             </div>
                         </div>
@@ -93,7 +93,7 @@ const Styles = () => {
                         <img className='w-[150px] m-auto' src="/images/styleRoll.png" alt="" />
                         <div className='px-[25px] flex justify-center'>
                             <div className="flex items-center ">
-                                <input  checked={styles === "style5" ? true : false} type="checkbox" className="w-4 h-4 text-blue-600 rounded " />
+                                <input  checked={styles === "style5" ? true : false} type="checkbox" className="w-4 h-4  rounded accent-white tickbox  " />
                                 <label for="bordered-checkbox-2" className="w-full py-4 ml-2 text-sm font-medium  text-[#008bbf] changed">Roll</label>
                             </div>
                         </div>
@@ -102,7 +102,7 @@ const Styles = () => {
                         <img className='w-[150px] m-auto' src="/images/sheet.png" alt="" />
                         <div className='px-[25px] flex justify-center'>
                             <div className="flex items-center ">
-                                <input type="checkbox"  checked={styles === "style6" ? true : false} className="w-4 h-4 text-blue-600 rounded " />
+                                <input type="checkbox"  checked={styles === "style6" ? true : false} className="w-4 h-4 rounded accent-white tickbox  " />
                                 <label for="bordered-checkbox-2" className="w-full py-4 ml-2 text-sm font-medium  text-[#008bbf] changed">Sheet</label>
                             </div>
                         </div>
@@ -116,7 +116,7 @@ const Styles = () => {
                         <img className='w-[150px] m-auto' src="/images/tuck.png" alt="" />
                         <div className='px-[25px] flex justify-center'>
                             <div className="flex items-center ">
-                                <input type="checkbox"  checked={styles === "style7" ? true : false} className="w-4 h-4 text-blue-600 rounded " />
+                                <input type="checkbox"  checked={styles === "style7" ? true : false} className="w-4 h-4 text-blue-600 rounded accent-white tickbox  " />
                                 <label for="bordered-checkbox-2" className="w-full py-4 ml-2 text-sm font-medium  text-[#008bbf] changed">Tuck Box</label>
                             </div>
                         </div>
@@ -125,7 +125,7 @@ const Styles = () => {
                         <img className='w-[150px] m-auto' src="/images/rigid.png" alt="" />
                         <div className='px-[25px] flex justify-center'>
                             <div className="flex items-center ">
-                                <input type="checkbox"  checked={styles === "style8" ? true : false} className="w-4 h-4 text-blue-600 rounded " />
+                                <input type="checkbox"  checked={styles === "style8" ? true : false} className="w-4 h-4 text-blue-600 rounded accent-white tickbox " />
                                 <label for="bordered-checkbox-2" className="w-full py-4 ml-2 text-sm font-medium  text-[#008bbf] changed">Rigid Box</label>
                             </div>
                         </div>
@@ -134,7 +134,7 @@ const Styles = () => {
                         <img className='w-[150px] m-auto' src="/images/mailer.png" alt="" />
                         <div className='px-[25px] flex justify-center'>
                             <div className="flex items-center ">
-                                <input type="checkbox"  checked={styles === "style9" ? true : false} className="w-4 h-4 text-blue-600 rounded " />
+                                <input type="checkbox"  checked={styles === "style9" ? true : false} className="w-4 h-4 text-blue-600 rounded accent-white tickbox  " />
                                 <label for="bordered-checkbox-2" className="w-full py-4 ml-2 text-sm font-medium  text-[#008bbf] changed">Mailer Box</label>
                             </div>
                         </div>

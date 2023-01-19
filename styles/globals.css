@@ -72,6 +72,14 @@ textarea{
 ::placeholder {
         color: #008BBF !important;
         opacity: 1 !important; 
+        font-weight: 400;
+}
+
+.tickbox::after{
+    border: solid #008BBF !important;
 }
 
 
+input[type="checkbox"]{
+    accent-color: white;
+}
