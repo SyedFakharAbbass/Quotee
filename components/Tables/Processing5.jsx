@@ -34,13 +34,13 @@ function Processing5() {
     }
 
     return (
-        <div className='mb-[60px]'>
+        <div className='mb-[60px] w-fit'>
             <div >
                 <div>
                     <h1 className='text-[#008bbf] font-bold text-[26px] mt-16 mb-[30px]'>JOB PROCESSING DATA</h1>
                     <div className='flex justify-between new_class'>
                         <div className='flex mr-[50px]'>
-                            <div className='flex items-end w-[519px] justify-between'>
+                            <div className='flex items-end w-[519px]  change_res justify-between'>
                                 <div className='flex flex-col'>
                                     <p className='text-[#008bbf] font-medium'>Size <span className='text-black text-[12px] font-light'> (Inches/mm)</span></p>
                                     <input className='bg-[#ECF8FD] p-2 w-[219.13px] outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' name="height" onChange={handleChange} value={formData.height}  type="text" placeholder='Height' />
@@ -50,7 +50,7 @@ function Processing5() {
                             </div>
                         </div>
 
-                        <div className='w-[381px]'>
+                        <div className='w-[381px] res_data'>
                             <p className='text-[#008bbf] font-medium'>Material</p>
                             <div>
                                 <select name='print_material' onChange={handleChange} value={formData.print_material} className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' >
@@ -70,7 +70,7 @@ function Processing5() {
                 <div>
                     <div className='flex justify-between new_class mt-[30px]'>
                         <div className='mr-[50px]'>
-                            <div className='w-[519px]'>
+                            <div className='w-[519px] change_res'>
                                 <p className='text-[#008bbf] font-medium'>Embellishment</p>
                                 <div>
                                     <select  name='embellishment' onChange={handleChange} value={formData.embellishment} className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' >
@@ -83,7 +83,7 @@ function Processing5() {
                                 </div>
                             </div>
                         </div>
-                        <div className=' w-[381px]'>
+                        <div className=' w-[381px] res_data'>
                             <p className='text-[#008bbf] font-medium'>Direction</p>
                             <div>
                                 <select name='direction' onChange={handleChange} value={formData.direction}  className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' >
@@ -100,9 +100,9 @@ function Processing5() {
 
 
                     <div className='flex justify-between new_class'>
-                        <div className='pt-5 w-[519px] mr-[50px]'>
+                        <div className='pt-5 w-[519px]  change_res mr-[50px]'>
                             <p className='text-[#008bbf] font-medium'>Total Number of Design</p>
-                            <div className='w-[519px]'>
+                            <div className='w-[519px] change_res'>
                                 <input name="total_design" onChange={handleChange} placeholder='Enter total number of design' type='number' value={formData.total_design} className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf px-3 rounded-[10px] h-[55px]'>
                                     
                                 </input>
@@ -112,7 +112,7 @@ function Processing5() {
                             </div>
                         </div>
 
-                        <div className=' pt-5 w-[381px]'>
+                        <div className=' pt-5 w-[381px] res_data'>
                             <p className='text-[#008bbf] font-medium'>Total Quantity</p>
                             <div>
                                 <input name="total_qty" onChange={handleChange} value={formData.total_qty}  className='w-full text-[#008bbf] bg-[#ECF8FD] h-[55px] rounded-[10px] px-3' type="text" placeholder='Enter...' />

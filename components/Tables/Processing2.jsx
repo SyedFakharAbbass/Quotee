@@ -81,13 +81,13 @@ function Processing2() {
     }
   }
   return (
-    <div className='mb-[60px]'>
+    <div className='mb-[60px] w-fit'>
       <div >
         <div>
           <h1 className='text-[#008bbf] font-bold text-[26px] mt-16 mb-[30px]'>JOB PROCESSING DATA</h1>
           <div className='flex justify-between new_class'>
-            <div className='flex mr-[50px]'>
-              <div className='flex items-end w-[519px] justify-between'>
+            <div className='flex lg:mr-[50px] mr-[0px]'>
+              <div className='flex items-end w-[519px]  change_res justify-between'>
                 <div className='flex flex-col'>
                   <p className='text-[#008bbf] font-medium'>Size <span className='text-black text-[12px] font-light'> (Inches/mm)</span></p>
                   <input name="height" onChange={handleChange} value={formData.height} className='bg-[#ECF8FD] p-2 w-[139.08px] outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' type="text" placeholder='Height' />
@@ -99,7 +99,7 @@ function Processing2() {
               </div>
             </div>
 
-            <div className='w-[381px]'>
+            <div className='w-[381px] res_data'>
               <p className='text-[#008bbf] font-medium'>Barrier Material</p>
               <div>
                 <select name='barrier_material' onChange={handleChange} value={formData.barrier_material} className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]'>
@@ -114,8 +114,8 @@ function Processing2() {
           </div>
 
           <div className='flex justify-between new_class mt-[30px]'>
-            <div className='mr-[50px]'>
-              <div className='w-[519px]'>
+            <div className='flex lg:mr-[50px] mr-[0px]'>
+              <div className='w-[519px]  change_res'>
                 <p className='text-[#008bbf] font-medium'>Print material</p>
                 <div>
                   <select name='print_material' onChange={handleChange} value={formData.print_material} className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]'>
@@ -127,7 +127,7 @@ function Processing2() {
                 </div>
               </div>
             </div>
-            <div className=' w-[381px]'>
+            <div className=' w-[381px] res_data'>
               <p className='text-[#008bbf] font-medium'>Embellishment</p>
               <div>
                 <select name='embellishment' onChange={handleChange} value={formData.embellishment} className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]'>
@@ -146,8 +146,8 @@ function Processing2() {
         <div className='mt-[-38px]'>
           <h1 className='text-[#008bbf] font-bold text-[26px] mt-16 mb-[30px]'>Zipper</h1>
           <div className='flex justify-between new_class'>
-            <div className=' w-[519px] mr-[50px]'>
-              <div className='bg-[#ECF8FD] w-[519px] rounded-[10px]'>
+            <div className=' w-[519px] change_res mr-[50px]'>
+              <div className='bg-[#ECF8FD] change_res w-[519px] rounded-[10px]'>
                 <div className="flex items-center pl-4">
                   <input type="checkbox" checked={zipper === 1 ? true : false} onClick={handleZipper} className="w-4 h-4 text-blue-600 pr-[10px]" />
                   <label for="bordered-checkbox-2" className=" py-4 text-sm font-medium px-4  text-[#008bbf] ">Child Resistant</label>
@@ -156,7 +156,7 @@ function Processing2() {
                 </div>
               </div>
             </div>
-            <div className='flex items-center w-[381px] justify-between'>
+            <div className='flex items-center res_data w-[381px] justify-between'>
               <div className='bg-[#ECF8FD] h-[55px] items-center flex justify-center rounded-[10px] w-[205px] pl-[8px]'>
                 <input type="checkbox" onClick={handleIcons} className=" h-4 text-blue-600 rounded" />
                 <label for="bordered-checkbox-2" className="flex labled py-4 text-sm font-medium  px-2 text-[#008bbf] "><span className='text-[14px]'>Hang Hole</span>{showIcons && <div className='flex items-center'>{!checkedIcons ? <img src="/images/img1.png" className='unckecked' alt="" onClick={handleCheck} /> : <img src="/images/img2.png" className='ckecked' alt="" onClick={handleCheck} />} {!checkedIcons2 ? <img src="/images/img4.png" className='unckecked' alt="" onClick={handleCheck2} /> : <img src="/images/img3.png" className='ckecked' alt="" onClick={handleCheck2} />} </div>}</label>
@@ -169,10 +169,10 @@ function Processing2() {
           </div>
 
           <div className='flex justify-between new_class'>
-            <div className='pt-5 w-[519px] mr-[50px]'>
+            <div className='pt-5 w-[519px]  change_res mr-[50px]'>
               <p className='text-[#008bbf] font-medium'>Total Number of Design</p>
 
-              <div className='w-[519px]'>
+              <div className='w-[519px] change_res'>
                 <input name="total_design" onChange={handleChange} placeholder='Enter total number of design' type='number' value={formData.total_design} className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf px-3 rounded-[10px] h-[55px]'>
 
                 </input>
@@ -183,7 +183,7 @@ function Processing2() {
               </div>
             </div>
 
-            <div className=' pt-5 w-[381px]'>
+            <div className=' pt-5 w-[381px] res_data'>
               <p className='text-[#008bbf] font-medium'>Total Quantity</p>
               <div>
                 <input name="total_qty" onChange={handleChange} value={formData.total_qty} className='w-full text-[#008bbf] bg-[#ECF8FD] h-[55px] rounded-[10px] px-3' type="text" placeholder='Enter...' />

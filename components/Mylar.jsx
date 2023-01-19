@@ -9,7 +9,7 @@ const Mylar = () => {
 
     return (
         <div className='response'>
-            <div className='border-2 border-[#008BBF] w-[510px] m-auto rounded-[10px] h-auto pb-10 px-4'> 
+            <div className='border-2 border-[#008BBF] lg:w-[510px] m-auto rounded-[10px] h-auto pb-10 px-4'> 
                 <div>
                     <h2 className='text-[#008BBF] font-medium text-[22px] text-center pt-4'>Detail configuration about your selection:</h2>
                 </div>
