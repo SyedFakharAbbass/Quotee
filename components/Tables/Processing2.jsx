@@ -92,9 +92,9 @@ function Processing2() {
                   <p className='text-[#008bbf] font-medium'>Size <span className='text-black text-[12px] font-light'> (Inches/mm)</span></p>
                   <input name="height" onChange={handleChange} value={formData.height} className='bg-[#ECF8FD] p-2 w-[139.08px] outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' type="text" placeholder='Height' />
                 </div>
-                <p className='font-bold pt-1 mb-4'>x</p>
+                <p className='font-medium pt-1 mb-4 text-[22px]'>x</p>
                 <input name="width" onChange={handleChange} value={formData.width} className='bg-[#ECF8FD] p-2 outline-none w-[139.08px] border-none hover:#008bbf rounded-[10px] h-[55px]' type="text" placeholder='Width' />
-                <p className='font-bold pt-1 mb-4'>x</p>
+                <p className='font-medium pt-1 mb-4 text-[22px]'>x</p>
                 <input name="length" onChange={handleChange} value={formData.length} className='bg-[#ECF8FD] p-2 outline-none w-[139.08px] border-none hover:#008bbf rounded-[10px] h-[55px]' type="text" placeholder='Gusset' />
               </div>
             </div>
@@ -161,7 +161,7 @@ function Processing2() {
                 <input type="checkbox" onClick={handleIcons} className=" h-4 text-blue-600 rounded" />
                 <label for="bordered-checkbox-2" className="flex labled py-4 text-sm font-medium  px-2 text-[#008bbf] "><span className='text-[14px]'>Hang Hole</span>{showIcons && <div className='flex items-center'>{!checkedIcons ? <img src="/images/img1.png" className='unckecked' alt="" onClick={handleCheck} /> : <img src="/images/img2.png" className='ckecked' alt="" onClick={handleCheck} />} {!checkedIcons2 ? <img src="/images/img4.png" className='unckecked' alt="" onClick={handleCheck2} /> : <img src="/images/img3.png" className='ckecked' alt="" onClick={handleCheck2} />} </div>}</label>
               </div>
-              <div className='bg-[#ECF8FD] h-[55px] items-center flex justify-center rounded-[10px]  w-[160px]'>
+              <div className='bg-[#ECF8FD] h-[55px] items-center flex justify-center rounded-[10px]  w-[160px] hov-inp'>
                 <input type="checkbox" checked={tear} onClick={handleTear} className=" h-4 text-blue-600 rounded" />
                 <label for="bordered-checkbox-2" className=" py-4 text-sm font-medium px-2  text-[#008bbf] ">Tear Notch</label>
               </div>

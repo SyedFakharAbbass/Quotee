@@ -126,3 +126,24 @@ input[type="checkbox"] {
         width: 500px !important;
     }
 } */
+input:hover{
+    border: 0.3px solid #008BBF !important;
+}
+
+select:hover{
+    border: 0.3px solid #008BBF !important;
+}
+
+input[type="checkbox"]:hover{
+    border: 0.3px solid #008BBF !important;
+}
+
+textarea:hover{
+    border: 0.3px solid #008BBF !important;
+}
+
+.hov-inp:hover{
+    border: 0.3px solid #008BBF !important;
+}
+
+

@@ -35,15 +35,15 @@ function Processing3() {
   const handleCheck = () => {
     setCheckedIcons(true)
     setCheckedIcons2(false)
-    setFormData({ ...formData, hanghole: "rounded" });
-    dispatch(setForm({ ...formData, hanghole: "rounded" }))
+    setFormData({ ...formData, hanghole: "Rounded" });
+    dispatch(setForm({ ...formData, hanghole: "Rounded" }))
   }
 
   const handleCheck2 = () => {
     setCheckedIcons(false)
     setCheckedIcons2(true)
-    setFormData({ ...formData, hanghole: "euro" });
-    dispatch(setForm({ ...formData, hanghole: "euro" }))
+    setFormData({ ...formData, hanghole: "Euro" });
+    dispatch(setForm({ ...formData, hanghole: "Euro" }))
   }
 
   const handleIcons = () => {
@@ -64,8 +64,8 @@ function Processing3() {
       setFormData({ ...formData, tear: "" });
       dispatch(setForm({ ...formData, tear: "" }))
     } else {
-      setFormData({ ...formData, tear: "yes" });
-      dispatch(setForm({ ...formData, tear: "yes" }))
+      setFormData({ ...formData, tear: "Yes" });
+      dispatch(setForm({ ...formData, tear: "Yes" }))
     }
   }
 
@@ -81,7 +81,7 @@ function Processing3() {
                   <p className='text-[#008bbf] font-medium'>Size <span className='text-black text-[12px] font-light'> (Inches/mm)</span></p>
                   <input className='bg-[#ECF8FD] p-2 w-[219.13px] outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' name="height" onChange={handleChange} value={formData.height}  type="text" placeholder='Height' />
                 </div>
-                <p className='font-bold pt-1 mb-4'>x</p>
+                <p className='font-medium pt-1 mb-4 text-[22px]'>x</p>
                 <input className='bg-[#ECF8FD] p-2 outline-none w-[219.13px] border-none hover:#008bbf rounded-[10px] h-[55px]' name="width" onChange={handleChange} value={formData.width} type="text" placeholder='Width' />
               </div>
             </div>
@@ -91,7 +91,7 @@ function Processing3() {
                 <input type="checkbox" onClick={handleIcons} className=" h-4 text-blue-600 rounded" />
                 <label for="bordered-checkbox-2" className="flex labled py-4 text-sm font-medium  px-2 text-[#008bbf] "><span className='text-[14px]'>Hang Hole</span>{showIcons && <div className='flex items-center'>{!checkedIcons ? <img src="/images/img1.png" className='unckecked' alt="" onClick={handleCheck} /> : <img src="/images/img2.png" className='ckecked' alt="" onClick={handleCheck} />} {!checkedIcons2 ? <img src="/images/img4.png" className='unckecked' alt="" onClick={handleCheck2} /> : <img src="/images/img3.png" className='ckecked' alt="" onClick={handleCheck2} />} </div>}</label>
               </div>
-              <div className='bg-[#ECF8FD] h-[55px] items-center flex justify-center rounded-[10px]  w-[160px]'>
+              <div className='bg-[#ECF8FD] h-[55px] items-center flex justify-center rounded-[10px]  w-[160px] hov-inp'>
                 <input type="checkbox" checked={tear} onClick={handleTear} className=" h-4 text-blue-600 rounded" />
                 <label for="bordered-checkbox-2" className=" py-4 text-sm font-medium px-2  text-[#008bbf] ">Tear Notch</label>
               </div>
