@@ -26,7 +26,7 @@ input {
     color: #FFFFFF;
 }
 
-@media screen and (max-width:1300px) {
+@media screen and (max-width:1275px) {
     .queries {
         flex-direction: column;
     }
@@ -34,6 +34,7 @@ input {
     .queries .response {
         width: 90%;
         margin: auto;
+        margin-top: 100px !important;
     }
 }
 
@@ -45,6 +46,12 @@ input {
     width: 17.5px;
     /* height: 17.5px; */
     margin: auto;
+}
+
+@media screen and (max-width:575px) {
+    .set_div_new {
+        width: 100% !important;
+    }
 }
 
 .ckecked {
@@ -64,6 +71,12 @@ textarea {
 
 .setDatas {
     transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width:575px) {
+    .setDatas {
+        flex-direction: column !important;
+    }
 }
 
 .main_class {
@@ -91,7 +104,7 @@ input[type="checkbox"] {
     opacity: 1 !important;
 } */
 
-@media screen and (max-width:1600px) {
+@media screen and (max-width:1100px) {
     .main_div {
         flex-direction: column;
     }
@@ -105,10 +118,11 @@ input[type="checkbox"] {
 }
 
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width:500px) {
     .res_data {
-        width: 519px;
-        padding-top: 30px;
+        /* width: 519px; */
+        /* padding-top: 30px; */
+        width: 100%;
     }
 }
 
@@ -121,16 +135,31 @@ input[type="checkbox"] {
 }
 
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:768px) {
     .change_res {
         width: 320px !important;
     }
 }
+
 @media screen and (max-width:280px) {
     .change_res {
         width: 280px !important;
+        width: 100%;
+
     }
 }
+
+@media screen and (max-width:480px) {
+    .change_res {
+        width: 100%;
+    }
+}
+
+/* @media screen and (max-width:500px) {
+    .change_res {
+        width: 100% !important;
+    }
+} */
 
 input:hover {
     border: 0.3px solid #008BBF !important;
@@ -240,3 +269,63 @@ input[type='number']::-webkit-outer-spin-button {
     accent-color: #008BBF;
 }
 
+
+
+@media screen and (max-width:768px) {
+    .end_mar {
+        margin: 0px;
+    }
+}
+
+
+@media screen and (max-width:768px) {
+    .adjust_data {
+        flex-direction: column;
+        margin-top: 100px;
+    }
+}
+
+
+
+@media screen and (min-width:1600px) {
+    .change_data_box {
+        width: 519px;
+    }
+}
+
+
+@media screen and (max-width:1600px) {
+    .change_data_box {
+        width: 500px;
+    }
+}
+
+
+@media screen and (max-width:1550px) {
+    .change_data_box {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width:1430px) {
+    .change_data_box {
+        width: 350px;
+    }
+}
+
+/* @media screen and (max-width:1365px) {
+    .change_data_box {
+        width: 450px;
+    }
+} */
+
+.new_screen {
+    margin-top: 0px;
+}
+
+
+@media screen and (max-width:575px) {
+    .new_screen {
+        margin-top: 40px;
+    }
+}

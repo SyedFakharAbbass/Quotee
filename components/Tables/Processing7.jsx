@@ -40,7 +40,7 @@ function Processing7() {
           <h1 className='text-[#008bbf] font-bold text-[26px] mt-16 mb-[30px]'>JOB PROCESSING DATA</h1>
           <div className='flex justify-between new_class'>
             <div className='flex mr-[50px]'>
-              <div className='flex items-end w-[519px]  change_res justify-between'>
+              <div className='flex items-end w-[450px]  change_res justify-between'>
                 <div className='flex flex-col'>
                   <p className='text-[#008bbf] font-medium'>Size <span className='text-black text-[12px] font-light'> (Inches)</span></p>
                   <input className='bg-[#ECF8FD] p-2 w-[139.08px] outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' type="number" name="height" onChange={handleChange} value={formData.height} placeholder='Height' />
@@ -68,7 +68,7 @@ function Processing7() {
 
           <div className='flex justify-between new_class mt-[30px]'>
             <div className='mr-[50px]'>
-              <div className='w-[519px]'>
+              <div className='w-[450px]'>
                 <p className='text-[#008bbf] change_res font-medium'>Paper Thickness</p>
                 <div>
                   <select name='paper_thickness' onChange={handleChange} value={formData.paper_thickness}  className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]'>
@@ -100,7 +100,7 @@ function Processing7() {
         <div>
           <div className='flex justify-between new_class mt-[30px]'>
             <div className='mr-[50px]'>
-              <div className='w-[519px]  change_res'>
+              <div className='w-[450px]  change_res'>
                 <p className='text-[#008bbf] font-medium'>Spot Foiling</p>
                 <div>
                   <select name='spot_foiling' onChange={handleChange} value={formData.spot_foiling} className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]'>
@@ -117,9 +117,9 @@ function Processing7() {
 
 
           <div className='flex justify-between new_class'>
-            <div className='pt-5 w-[519px]  change_res mr-[50px]'>
+            <div className='pt-5 w-[450px]  change_res mr-[50px]'>
               <p className='text-[#008bbf] font-medium'>Total Number of Design</p>
-              <div className='w-[519px] change_res'>
+              <div className='w-[450px] change_res'>
                 <input name="total_design" onChange={handleChange} placeholder='Enter total number of design' type='number' value={formData.total_design} className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf px-3 rounded-[10px] h-[55px]'>
 
                 </input>
@@ -143,7 +143,7 @@ function Processing7() {
               <textarea placeholder='Type.......' name="special_requirement" onChange={handleChange} value={formData.special_requirement} className='h-[300px] w-full px-3 py-[20px] border-4 border-[#ECF8FD] rounded-[10px]' cols="30" rows="10"></textarea>
             </div>
           </div>
-
+          <div className='new_screen'></div>
           <div className='flex absolute left-[50%] setDatas mt-[60px] gap-[35px]'>
             <div className='cursor-pointer w-[200px] text-[#008BBF] font-medium bg-[#ECF8FD] flex items-center justify-center h-[55px] rounded-[10px]' onClick={handleSelect} style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }}>Select Again</div>
             <button className='w-[200px] text-[#FFFFFF] font-medium bg-[#008BBF] flex items-center justify-center h-[55px] rounded-[10px]' style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }} onClick={handleModalClick}>SUBMIT</button>

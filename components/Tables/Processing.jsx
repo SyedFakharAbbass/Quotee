@@ -103,7 +103,7 @@ const Processing = () => {
                     <h1 className='text-[#008bbf] font-bold text-[18px] md:text-[26px] mt-16 mb-[30px] md:mb-[0px]'>JOB PROCESSING DATA</h1>
                     <div className='flex justify-between new_class'>
                         <div className='flex lg:mr-[50px] mr-[0px]'>
-                            <div className='flex gap-3 items-end md:w-[519px] justify-between '>
+                            <div className='flex gap-3 items-end  justify-between '>
                                 <div className=''>
                                     <p className='text-[#008bbf] font-medium'>Size <span className='text-black text-[12px] font-light'> (Inches)</span></p>
                                     <input className='bg-[#ECF8FD] p-2 md:w-[219.13px] w-full  outline-none border-none  rounded-[10px]  h-[55px]' name="height" onChange={handleChange} value={formData.height} type="number" placeholder='Height' />
@@ -111,7 +111,7 @@ const Processing = () => {
                                 <p className='font-medium md:pt-1 mb-2 md:mb-4 text-[22px]'>x</p>
                                 <div>
 
-                                <input className='bg-[#ECF8FD] p-2 outline-none md:w-[219.13px] w-full border-none  rounded-[10px] h-[55px]' name="width" onChange={handleChange} value={formData.width} type="number" placeholder='Width' />
+                                    <input className='bg-[#ECF8FD] p-2 outline-none md:w-[219.13px] w-full border-none  rounded-[10px] h-[55px]' name="width" onChange={handleChange} value={formData.width} type="number" placeholder='Width' />
                                 </div>
                             </div>
                         </div>
@@ -126,13 +126,13 @@ const Processing = () => {
                                     <option>Metalized</option>
                                 </select>
                             </div>
-                    </div>
-
                         </div>
+
+                    </div>
 
                     <div className='flex justify-between  new_class'>
                         <div className='flex lg:mr-[50px] mt-[30px] mr-[0px]'>
-                            <div className='md:w-[519px]  w-full'>
+                            <div className='  w-full'>
                                 <p className='text-[#008bbf] font-medium'>Print material</p>
                                 <div className='w-full'>
                                     <select name='print_material' onChange={handleChange} value={formData.print_material} className='w-full bg-[#ECF8FD] p-2 outline-none border-none  rounded-[10px] h-[55px]'>
@@ -163,8 +163,8 @@ const Processing = () => {
                 <div className='mt-[-38px]'>
                     <h1 className='text-[#008bbf] font-bold text-[26px] mt-16 mb-[30px]'>Zipper</h1>
                     <div className='flex mt-[30px]  new_class'>
-                        <div className=' md:w-[519px] w-full md:mr-[50px] '>
-                            <div className='bg-[#ECF8FD] md:w-[519px] rounded-[10px] hov-inp'>
+                        <div className='  w-full md:mr-[50px] '>
+                            <div className='bg-[#ECF8FD]  rounded-[10px] hov-inp'>
                                 <div className="flex items-center pl-4">
                                     <input type="checkbox" checked={zipper === 1 ? true : false} onClick={handleZipper} className="cursor-pointer w-4 h-4 text-blue-600 pr-[10px]" />
                                     <label for="bordered-checkbox-2" className="cursor-pointer py-4 text-sm font-medium px-4  text-[#008bbf] " onClick={handleZipper}>Child Resistant</label>
@@ -186,13 +186,13 @@ const Processing = () => {
                     </div>
 
                     <div className='flex justify-between new_class'>
-                        <div className='pt-5 md:w-[519px]  md:mr-[50px]'>
+                        <div className='pt-5   md:mr-[50px]'>
                             <p className='text-[#008bbf] font-medium'>Total Number of Design</p>
-                            <div className='md:w-[519px]'>
+                            <div className=''>
                                 <input name="total_design" onChange={handleChange} placeholder='Enter total number of design' type='number' value={formData.total_design} className='w-full bg-[#ECF8FD] p-2 outline-none border-none  px-3 rounded-[10px] h-[55px]'>
 
                                 </input>
-                               
+
                             </div>
                         </div>
                         <div className=' pt-5 md:w-[381px] '>
@@ -209,12 +209,13 @@ const Processing = () => {
                 <div className='mt-[-38px]'>
                     <h1 className='text-[#008bbf] font-bold text-[26px] mt-16 mb-[30px]'>ANY SPECIAL REQUIREMENT</h1>
                     <div>
-                        <textarea placeholder='Type.......' name="special_requirement" onChange={handleChange} value={formData.special_requirement} className='h-[300px] change_res w-[519px] lg:w-full px-3 py-[20px] border-4 border-[#ECF8FD] rounded-[10px]' cols="30" rows="10"></textarea>
+                        <textarea placeholder='Type.......' name="special_requirement" onChange={handleChange} value={formData.special_requirement} className='h-[300px] change_res w-[450px] lg:w-full px-3 py-[20px] border-4 border-[#ECF8FD] rounded-[10px]' cols="30" rows="10"></textarea>
                     </div>
                 </div>
-                <div className='flex absolute left-[50%] setDatas mt-[60px] gap-[35px]'>
-                    <div className='z-[0] cursor-pointer md:w-[200px] w-[120px] text-[#008BBF] font-medium bg-[#ECF8FD] flex items-center justify-center h-[55px] rounded-[10px]' onClick={handleSelect} style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }}>Select Again</div>
-                    <button className='z-[0] md:w-[200px] w-[120px] text-[#FFFFFF] font-medium bg-[#008BBF] flex items-center justify-center h-[55px] rounded-[10px]' style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }} onClick={handleModalClick}>SUBMIT</button>
+                <div className='new_screen'></div>
+                <div className='flex absolute left-[50%] setDatas mt-[60px] gap-[20px] lg:gap-[35px] pb-12 adjust_data'>
+                    <div className='cursor-pointer w-[200px] text-[#008BBF] font-medium bg-[#ECF8FD] flex items-center justify-center h-[55px] rounded-[10px]' onClick={handleSelect} style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }}>Select Again</div>
+                    <button type='submit' className='w-[200px] text-[#FFFFFF] font-medium bg-[#008BBF] flex items-center justify-center h-[55px] rounded-[10px]' style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }}>SUBMIT</button>
                 </div>
             </form>
             {/* <Modal show={show} setShow={setShow} error={error} setError={setError} handleModalClick={handleModalClick} /> */}
