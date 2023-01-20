@@ -115,38 +115,39 @@ input[type="checkbox"] {
 
 
 @media screen and (max-width:1024px) {
-    .set_class_data{
+    .set_class_data {
         margin-right: 0px !important;
     }
 }
 
 
 @media screen and (max-width:600px) {
-    .change_res{
+    .change_res {
         width: 400px !important;
     }
 }
 
-input:hover{
+input:hover {
     border: 0.3px solid #008BBF !important;
 }
 
-select:hover{
+select:hover {
     border: 0.3px solid #008BBF !important;
 }
 
-input[type="checkbox"]:hover{
+input[type="checkbox"]:hover {
     border: 0.3px solid #008BBF !important;
 }
 
-textarea:hover{
+textarea:hover {
     border: 0.3px solid #008BBF !important;
 }
 
-.hov-inp:hover{
+.hov-inp:hover {
     border: 0.3px solid #008BBF !important;
 }
 
-select{
-    
+.borr {
+    border: 2px solid #EBF7FC;
+    filter: blur(1.5px);
 }
