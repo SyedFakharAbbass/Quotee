@@ -45,7 +45,7 @@ function Processing5() {
                                     <p className='text-[#008bbf] font-medium'>Size <span className='text-black text-[12px] font-light'> (Inches)</span></p>
                                     <input className='bg-[#ECF8FD] p-2 w-[219.13px] outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' name="height" onChange={handleChange} value={formData.height}  type="number" placeholder='Height' />
                                 </div>
-                                <p className='font-bold pt-1 mb-4'>x</p>
+                                <p className='font-medium pt-1 mb-4 text-[22px]'>x</p>
                                 <input name="width" onChange={handleChange} value={formData.width} className='bg-[#ECF8FD] p-2 outline-none w-[219.13px] border-none hover:#008bbf rounded-[10px] h-[55px]' type="number" placeholder='Width' />
                             </div>
                         </div>

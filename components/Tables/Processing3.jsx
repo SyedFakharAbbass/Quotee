@@ -79,7 +79,7 @@ function Processing3() {
               <div className='flex items-end w-[519px]  change_res justify-between'>
                 <div className='flex flex-col'>
                   <p className='text-[#008bbf] font-medium'>Size <span className='text-black text-[12px] font-light'> (Inches)</span></p>
-                  <input className='bg-[#ECF8FD] p-2 w-[219.13px] outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' name="height" onChange={handleChange} value={formData.height}  type="number" placeholder='Height' />
+                  <input className='bg-[#ECF8FD] p-2 w-[219.13px] outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' name="height" onChange={handleChange} value={formData.height} type="number" placeholder='Height' />
                 </div>
                 <p className='font-medium pt-1 mb-4 text-[22px]'>x</p>
                 <input className='bg-[#ECF8FD] p-2 outline-none w-[219.13px] border-none hover:#008bbf rounded-[10px] h-[55px]' name="width" onChange={handleChange} value={formData.width} type="number" placeholder='Width' />
@@ -88,12 +88,12 @@ function Processing3() {
 
             <div className='flex items-center w-[381px] res_data justify-between'>
               <div className='bg-[#ECF8FD] h-[55px] items-center flex justify-center rounded-[10px] w-[205px] pl-[8px] hov-inp'>
-                <input type="checkbox" onClick={handleIcons} className=" h-4 text-blue-600 rounded" />
-                <label for="bordered-checkbox-2" className="flex labled py-4 text-sm font-medium  px-2 text-[#008bbf] "><span className='text-[14px]'>Hang Hole</span>{showIcons && <div className='flex items-center'>{!checkedIcons ? <img src="/images/img1.png" className='unckecked' alt="" onClick={handleCheck} /> : <img src="/images/img2.png" className='ckecked' alt="" onClick={handleCheck} />} {!checkedIcons2 ? <img src="/images/img4.png" className='unckecked' alt="" onClick={handleCheck2} /> : <img src="/images/img3.png" className='ckecked' alt="" onClick={handleCheck2} />} </div>}</label>
+                <input type="checkbox" checked={showIcons ? true : false} onClick={handleIcons} className="cursor-pointer h-4 text-blue-600 rounded" />
+                <label for="bordered-checkbox-2" className="flex labled py-4 text-sm font-medium cursor-pointer px-2 text-[#008bbf] "><span onClick={handleIcons} className='text-[14px]'>Hang Hole</span>{showIcons && <div className='flex items-center ml-[16px] mt-[10px]'>{!checkedIcons ? <div className='mr-[10px]'><img src="/images/img1.png" className='unckecked' alt="" onClick={handleCheck} /><span className='text-[10px]'>Round</span></div> : <div className='mr-[10px]'><img src="/images/img2.png" className='ckecked' alt="" onClick={handleCheck} /><span className='text-[10px]'>Round</span></div>} {!checkedIcons2 ? <div className=''><img src="/images/img4.png" className='unckecked' alt="" onClick={handleCheck2} /><span className='text-[10px]'>Euro</span></div> : <div className=''><img src="/images/img3.png" className='ckecked' alt="" onClick={handleCheck2} /><span className='text-[10px]'>Euro</span></div>} </div>}</label>
               </div>
               <div className='bg-[#ECF8FD] h-[55px] items-center flex justify-center rounded-[10px]  w-[160px] hov-inp'>
-                <input type="checkbox" checked={tear} onClick={handleTear} className=" h-4 text-blue-600 rounded" />
-                <label for="bordered-checkbox-2" className=" py-4 text-sm font-medium px-2  text-[#008bbf] ">Tear Notch</label>
+                <input type="checkbox" checked={tear} onClick={handleTear} className="cursor-pointer  h-4 text-blue-600 rounded" />
+                <label for="bordered-checkbox-2" onClick={handleTear} className="cursor-pointer py-4 text-sm font-medium px-2  text-[#008bbf] ">Tear Notch</label>
               </div>
             </div>
           </div>

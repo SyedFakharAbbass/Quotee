@@ -43,14 +43,14 @@ input {
 
 .unckecked {
     width: 17.5px;
-    height: 17.5px;
-    margin-left: 8px;
+    /* height: 17.5px; */
+    margin: auto;
 }
 
 .ckecked {
-    width: 20px;
-    height: 20px;
-    margin-left: 8px;
+    width: 21.8px;
+    /* height: 20px; */
+    margin: auto;
 }
 
 input {
@@ -164,4 +164,73 @@ select {
 .borr {
     border: 2px solid #EBF7FC;
     filter: blur(1.5px);
+}
+
+/* .--toastify-toast-width{
+    
+} */
+
+.Toastify__toast {
+    width: 450px !important;
+}
+
+.Toastify__toast-container {
+    width: 450px !important;
+}
+
+@media screen and (max-width:1400px) {
+    .Toastify__toast {
+        width: 350px !important;
+    }
+
+    .Toastify__toast-container {
+        width: 350px !important;
+    }
+}
+
+
+/* @media screen and (max-width:1400px) {
+    .Toastify__toast {
+        width: 450px !important;
+    }
+
+    .Toastify__toast-container {
+        width: 450px !important;
+    }
+} */
+
+body {
+    -webkit-touch-callout: none;
+    /* Disable callout on iOS */
+    -webkit-user-select: none;
+    /* Disable selection on iOS */
+    -khtml-user-select: none;
+    /* Disable selection on old Konqueror browsers */
+    -moz-user-select: none;
+    /* Disable selection on Firefox */
+    -ms-user-select: none;
+    /* Disable selection on Internet Explorer */
+    user-select: none;
+    /* Disable selection on modern browsers */
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.adjust_modal {
+    width: 650px;
+}
+
+
+@media screen and (max-width:768px) {
+    .adjust_modal {
+        width: 90%;
+    }
+}
+
+.new_check[type="checkbox"] {
+    accent-color: #008BBF;
 }
