@@ -43,14 +43,14 @@ input {
 
 .unckecked {
     width: 17.5px;
-    height: 17.5px;
-    margin-left: 8px;
+    /* height: 17.5px; */
+    margin: auto;
 }
 
 .ckecked {
-    width: 20px;
-    height: 20px;
-    margin-left: 8px;
+    width: 21.8px;
+    /* height: 20px; */
+    margin: auto;
 }
 
 input {
