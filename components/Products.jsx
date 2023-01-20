@@ -74,14 +74,14 @@ const Products = () => {
                                 </div>
                             </div>
                             <div></div>
-                            <p className='text-[10px] items-center text-[#008bbf] py-2 px-[39px] text_data'>Custom plane or printed mylar bags are prefect solution for your product</p>
+                            <p className='text-[10px] text-center items-center text-[#008bbf] py-2 px-[39px] text_data'>Custom plane or printed mylar bags are prefect solution for your product</p>
                         </div>
                     </div>
                     <div className={`w-[250px]  bg-[#ECF8FD] mr-[20px] h-[300px] mb-[20px] cursor-pointer rounded-[10px] ${products === "two" ? "selected" : ""}`} onClick={handleClick2} >
                         <img className='w-[200px]  m-auto' src="/images/sticker.png" alt="" />
                         <div className='mt-2'>
                             <div className="flex items-center justify-center">
-                                <div>
+                                <div  className='flex'>
                                     <input type="checkbox" checked={products === "two" ? true : false} className="w-4 h-4 cursor-pointer accent-white text-blue-600 rounded tickbox" />
                                 </div>
                                 <div>
@@ -89,7 +89,7 @@ const Products = () => {
                                 </div>
                             </div>
                             <div></div>
-                            <p className='text-[10px] items-center text-[#008bbf] py-2 px-[39px] text_data'>Highlight your brands logo with our personalized and custom printed labels and stickers.</p>
+                            <p className='text-[10px] text-center items-center text-[#008bbf] py-2 px-[39px] text_data'>Highlight your brands logo with our personalized and custom printed labels and stickers.</p>
                         </div>
                     </div>
                     <div className={`w-[250px]  bg-[#ECF8FD] mr-[20px] h-[300px] mb-[20px] cursor-pointer rounded-[10px] ${products === "three" ? "selected" : ""}`} onClick={handleClick3} >
@@ -104,7 +104,7 @@ const Products = () => {
                                 </div>
                             </div>
                             <div></div>
-                            <p className='text-[10px] items-center text-[#008bbf] py-2 px-[39px] text_data'>Upgrade your brands recoginition with our plane and custom printed boxes.</p>
+                            <p className='text-[10px] text-center items-center text-[#008bbf] py-2 px-[39px] text_data'>Upgrade your brands recoginition with our plane and custom printed boxes.</p>
                         </div>
                     </div>
                     <div className='h-[300px] w-[250px] bg-[#ECF8FD] px-[25px] cursor-pointer rounded-[10px]'>

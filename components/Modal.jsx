@@ -1,6 +1,8 @@
 import { setForm, submitRequest } from '@/redux/data';
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { toast } from 'react-toastify';
+import RequestMessage from './Request';
 
 function Modal({ show, setShow, handleModalClick, setError, error }) {
 
@@ -33,6 +35,7 @@ function Modal({ show, setShow, handleModalClick, setError, error }) {
             //     setShow(false);
             //     document.getElementById("linkk").click();
             // })
+            toast(<RequestMessage message="SUBMITTED SUCCESSFULLY" />);
             console.log(abcdd)
         }
     }

@@ -27,7 +27,7 @@ export const submitRequest = createAsyncThunk(
             thunkAPI.dispatch(setLoading(false));
             thunkAPI.dispatch(setProducts(""));
             thunkAPI.dispatch(setStyles(""));
-            toast(<RequestMessage message="Message sent successfully!" />);
+            toast(<RequestMessage message="SUBMITTED SUCCESSFULLY" />);
             return response;
         } catch (error) {
             console.log("Error", error);
