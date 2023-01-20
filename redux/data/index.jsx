@@ -27,10 +27,11 @@ export const submitRequest = createAsyncThunk(
             thunkAPI.dispatch(setLoading(false));
             thunkAPI.dispatch(setProducts(""));
             thunkAPI.dispatch(setStyles(""));
-            toast(<RequestMessage message="SUBMITTED SUCCESSFULLY" />);
+            toast(<RequestMessage message="SUBMITTED SUCCESSFULLY" color="text-[#179814]" image="/images/congrate.png"/>);
             return response;
         } catch (error) {
             console.log("Error", error);
+            toast(<RequestMessage message="SOMETHING WENT WRONG..!" color="text-red-500" image="/images/error.png"/>);
             return null;
         }
     }

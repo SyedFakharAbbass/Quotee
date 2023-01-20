@@ -230,3 +230,7 @@ input[type='number']::-webkit-outer-spin-button {
         width: 90%;
     }
 }
+
+.new_check[type="checkbox"] {
+    accent-color: #008BBF;
+}

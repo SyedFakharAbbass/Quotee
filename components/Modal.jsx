@@ -36,7 +36,8 @@ function Modal({ show, setShow, handleModalClick, setError, error }) {
             //     document.getElementById("linkk").click();
             // setError(false)
             // })
-            toast(<RequestMessage message="SUBMITTED SUCCESSFULLY" />);
+            toast(<RequestMessage message="SUBMITTED SUCCESSFULLY" color="text-[#179814]" image="/images/congrate.png"/>);
+            toast(<RequestMessage message="SOMETHING WENT WRONG..!" color="text-red-500" image="/images/error.png"/>);
             console.log(abcdd)
         }
     }

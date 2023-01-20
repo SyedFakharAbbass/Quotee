@@ -20,10 +20,11 @@ const Processing = () => {
 
     const handleChange = (e) => {
         // setFormData({ ...formData, [e.target.name]: e.target.value });
-        // if (formData?.height?.length <= 9) {
+        // if (formData?.height?.length === undefined || formData?.height?.length < 10 || formData?.width?.length === undefined || formData?.width?.length < 10) {
             dispatch(setForm({ ...formData, [e.target.name]: e.target.value }))
         // }
-        // console.log(form1.height && form1.height.length)
+        console.log(formData?.height?.length)
+        console.log(form1.height && form1.height.length)
     }
     useEffect(() => {
         setFormData({ ...form1 });

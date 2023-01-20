@@ -27,7 +27,7 @@ const Mylar = () => {
 
                 {form1.product_style && <div className='flex pl-10'>
                     <div className='items-center flex'>
-                        <input type="checkbox" checked={true} className=" h-4 text-blue-600 rounded cursor-pointer" />
+                        <input type="checkbox" checked={true} className=" h-4 new_check text-blue-600 rounded cursor-pointer" />
                         <label for="bordered-checkbox-2" className=" py-4 ml-2 text-sm font-medium text-[22px] mr-4 text-[#008bbf]">Product Style :</label>
                     </div>
                     <div className='items-center flex'>
@@ -36,7 +36,7 @@ const Mylar = () => {
                 </div>}
                 {main && <div className='flex pl-10'>
                     <div className='items-center flex'>
-                        <input type="checkbox" checked={true} className=" h-4 text-blue-600 rounded cursor-pointer" />
+                        <input type="checkbox" checked={true} className=" h-4 new_check text-blue-600 rounded cursor-pointer" />
                         <label for="bordered-checkbox-2" className=" py-4 ml-2 text-sm font-medium text-[22px] mr-4 text-[#008bbf]">Dimensions :</label>
                     </div>
                     <div className='items-center flex'>
@@ -45,7 +45,7 @@ const Mylar = () => {
                 </div>}
                 {form1.barrier_material && <div className='flex pl-10'>
                     <div className='items-center flex'>
-                        <input type="checkbox" checked={true} className=" h-4 text-blue-600 rounded cursor-pointer" />
+                        <input type="checkbox" checked={true} className=" h-4 new_check text-blue-600 rounded cursor-pointer" />
                         <label for="bordered-checkbox-2" className=" py-4 ml-2 text-sm font-medium text-[22px] mr-4 text-[#008bbf]">Barrier Material :</label>
                     </div>
                     <div className='items-center flex'>
@@ -54,7 +54,7 @@ const Mylar = () => {
                 </div>}
                 {form1.print_material && <div className='flex pl-10'>
                     <div className='items-center flex'>
-                        <input type="checkbox" checked={true} className=" h-4 text-blue-600 rounded cursor-pointer" />
+                        <input type="checkbox" checked={true} className=" h-4 new_check text-blue-600 rounded cursor-pointer" />
                         <label for="bordered-checkbox-2" className=" py-4 ml-2 text-sm font-medium text-[22px] mr-4 text-[#008bbf]">Print Material :</label>
                     </div>
                     <div className='items-center flex'>
@@ -63,7 +63,7 @@ const Mylar = () => {
                 </div>}
                 {form1.paper_thickness && <div className='flex pl-10'>
                     <div className='items-center flex'>
-                        <input type="checkbox" checked={true} className=" h-4 text-blue-600 rounded cursor-pointer" />
+                        <input type="checkbox" checked={true} className=" h-4 new_check text-blue-600 rounded cursor-pointer" />
                         <label for="bordered-checkbox-2" className=" py-4 ml-2 text-sm font-medium text-[22px] mr-4 text-[#008bbf]">Paper Thickness :</label>
                     </div>
                     <div className='items-center flex'>
@@ -72,7 +72,7 @@ const Mylar = () => {
                 </div>}
                 {form1.finishing && <div className='flex pl-10'>
                     <div className='items-center flex'>
-                        <input type="checkbox" checked={true} className=" h-4 text-blue-600 rounded cursor-pointer" />
+                        <input type="checkbox" checked={true} className=" h-4 new_check text-blue-600 rounded cursor-pointer" />
                         <label for="bordered-checkbox-2" className=" py-4 ml-2 text-sm font-medium text-[22px] mr-4 text-[#008bbf]">Finishing :</label>
                     </div>
                     <div className='items-center flex'>
@@ -81,7 +81,7 @@ const Mylar = () => {
                 </div>}
                 {form1.spot_foiling && <div className='flex pl-10'>
                     <div className='items-center flex'>
-                        <input type="checkbox" checked={true} className=" h-4 text-blue-600 rounded cursor-pointer" />
+                        <input type="checkbox" checked={true} className=" h-4 new_check text-blue-600 rounded cursor-pointer" />
                         <label for="bordered-checkbox-2" className=" py-4 ml-2 text-sm font-medium text-[22px] mr-4 text-[#008bbf]">Spot Foiling :</label>
                     </div>
                     <div className='items-center flex'>
@@ -90,7 +90,7 @@ const Mylar = () => {
                 </div>}
                 {form1.embellishment && <div className='flex pl-10'>
                     <div className='items-center flex'>
-                        <input type="checkbox" checked={true} className=" h-4 text-blue-600 rounded cursor-pointer" />
+                        <input type="checkbox" checked={true} className=" h-4 new_check text-blue-600 rounded cursor-pointer" />
                         <label for="bordered-checkbox-2" className=" py-4 ml-2 text-sm font-medium text-[22px] mr-4 text-[#008bbf]">Embellishment :</label>
                     </div>
                     <div className='items-center flex'>
@@ -99,7 +99,7 @@ const Mylar = () => {
                 </div>}
                 {form1.direction && <div className='flex pl-10'>
                     <div className='items-center flex'>
-                        <input type="checkbox" checked={true} className=" h-4 text-blue-600 rounded cursor-pointer" />
+                        <input type="checkbox" checked={true} className=" h-4 new_check text-blue-600 rounded cursor-pointer" />
                         <label for="bordered-checkbox-2" className=" py-4 ml-2 text-sm font-medium text-[22px] mr-4 text-[#008bbf]">Direction :</label>
                     </div>
                     <div className='items-center flex'>
@@ -108,7 +108,7 @@ const Mylar = () => {
                 </div>}
                 {form1.zipper && <div className='flex pl-10'>
                     <div className='items-center flex'>
-                        <input type="checkbox" checked={true} className=" h-4 text-blue-600 rounded cursor-pointer" />
+                        <input type="checkbox" checked={true} className=" h-4 new_check text-blue-600 rounded cursor-pointer" />
                         <label for="bordered-checkbox-2" className=" py-4 ml-2 text-sm font-medium text-[22px] mr-4 text-[#008bbf]">Zipper :</label>
                     </div>
                     <div className='items-center flex'>
@@ -117,7 +117,7 @@ const Mylar = () => {
                 </div>}
                 {form1.hanghole && <div className='flex pl-10'>
                     <div className='items-center flex'>
-                        <input type="checkbox" checked={true} className=" h-4 text-blue-600 rounded cursor-pointer" />
+                        <input type="checkbox" checked={true} className=" h-4 new_check text-blue-600 rounded cursor-pointer" />
                         <label for="bordered-checkbox-2" className=" py-4 ml-2 text-sm font-medium text-[22px] mr-4 text-[#008bbf]">Hang Hole :</label>
                     </div>
                     <div className='items-center flex'>
@@ -126,7 +126,7 @@ const Mylar = () => {
                 </div>}
                 {form1.tear && <div className='flex pl-10'>
                     <div className='items-center flex'>
-                        <input type="checkbox" checked={true} className=" h-4 text-blue-600 rounded cursor-pointer" />
+                        <input type="checkbox" checked={true} className=" h-4 new_check text-blue-600 rounded cursor-pointer" />
                         <label for="bordered-checkbox-2" className=" py-4 ml-2 text-sm font-medium text-[22px] mr-4 text-[#008bbf]">Tear :</label>
                     </div>
                     <div className='items-center flex'>
@@ -135,7 +135,7 @@ const Mylar = () => {
                 </div>}
                 {form1.total_design && <div className='flex pl-10'>
                     <div className='items-center flex'>
-                        <input type="checkbox" checked={true} className=" h-4 text-blue-600 rounded cursor-pointer" />
+                        <input type="checkbox" checked={true} className=" h-4 new_check text-blue-600 rounded cursor-pointer" />
                         <label for="bordered-checkbox-2" className=" py-4 ml-2 text-sm font-medium text-[22px] mr-4 text-[#008bbf]">Total Design :</label>
                     </div>
                     <div className='items-center flex'>
@@ -144,7 +144,7 @@ const Mylar = () => {
                 </div>}
                 {form1.total_qty && <div className='flex pl-10'>
                     <div className='items-center flex'>
-                        <input type="checkbox" checked={true} className=" h-4 text-blue-600 rounded cursor-pointer" />
+                        <input type="checkbox" checked={true} className=" h-4 new_check text-blue-600 rounded cursor-pointer" />
                         <label for="bordered-checkbox-2" className=" py-4 ml-2 text-sm font-medium text-[22px] mr-4 text-[#008bbf]">Total Quantity :</label>
                     </div>
                     <div className='items-center flex'>
