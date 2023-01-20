@@ -115,7 +115,7 @@ function Processing5() {
                         <div className=' pt-5 w-[381px] res_data'>
                             <p className='text-[#008bbf] font-medium'>Total Quantity</p>
                             <div>
-                                <input name="total_qty" onChange={handleChange} value={formData.total_qty}  className='w-full text-[#008bbf] bg-[#ECF8FD] h-[55px] rounded-[10px] px-3' type="text" placeholder='Enter...' />
+                                <input name="total_qty" onChange={handleChange} value={formData.total_qty}  className='w-full text-[#008bbf] bg-[#ECF8FD] h-[55px] rounded-[10px] px-3' type="number" placeholder='Enter...' />
                             </div>
                         </div>
                     </div>

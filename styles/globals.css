@@ -160,3 +160,8 @@ select {
     background-position-x: calc(100% - 25px);
     background-repeat: no-repeat;
 }
+
+.borr {
+    border: 2px solid #EBF7FC;
+    filter: blur(1.5px);
+}
