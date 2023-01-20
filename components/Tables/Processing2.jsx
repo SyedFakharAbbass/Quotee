@@ -90,12 +90,12 @@ function Processing2() {
               <div className='flex items-end w-[519px]  change_res justify-between'>
                 <div className='flex flex-col'>
                   <p className='text-[#008bbf] font-medium'>Size <span className='text-black text-[12px] font-light'> (Inches/mm)</span></p>
-                  <input name="height" onChange={handleChange} value={formData.height} className='bg-[#ECF8FD] p-2 w-[139.08px] outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' type="text" placeholder='Height' />
+                  <input name="height" onChange={handleChange} value={formData.height} className='bg-[#ECF8FD] p-2 w-[139.08px] outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' type="number" placeholder='Height' />
                 </div>
                 <p className='font-medium pt-1 mb-4 text-[22px]'>x</p>
-                <input name="width" onChange={handleChange} value={formData.width} className='bg-[#ECF8FD] p-2 outline-none w-[139.08px] border-none hover:#008bbf rounded-[10px] h-[55px]' type="text" placeholder='Width' />
+                <input name="width" onChange={handleChange} value={formData.width} className='bg-[#ECF8FD] p-2 outline-none w-[139.08px] border-none hover:#008bbf rounded-[10px] h-[55px]' type="number" placeholder='Width' />
                 <p className='font-medium pt-1 mb-4 text-[22px]'>x</p>
-                <input name="length" onChange={handleChange} value={formData.length} className='bg-[#ECF8FD] p-2 outline-none w-[139.08px] border-none hover:#008bbf rounded-[10px] h-[55px]' type="text" placeholder='Gusset' />
+                <input name="length" onChange={handleChange} value={formData.length} className='bg-[#ECF8FD] p-2 outline-none w-[139.08px] border-none hover:#008bbf rounded-[10px] h-[55px]' type="number" placeholder='Gusset' />
               </div>
             </div>
 
@@ -186,7 +186,7 @@ function Processing2() {
             <div className=' pt-5 w-[381px] res_data'>
               <p className='text-[#008bbf] font-medium'>Total Quantity</p>
               <div>
-                <input name="total_qty" onChange={handleChange} value={formData.total_qty} className='w-full text-[#008bbf] bg-[#ECF8FD] h-[55px] rounded-[10px] px-3' type="text" placeholder='Enter...' />
+                <input name="total_qty" onChange={handleChange} value={formData.total_qty} className='w-full text-[#008bbf] bg-[#ECF8FD] h-[55px] rounded-[10px] px-3' type="number" placeholder='Enter...' />
               </div>
             </div>
           </div>
