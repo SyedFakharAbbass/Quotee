@@ -43,10 +43,10 @@ function Processing5() {
                             <div className='flex items-end w-[519px]  change_res justify-between'>
                                 <div className='flex flex-col'>
                                     <p className='text-[#008bbf] font-medium'>Size <span className='text-black text-[12px] font-light'> (Inches/mm)</span></p>
-                                    <input className='bg-[#ECF8FD] p-2 w-[219.13px] outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' name="height" onChange={handleChange} value={formData.height}  type="text" placeholder='Height' />
+                                    <input className='bg-[#ECF8FD] p-2 w-[219.13px] outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' name="height" onChange={handleChange} value={formData.height}  type="number" placeholder='Height' />
                                 </div>
                                 <p className='font-bold pt-1 mb-4'>x</p>
-                                <input name="width" onChange={handleChange} value={formData.width} className='bg-[#ECF8FD] p-2 outline-none w-[219.13px] border-none hover:#008bbf rounded-[10px] h-[55px]' type="text" placeholder='Width' />
+                                <input name="width" onChange={handleChange} value={formData.width} className='bg-[#ECF8FD] p-2 outline-none w-[219.13px] border-none hover:#008bbf rounded-[10px] h-[55px]' type="number" placeholder='Width' />
                             </div>
                         </div>
 

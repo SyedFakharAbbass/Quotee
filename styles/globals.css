@@ -126,6 +126,7 @@ input[type="checkbox"] {
         width: 400px !important;
     }
 }
+
 input:hover{
     border: 0.3px solid #008BBF !important;
 }
