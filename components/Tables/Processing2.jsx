@@ -34,15 +34,27 @@ function Processing2() {
   }
 
   const handleZipper = () => {
-    setZipper(1)
-    setFormData({ ...formData, zipper: "Child Resistant" });
-    dispatch(setForm({ ...formData, zipper: "Child Resistant" }))
-  }
-  const handleZipper2 = () => {
-    setZipper(2)
-    setFormData({ ...formData, zipper: "Press to close standard powder proof" });
-    dispatch(setForm({ ...formData, zipper: "Press to close standard powder proof" }))
-  }
+    if (zipper === 1) {
+        setZipper(null)
+        setFormData({ ...formData, zipper: null });
+        dispatch(setForm({ ...formData, zipper: null }))
+    } else {
+        setZipper(1)
+        setFormData({ ...formData, zipper: "Child Resistant" });
+        dispatch(setForm({ ...formData, zipper: "Child Resistant" }))
+    }
+}
+const handleZipper2 = () => {
+    if (zipper === 2) {
+        setZipper(null)
+        setFormData({ ...formData, zipper: null });
+        dispatch(setForm({ ...formData, zipper: null }))
+    } else {
+        setZipper(2)
+        setFormData({ ...formData, zipper: "Press to close standard powder proof" });
+        dispatch(setForm({ ...formData, zipper: "Press to close standard powder proof" }))
+    }
+}
 
   const handleCheck = () => {
     setCheckedIcons(true)
