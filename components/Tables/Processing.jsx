@@ -173,7 +173,7 @@ const Processing = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className='flex items-center gap-4 w-full md:w-[381px]  lg:pt-[0px]  justify-between mt-[30px] lg:mt-[0px]'>
+                        <div className='flex items-center gap-4 w-full md:w-[381px]   justify-between mt-[30px] xl:mt-[0px] '>
                             <div className='bg-[#ECF8FD] h-[55px] items-center flex justify-center rounded-[10px] w-full md:w-[205px] pl-[8px] hov-inp'>
                                 <input type="checkbox" checked={showIcons ? true : false} onClick={handleIcons} className="cursor-pointer h-4 text-blue-600 rounded" />
                                 <label for="bordered-checkbox-2" className="flex labled py-4 text-sm font-medium cursor-pointer px-2 text-[#008bbf] "><span onClick={handleIcons} className='text-[14px]'>Hang Hole</span>{showIcons && <div className='flex items-center ml-[16px] mt-[10px]'>{!checkedIcons ? <div className='mr-[10px]'><img src="/images/img1.png" className='unckecked' alt="" onClick={handleCheck} /><span className='text-[10px]'>Round</span></div> : <div className='mr-[10px]'><img src="/images/img2.png" className='ckecked' alt="" onClick={handleCheck} /><span className='text-[10px]'>Round</span></div>} {!checkedIcons2 ? <div className=''><img src="/images/img4.png" className='unckecked' alt="" onClick={handleCheck2} /><span className='text-[10px]'>Euro</span></div> : <div className=''><img src="/images/img3.png" className='ckecked' alt="" onClick={handleCheck2} /><span className='text-[10px]'>Euro</span></div>} </div>}</label>

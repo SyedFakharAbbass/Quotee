@@ -74,7 +74,7 @@ function Processing3() {
       <div >
         <div>
           <h1 className='text-[#008bbf] font-bold text-[18px] md:text-[26px] mt-16 mb-[30px]  md:mb-[0px]'>JOB PROCESSING DATA</h1>
-          <div className='flex justify-between flex-col lg:flex-row pt-[30px]'>
+          <div className='flex justify-between flex-col xl:flex-row pt-[30px]'>
             <div className='flex md:mr-[50px] set_class_data'>
               <div className='flex items-end  md:w-[519px] gap-2  justify-between'>
                 <div className=''>
@@ -116,7 +116,7 @@ function Processing3() {
               </div>
             </div>
 
-            <div className='md:w-[381px] mt-[30px] md:mt-[30px]'>
+            <div className='md:w-[381px]  '>
               <p className='text-[#008bbf] font-medium'>Print Material</p>
               <div className='w-full'>
                 <select name='print_material' onChange={handleChange} value={formData.print_material} className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' >
@@ -151,7 +151,7 @@ function Processing3() {
               </div>
             </div>
 
-            <div className='md:w-[381px] pt-[30px]'>
+            <div className='md:w-[381px] '>
               <p className='text-[#008bbf] font-medium'>Embellishment</p>
               <div className='w-full'>
                 <select name='embellishment' onChange={handleChange} value={formData.embellishment} className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]'>
