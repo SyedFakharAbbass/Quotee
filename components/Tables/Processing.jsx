@@ -96,23 +96,23 @@ const Processing = () => {
         <div className='mb-[60px] w-fit'>
             <form onSubmit={handleSubmit}>
                 <div>
-                    <h1 className='text-[#008bbf] font-bold text-[26px] mt-16 mb-[30px]'>JOB PROCESSING DATA</h1>
+                    <h1 className='text-[#008bbf] font-bold text-[18px] md:text-[26px] mt-16 mb-[30px]'>JOB PROCESSING DATA</h1>
                     <div className='flex justify-between new_class'>
                         <div className='flex lg:mr-[50px] mr-[0px]'>
                             <div className='flex items-end w-[519px] justify-between change_res'>
-                                <div className='flex flex-col'>
+                                <div className=''>
                                     <p className='text-[#008bbf] font-medium'>Size <span className='text-black text-[12px] font-light'> (Inches)</span></p>
-                                    <input className='bg-[#ECF8FD] p-2 w-[219.13px] outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' name="height" onChange={handleChange} value={formData.height} type="number" placeholder='Height' />
+                                    <input className='bg-[#ECF8FD] p-2 md:w-[219.13px] w-[180px]  outline-none border-none  rounded-[10px] h-[45px] md:h-[55px]' name="height" onChange={handleChange} value={formData.height} type="number" placeholder='Height' />
                                 </div>
-                                <p className='font-medium pt-1 mb-4 text-[22px]'>x</p>
-                                <input className='bg-[#ECF8FD] p-2 outline-none w-[219.13px] border-none hover:#008bbf rounded-[10px] h-[55px]' name="width" onChange={handleChange} value={formData.width} type="number" placeholder='Width' />
+                                <p className='font-medium md:pt-1 mb-2 md:mb-4 text-[22px]'>x</p>
+                                <input className='bg-[#ECF8FD] p-2 outline-none md:w-[219.13px] w-[180px] border-none  rounded-[10px] h-[45px] md:h-[55px]' name="width" onChange={handleChange} value={formData.width} type="number" placeholder='Width' />
                             </div>
                         </div>
 
                         <div className='w-[381px] res_data'>
                             <p className='text-[#008bbf] font-medium'>Barrier Material</p>
                             <div>
-                                <select className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' name='barrier_material' onChange={handleChange} value={formData.barrier_material} id='None'>
+                                <select className='w-full bg-[#ECF8FD] p-2 outline-none border-none  rounded-[10px] h-[55px]' name='barrier_material' onChange={handleChange} value={formData.barrier_material} id='None'>
                                     <option hidden>None</option>
                                     <option>White</option>
                                     <option>Clear- Only For non- Cannabis</option>
@@ -128,7 +128,7 @@ const Processing = () => {
                             <div className='w-[519px] change_res'>
                                 <p className='text-[#008bbf] font-medium'>Print material</p>
                                 <div>
-                                    <select name='print_material' onChange={handleChange} value={formData.print_material} className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]'>
+                                    <select name='print_material' onChange={handleChange} value={formData.print_material} className='w-full bg-[#ECF8FD] p-2 outline-none border-none  rounded-[10px] h-[55px]'>
                                         <option hidden>None</option>
                                         <option>Soft Touch- Velvet Like Material</option>
                                         <option>Matte</option>
@@ -140,7 +140,7 @@ const Processing = () => {
                         <div className=' w-[381px] res_data'>
                             <p className='text-[#008bbf] font-medium'>Embellishment</p>
                             <div>
-                                <select name='embellishment' onChange={handleChange} value={formData.embellishment} className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' >
+                                <select name='embellishment' onChange={handleChange} value={formData.embellishment} className='w-full bg-[#ECF8FD] p-2 outline-none border-none  rounded-[10px] h-[55px]' >
                                     <option hidden>None</option>
                                     <option>Spot Varnish</option>
                                     <option>Spot Matte</option>
@@ -182,7 +182,7 @@ const Processing = () => {
                         <div className='pt-5 w-[519px] change_res mr-[50px]'>
                             <p className='text-[#008bbf] font-medium'>Total Number of Design</p>
                             <div className='w-[519px] change_res'>
-                                <input name="total_design" onChange={handleChange} placeholder='Enter total number of design' type='number' value={formData.total_design} className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf px-3 rounded-[10px] h-[55px]'>
+                                <input name="total_design" onChange={handleChange} placeholder='Enter total number of design' type='number' value={formData.total_design} className='w-full bg-[#ECF8FD] p-2 outline-none border-none  px-3 rounded-[10px] h-[55px]'>
 
                                 </input>
                                 {/* {formData.total_design === "Custom" && <div>

@@ -60,9 +60,10 @@ const Products = () => {
     return (
         <div className='container '>
             <div className='mx-[80pxpx]'>
-                <h1 className='text-[#008bbf] font-bold text-[26px] mt-16 mb-[30px]'>CHOOSE YOUR PRODUCT</h1>
-                <div className='flex flex-wrap mx-[30px]'>
-                    <div className={`w-[250px]  bg-[#ECF8FD] mr-[20px] h-[300px] mb-[20px] cursor-pointer rounded-[10px] ${products === "one" ? "selected" : ""}`} onClick={handleClick}>
+                <h1 className='text-[#008bbf] font-bold md:text-[26px] text-[20px] mt-[30px] md:mt-[60px] '>CHOOSE YOUR PRODUCT</h1>
+                <div className='md:mt-[30px] mt-[20px]'>
+                <div className='flex sm:flex-wrap sm:flex-row gap-4  flex-col items-center mx-[20px]'>
+                    <div className={`w-[250px]  bg-[#ECF8FD]  h-[300px]  cursor-pointer rounded-[10px] ${products === "one" ? "selected" : ""}`} onClick={handleClick}>
                         <img className='w-[200px]  m-auto' src="/images/lerbag.png" alt="" />
                         <div className='mt-2'>
                             <div className="flex items-center justify-center">
@@ -77,7 +78,7 @@ const Products = () => {
                             <p className='text-[10px] items-center text-[#008bbf] py-2 px-[39px] text_data'>Custom plane or printed mylar bags are prefect solution for your product</p>
                         </div>
                     </div>
-                    <div className={`w-[250px]  bg-[#ECF8FD] mr-[20px] h-[300px] mb-[20px] cursor-pointer rounded-[10px] ${products === "two" ? "selected" : ""}`} onClick={handleClick2} >
+                    <div className={`w-[250px]  bg-[#ECF8FD]  h-[300px]  cursor-pointer rounded-[10px] ${products === "two" ? "selected" : ""}`} onClick={handleClick2} >
                         <img className='w-[200px]  m-auto' src="/images/sticker.png" alt="" />
                         <div className='mt-2'>
                             <div className="flex items-center justify-center">
@@ -92,7 +93,7 @@ const Products = () => {
                             <p className='text-[10px] items-center text-[#008bbf] py-2 px-[39px] text_data'>Highlight your brands logo with our personalized and custom printed labels and stickers.</p>
                         </div>
                     </div>
-                    <div className={`w-[250px]  bg-[#ECF8FD] mr-[20px] h-[300px] mb-[20px] cursor-pointer rounded-[10px] ${products === "three" ? "selected" : ""}`} onClick={handleClick3} >
+                    <div className={`w-[250px]  bg-[#ECF8FD]  h-[300px]  cursor-pointer rounded-[10px] ${products === "three" ? "selected" : ""}`} onClick={handleClick3} >
                         <img className='w-[200px]  m-auto' src="/images/boxes.png" alt="" />
                         <div className='mt-2'>
                             <div className="flex items-center justify-center ">
@@ -119,6 +120,7 @@ const Products = () => {
                             }
                         </div>
                     </div>
+                </div>
                 </div>
             </div>
             <Modal show={show} error={error} setError={setError} setShow={setShow} handleModalClick={handleModalClick} />

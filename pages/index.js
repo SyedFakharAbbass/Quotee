@@ -98,7 +98,7 @@ export default function Home() {
       <main>
         <Header />
         <Products />
-        <div className="flex justify-between gap-[60px] container pt-16 queries pb-[80px] main_div">
+        <div className="flex justify-between gap-[60px] container pt-10 md:pt-16 queries pb-[80px] main_div">
           <div className="w-full">
             <Styles />
             {styles === "style1" && (
