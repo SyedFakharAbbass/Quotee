@@ -1,17 +1,25 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setForm, setProducts, setStyles } from '../redux/data';
+import Modal from './Modal';
 
 const Products = () => {
 
+    const [show, setShow] = useState(false);
+    const [error, setError] = useState({});
     const { products, form1 } = useSelector((state) => state.data);
-    const [colors, setColors] = useState(true)
+    const [colors, setColors] = useState(false)
 
     const dispatch = useDispatch();
 
     // useEffect(() => {
     //     console.log("products", products)
     // }, [products])
+
+    const handleModalClick = () => {
+        setShow(true)
+        setError({email: "" ,phone: ""})
+    }
 
     const handleClick = () => {
         dispatch(setProducts("one"))
@@ -38,13 +46,8 @@ const Products = () => {
         return () => clearInterval(intervalId);
     }, [colors]);
 
-    const handleChat = () => {
-        // <script>
-        (function (w, d, u) {
-            var s = d.createElement('script'); s.async = true; s.src = u + '?' + (Date.now() / 60000 | 0);
-            var h = d.getElementsByTagName('script')[0]; h.parentNode.insertBefore(s, h);
-        })(window, document, 'https://cdn.bitrix24.com/b24127555/crm/site_button/loader_1_rzvzu1.js');
-        {/* </script> */ }
+    const handleContact = () => {
+        setShow(true)
     }
     useEffect(() => {
         // document.getElementById("abcd").click();
@@ -104,20 +107,21 @@ const Products = () => {
                             <p className='text-[10px] items-center text-[#008bbf] py-2 px-[39px] text_data'>Upgrade your brands recoginition with our plane and custom printed boxes.</p>
                         </div>
                     </div>
-                    {/* <div className='h-[300px] w-[250px] bg-[#ECF8FD] px-[25px] cursor-pointer rounded-[10px]'>
+                    <div className='h-[300px] w-[250px] bg-[#ECF8FD] px-[25px] cursor-pointer rounded-[10px]'>
                         <p className='text-center text-[#008bbf] text-[22px] pb-6 pt-3 font-medium capitalize'>Not Clear yet..?</p>
                         <p className='text-center text-[#008bbf] text-[15px] pb-8 font-medium capitalize'>let our team to help you</p>
                         <p className='text-center text-[#008bbf] text-[15px] pb-10 font-medium capitalize'>chat with our team to find best quote for your product</p>
                         <div>
                             {
                                 colors ?
-                                    <button id="abcd" onClick={handleChat} className='flex m-auto content-center w-[175px] h-[60px] bg-[#008BBF] justify-center text-white items-center p-3 rounded-[10px]'><img className='pr-2' src="/images/vector.png" />CHAT NOW</button>
-                                    : <button id="abcd" onClick={handleChat} className='flex m-auto content-center w-[175px] h-[60px] justify-center bg-[#DBF4FF] text-[#008BBF] font-extrabold items-center p-3 rounded-[10px]' style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }}><img className='pr-2' src="/images/vector1.png" />CHAT NOW</button>
+                                    <button id="abcd" onClick={handleContact} className='flex m-auto content-center w-[175px] h-[60px] bg-[#008BBF] justify-center text-white items-center p-3 rounded-[10px]'><img className='pr-2' src="/images/vector.png" /><span className='flex text-[14px]'>CONTACT NOW</span></button>
+                                    : <button id="abcd" onClick={handleContact} className='flex m-auto content-center w-[175px] h-[60px] justify-center bg-[#DBF4FF] text-[#008BBF] font-extrabold items-center p-3 rounded-[10px] ' style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }}><img className='pr-2' src="/images/vector1.png" /><span className='flex text-[14px]'>CONTACT NOW</span></button>
                             }
                         </div>
-                    </div> */}
+                    </div>
                 </div>
             </div>
+            <Modal show={show} error={error} setError={setError} setShow={setShow} handleModalClick={handleModalClick} />
         </div>
     )
 }

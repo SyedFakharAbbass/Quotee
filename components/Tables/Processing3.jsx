@@ -78,7 +78,7 @@ function Processing3() {
             <div className='flex mr-[50px] set_class_data'>
               <div className='flex items-end w-[519px]  change_res justify-between'>
                 <div className='flex flex-col'>
-                  <p className='text-[#008bbf] font-medium'>Size <span className='text-black text-[12px] font-light'> (Inches/mm)</span></p>
+                  <p className='text-[#008bbf] font-medium'>Size <span className='text-black text-[12px] font-light'> (Inches)</span></p>
                   <input className='bg-[#ECF8FD] p-2 w-[219.13px] outline-none border-none hover:#008bbf rounded-[10px] h-[55px]' name="height" onChange={handleChange} value={formData.height}  type="number" placeholder='Height' />
                 </div>
                 <p className='font-medium pt-1 mb-4 text-[22px]'>x</p>
