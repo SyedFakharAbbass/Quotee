@@ -6,7 +6,7 @@ function Header() {
       <div className='bg-[#ecf8fd] w-[100%] h-[72px] items-center content-center flex'>
         <div className='container'>
           <div className='w-[200px]'>
-            <a href="https://print247.us/" id="linkk" className='w-[200px]'><img className='w-[200px] pl-10' src="/images/logo.png" alt="" /></a>
+            <a href="https://print247.us/" id="linkk" className='w-[200px]'><img className='w-[200px] pl-10' src="/images/print247.png" alt="" /></a>
           </div>
         </div>
       </div>
