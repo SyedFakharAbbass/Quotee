@@ -219,3 +219,14 @@ input[type='number']::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
+
+.adjust_modal {
+    width: 650px;
+}
+
+
+@media screen and (max-width:768px) {
+    .adjust_modal {
+        width: 90%;
+    }
+}
