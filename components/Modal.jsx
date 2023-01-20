@@ -34,6 +34,7 @@ function Modal({ show, setShow, handleModalClick, setError, error }) {
             // dispatch(submitRequest({ ...abcdd })).then((res) => {
             //     setShow(false);
             //     document.getElementById("linkk").click();
+            // setError(false)
             // })
             toast(<RequestMessage message="SUBMITTED SUCCESSFULLY" />);
             console.log(abcdd)
