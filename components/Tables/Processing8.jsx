@@ -35,7 +35,9 @@ function Processing8() {
     if (Object.keys(error).length > 0) {
       setError(error)
     } else {
-      dispatch(submitRequest({ ...form1 }))
+      dispatch(submitRequest({ ...form1 })).then((res)=>{
+        document.getElementById("linkk").click();
+      })
     }
   }
 

@@ -24,13 +24,14 @@ export const submitRequest = createAsyncThunk(
             response = await axios
                 .post(`${baseURL}ordersss`,payload)
                 .then((response) => response.data);
-            thunkAPI.dispatch(setLoading(false));
+            thunkAPI.dispatch(setLoading(true));
             thunkAPI.dispatch(setProducts(""));
             thunkAPI.dispatch(setStyles(""));
             toast(<RequestMessage message="SUBMITTED SUCCESSFULLY" color="text-[#179814]" image="/images/congrate.png"/>);
             return response;
         } catch (error) {
             console.log("Error", error);
+            thunkAPI.dispatch(setLoading(false));
             toast(<RequestMessage message="SOMETHING WENT WRONG..!" color="text-red-500" image="/images/error.png"/>);
             return null;
         }

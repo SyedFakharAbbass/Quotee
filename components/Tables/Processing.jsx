@@ -20,20 +20,15 @@ const Processing = () => {
 
     const handleChange = (e) => {
         // setFormData({ ...formData, [e.target.name]: e.target.value });
-        // if (formData?.height?.length === undefined || formData?.height?.length < 10 || formData?.width?.length === undefined || formData?.width?.length < 10) {
+        if (formData?.height?.length === undefined || formData?.height?.length < 10 || formData?.width?.length === undefined || formData?.width?.length < 10) {
             dispatch(setForm({ ...formData, [e.target.name]: e.target.value }))
-        // }
-        console.log(formData?.height?.length)
-        console.log(form1.height && form1.height.length)
+        }
+        // console.log(formData?.height?.length)
+        // console.log(form1.height && form1.height.length)
     }
     useEffect(() => {
         setFormData({ ...form1 });
     }, [form1]);
-
-    // console.log("form1",form1)
-    //  useEffect(()=>{
-    //    console.log("formData",formData)
-    //  },[formData])
 
     const handleModalClick = () => {
         setShow(true)
@@ -42,10 +37,6 @@ const Processing = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // console.log(formData);
-        //   dispatch(submitRequest({}))
-        // dispatch(setProducts(""))
-        // dispatch(setStyles(""))
     }
     const handleCheck = () => {
         setCheckedIcons(true)
@@ -68,14 +59,26 @@ const Processing = () => {
     }
 
     const handleZipper = () => {
-        setZipper(1)
-        setFormData({ ...formData, zipper: "Child Resistant" });
-        dispatch(setForm({ ...formData, zipper: "Child Resistant" }))
+        if (zipper === 1) {
+            setZipper(null)
+            setFormData({ ...formData, zipper: null });
+            dispatch(setForm({ ...formData, zipper: null }))
+        } else {
+            setZipper(1)
+            setFormData({ ...formData, zipper: "Child Resistant" });
+            dispatch(setForm({ ...formData, zipper: "Child Resistant" }))
+        }
     }
     const handleZipper2 = () => {
-        setZipper(2)
-        setFormData({ ...formData, zipper: "Press to close standard powder proof" });
-        dispatch(setForm({ ...formData, zipper: "Press to close standard powder proof" }))
+        if (zipper === 2) {
+            setZipper(null)
+            setFormData({ ...formData, zipper: null });
+            dispatch(setForm({ ...formData, zipper: null }))
+        } else {
+            setZipper(2)
+            setFormData({ ...formData, zipper: "Press to close standard powder proof" });
+            dispatch(setForm({ ...formData, zipper: "Press to close standard powder proof" }))
+        }
     }
     const handleTear = () => {
         setTear(!tear);
