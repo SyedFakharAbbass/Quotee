@@ -74,8 +74,8 @@ function Processing3() {
       <div >
         <div>
           <h1 className='text-[#008bbf] font-bold text-[18px] md:text-[26px] mt-16 mb-[30px]  md:mb-[0px]'>JOB PROCESSING DATA</h1>
-          <div className='flex justify-between flex-col xl:flex-row pt-[30px]'>
-            <div className='flex md:mr-[50px] set_class_data'>
+          <div className='flex justify-between flex-col gap-[50px] xl:flex-row pt-[30px]'>
+            <div className='flex set_class_data'>
               <div className='flex items-end  md:w-[519px] gap-2  justify-between'>
                 <div className=''>
                   <p className='text-[#008bbf] font-medium'>Size <span className='text-black text-[12px] font-light'> (Inches)</span></p>
@@ -101,8 +101,8 @@ function Processing3() {
             </div>
           </div>
 
-          <div className='flex justify-between new_class mt-[30px]'>
-            <div className='md:mr-[50px]'>
+          <div className='flex gap-[50px] justify-between new_class mt-[30px]'>
+            <div className=''>
               <div className='md:w-[519px] '>
                 <p className='text-[#008bbf] font-medium'>Barrier material</p>
                 <div className='w-full'>
@@ -135,8 +135,8 @@ function Processing3() {
 
         <div>
 
-          <div className='flex justify-between new_class mt-[30px]'>
-            <div className='md:mr-[50px]'>
+          <div className='flex gap-[50px] justify-between new_class mt-[30px]'>
+            <div className=''>
               <div className='md:w-[519px] '>
                 <p className='text-[#008bbf] font-medium'>Direction</p>
                 <div className='w-full'>
@@ -167,8 +167,8 @@ function Processing3() {
 
           </div>
 
-          <div className='flex justify-between new_class'>
-            <div className='pt-5 md:w-[519px]  md:mr-[50px]'>
+          <div className='flex justify-between new_class gap-[50px]'>
+            <div className='pt-5 md:w-[519px] '>
               <p className='text-[#008bbf] font-medium'>Total Number of Design</p>
               <div className='md:w-[519px]'>
                 <input name="total_design" onChange={handleChange} placeholder='Enter total number of design' type='number' value={formData.total_design} className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf px-3 rounded-[10px] h-[55px]'>
@@ -198,7 +198,7 @@ function Processing3() {
         <div className='new_screen'></div>
         <div className='flex absolute left-[50%] setDatas mt-[60px] gap-[20px] lg:gap-[35px] pb-12 adjust_data'>
           <div className='cursor-pointer w-[200px] text-[#008BBF] font-medium bg-[#ECF8FD] flex items-center justify-center h-[55px] rounded-[10px]' onClick={handleSelect} style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }}>Select Again</div>
-          <button type='submit' className='w-[200px] text-[#FFFFFF] font-medium bg-[#008BBF] flex items-center justify-center h-[55px] rounded-[10px]' style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }}>SUBMIT</button>
+          <button type='submit' className='w-[200px] text-[#FFFFFF] font-medium bg-[#008BBF] flex items-center justify-center h-[55px] rounded-[10px]'  onClick={handleModalClick} style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }}>SUBMIT</button>
         </div>
       </div>
       <Modal show={show} setShow={setShow} error={error} setError={setError} handleModalClick={handleModalClick} />

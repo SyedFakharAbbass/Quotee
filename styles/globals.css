@@ -138,6 +138,7 @@ input[type="checkbox"] {
 @media screen and (max-width:768px) {
     .change_res {
         width: 320px !important;
+        
     }
 }
 

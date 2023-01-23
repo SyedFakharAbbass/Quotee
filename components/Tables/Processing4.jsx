@@ -70,7 +70,7 @@ function Processing4() {
 
 
         <div className='flex justify-between new_class mt-[30px]'>
-          <div className='mr-[50px]'>
+          <div className=''>
             <div className='w-[450px] change_res'>
               <p className='text-[#008bbf] font-medium'>Embellishment</p>
               <div>
@@ -87,8 +87,8 @@ function Processing4() {
 
         </div>
 
-        <div className='flex justify-between new_class'>
-          <div className='pt-5 w-[450px] change_res mr-[50px] end_mar'>
+        <div className='flex justify-between gap-[50px] new_class'>
+          <div className='pt-5 w-[450px] change_res end_mar'>
             <p className='text-[#008bbf] font-medium'>Total Number of Design</p>
             <div className='w-[450px] change_res'>
               <input name="total_design" onChange={handleChange} placeholder='Enter total number of design' type='number' value={formData.total_design} className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf px-3 rounded-[10px] h-[55px]'>

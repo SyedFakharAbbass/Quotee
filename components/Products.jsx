@@ -49,13 +49,13 @@ const Products = () => {
     const handleContact = () => {
         setShow(true)
     }
-    // useEffect(() => {
-    //     // document.getElementById("abcd").click();
-    //     (function (w, d, u) {
-    //         var s = d.createElement('script'); s.async = true; s.src = u + '?' + (Date.now() / 60000 | 0);
-    //         var h = d.getElementsByTagName('script')[0]; h.parentNode.insertBefore(s, h);
-    //     })(window, document, 'https://cdn.bitrix24.com/b24127555/crm/site_button/loader_1_rzvzu1.js');
-    // }, [])
+    useEffect(() => {
+        // document.getElementById("abcd").click();
+        (function (w, d, u) {
+            var s = d.createElement('script'); s.async = true; s.src = u + '?' + (Date.now() / 60000 | 0);
+            var h = d.getElementsByTagName('script')[0]; h.parentNode.insertBefore(s, h);
+        })(window, document, 'https://cdn.bitrix24.com/b24127555/crm/site_button/loader_1_rzvzu1.js');
+    }, [])
 
     return (
         <div className='container '>
@@ -116,7 +116,7 @@ const Products = () => {
                             {
                                 colors ?
                                     <button id="abcd" onClick={handleContact} className='flex m-auto content-center w-[175px] h-[60px] bg-[#008BBF] justify-center text-white items-center p-3 rounded-[10px]'><img className='pr-2' src="/images/vector.png" /><span className='flex text-[14px]'>CONTACT NOW</span></button>
-                                    : <button id="abcd" onClick={handleContact} className='flex m-auto content-center w-[175px] h-[60px] justify-center bg-[#DBF4FF] text-[#008BBF] font-extrabold items-center p-3 rounded-[10px] ' style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }}><img className='pr-2' src="/images/vector1.png" /><span className='flex text-[14px]'>CONTACT NOW</span></button>
+                                    : <button id="abcd" onClick={handleContact} className='flex m-auto content-center w-[175px] h-[60px] justify-center bg-[#DBF4FF] text-[#008BBF] font-extrabold items-center p-3 rounded-[10px] ' style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }}><img className='pr-2' src="/images/vector7.png" /><span className='flex text-[14px]'>CONTACT NOW</span></button>
                             }
                         </div>
                     </div>
