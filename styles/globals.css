@@ -153,12 +153,22 @@ input[type="checkbox"] {
     .input{
         font-size: 14px;
     }
+    
 }
 
 @media screen and (max-width:768px) {
     .change_res {
-        width: 320px !important;
-        
+        width: 100% !important;
+    }
+}
+@media screen and (min-width:768px) {
+    .change_res {
+        width: 100% !important;
+    }
+}
+@media screen and (min-width:820px) {
+    .change_res {
+        width: 100% !important;
     }
 }
 

@@ -25,18 +25,30 @@ const Products = () => {
     dispatch(setProducts("one"));
     dispatch(setStyles(""));
     dispatch(setForm({ ...form1, product: "MyLar Bag" }));
+    setTimeout(()=>{
+      const element = document.getElementById("prodct");
+      element?.scrollIntoView({ behavior: "smooth" })
+    },400)
   };
 
   const handleClick2 = () => {
     dispatch(setProducts("two"));
     dispatch(setStyles(""));
     dispatch(setForm({ ...form1, product: "Label & Stickers" }));
+    setTimeout(()=>{
+      const element = document.getElementById("prodct");
+      element?.scrollIntoView({ behavior: "smooth" })
+    },400)
   };
 
   const handleClick3 = () => {
     dispatch(setProducts("three"));
     dispatch(setStyles(""));
     dispatch(setForm({ ...form1, product: "Boxes" }));
+    setTimeout(()=>{
+      const element = document.getElementById("prodct");
+      element?.scrollIntoView({ behavior: "smooth" })
+    },400)
   };
 
   useEffect(() => {
@@ -72,9 +84,9 @@ const Products = () => {
         </h1>
         <div className="md:mt-[30px] mt-[20px]">
           <div className="flex flex-wrap sm:flex-row gap-4 justify-center md:justify-start  items-center md:mx-[20px]">
-            <Link href="#prodct" className="transition duration-300 ease-in-out">
+            {/* <Link href="#prodct" className="transition duration-300 ease-in-out" > */}
               {" "}
-              <div
+              <div 
                 className={`md:w-[250px] w-[150px] bg-[#ECF8FD] h-[180px] md:h-[300px]  cursor-pointer rounded-[10px] ${
                   products === "one" ? "selected" : ""
                 }`}
@@ -110,9 +122,9 @@ const Products = () => {
                   </p>
                 </div>
               </div>
-            </Link>
+            {/* </Link> */}
 
-            <Link href="#prodct">
+            {/* <Link href="#prodct"> */}
               {" "}
               <div
                 className={`md:w-[250px] w-[150px] bg-[#ECF8FD] h-[180px]  md:h-[300px] rounded-[10px] ${
@@ -151,9 +163,9 @@ const Products = () => {
                   </p>
                 </div>
               </div>
-            </Link>
+            {/* </Link> */}
 
-            <Link href="#prodct">
+            {/* <Link href="#prodct"> */}
               {" "}
               <div
                 className={`md:w-[250px] w-[150px] bg-[#ECF8FD] h-[180px] md:h-[300px] rounded-[10px] ${
@@ -191,7 +203,7 @@ const Products = () => {
                   </p>
                 </div>
               </div>
-            </Link>
+            {/* </Link> */}
 
             <div className="md:w-[250px] w-[150px] bg-[#ECF8FD] h-[180px] md:h-[300px] md:px-[25px] cursor-pointer rounded-[10px]">
               <p className="text-center text-[#008bbf] mt-[20px] md:mt-[0px] text-[10px] md:text-[22px] md:pb-6 pb-2 pt-3 font-medium capitalize">

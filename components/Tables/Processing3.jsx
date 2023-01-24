@@ -75,20 +75,19 @@ function Processing3() {
         <div>
           <h1 className='text-[#008bbf] font-bold text-[18px] md:text-[26px] mt-16 mb-[30px]  md:mb-[0px]'>JOB PROCESSING DATA</h1>
           <div className='flex flex-col gap-4 2xl:flex-row md:pt-[30px]'>
-            <div className='flex gap-4 set_class_data'>
-              <div className='flex items-end w-full gap-4 2xl:w-[519px] justify-between'>
-                <div className='w-full'>
+          <div className='flex gap-4 w-full'>
+              <div className='flex items-end  w-full '>
+                <div className='flex flex-col w-full'>
                   <p className='text-[#008bbf] font-medium'>Size <span className='text-black text-[12px] font-light'> (Inches)</span></p>
-                  <input className='bg-[#ECF8FD] p-2 w-full outline-none border-none  rounded-[10px] h-[55px]' name="height" onChange={handleChange} value={formData.height} type="number" placeholder='Height' />
+                  <input name="height" onChange={handleChange} value={formData.height}  className='bg-[#ECF8FD] p-2 w-full outline-none border-none  rounded-[10px] h-[55px]' type="number" placeholder='Height' />
                 </div>
-                <p className='font-medium pt-1 mb-4 text-[22px]'>x</p>
+                <p className='font-medium pt-1 mb-4 text-[22px] px-3'>x</p>
                 <div className='w-full'>
 
-                  <input className='bg-[#ECF8FD] p-2 outline-none w-full border-none  rounded-[10px] h-[55px]' name="width" onChange={handleChange} value={formData.width} type="number" placeholder='Width' />
-                </div>
+                <input className='bg-[#ECF8FD] p-2 w-full outline-none w-fullborder-none  rounded-[10px] h-[55px]' name="width" onChange={handleChange} value={formData.width} type="number" placeholder='Width' />
               </div>
+                </div>
             </div>
-
             <div className='flex items-center w-full gap-4 2xl:pt-[30px] '>
               <div className='bg-[#ECF8FD] h-[55px] items-center flex justify-center rounded-[10px]  w-full pl-[8px] hov-inp'>
                 <input type="checkbox" checked={showIcons ? true : false} onClick={handleIcons} className="cursor-pointer h-4 text-blue-600 rounded" />

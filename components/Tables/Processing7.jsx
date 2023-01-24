@@ -100,7 +100,7 @@ function Processing7() {
         <div>
           <div className='flex  new_class mt-[30px] gap-4'>
             <div className='w-full'>
-              <div className='2xl:w-[450px]  w-full'>
+              <div className='  w-full'>
                 <p className='text-[#008bbf] font-medium'>Spot Foiling</p>
                 <div>
                   <select name='spot_foiling' onChange={handleChange} value={formData.spot_foiling} className='w-full bg-[#ECF8FD] p-2 outline-none border-none hover:#008bbf rounded-[10px] h-[55px]'>

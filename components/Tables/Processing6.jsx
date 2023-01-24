@@ -76,7 +76,7 @@ function Processing6() {
 
         <div className='flex justify-between new_class mt-[30px]'>
           <div className='w-full'>
-            <div className='xl:w-[50%]'>
+            <div className='w-full'>
               <p className='text-[#008bbf] font-medium'>Embellishment</p>
               <div>
                 <select name='embellishment' onChange={handleChange} value={formData.embellishment} className='w-full bg-[#ECF8FD] p-2 outline-none border-none  rounded-[10px] h-[55px]' >

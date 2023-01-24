@@ -76,24 +76,24 @@ function Modal({ show, setShow, handleModalClick, setError, error }) {
 
     return (
         <div className=''>
-            {show && <div><div className="z-5 bg-opacity-50 flex h-[100vh] fixed justify-center items-center top-0 right-0 bottom-0 left-0" onClick={() => setShow(false)} style={{ background: "rgba(12, 11, 11, 0.8)" }}>
+            {show && <div className=''><div className="z-5 bg-opacity-50 flex h-[100vh] fixed justify-center items-center top-0 right-0 bottom-0 left-0" onClick={() => setShow(false)} style={{ background: "rgba(12, 11, 11, 0.8)" }}>
             </div>
-                <div className="bg-white adjust_modal pt-[30px] pb-[25px] px-[60px] rounded-[10px] text-center fixed main_class">
-                    <h1 className="mb-[30px] font-bold text-[26px] text-[#008BBF]">You Are Just One Step Ahead..!</h1>
+                <div className="bg-white adjust_modal  pt-[30px] mb-[12px] md:pb-[25px] md:px-[60px] px-[10px] rounded-[10px] text-center fixed main_class">
+                    <h1 className="md:mb-[30px] mb-4 font-bold md:text-[26px] text-[#008BBF]">You Are Just One Step Ahead..!</h1>
                     <div><img src="/images/close.png" onClick={() => setShow(false)} className='cursor-pointer absolute top-[10px] right-[10px] h-[30px]' /></div>
                     <div className='flex flex-col mb-[15px]'>
                         <label className='mr-auto text-[#008BBF] font-medium'>Email Address</label>
-                        <input type="email" name="email" value={data.email} onChange={handleChange} className='px-[12px] h-[60px] rounded-[10px] border-[1px] border-[#008BBF]' />
+                        <input type="email" name="email" value={data.email} onChange={handleChange} className='md:px-[12px] px-[7px] md:h-[60px] h-[40px] rounded-md md:rounded-[10px] border-[1px] border-[#008BBF]' />
                         {error.email && <p className='text-left text-[red] text-[13px] m-[0px]'>{error.email}</p>}
                     </div>
                     <div className='flex flex-col mb-[15px]'>
                         <label className='mr-auto text-[#008BBF] font-medium'>Phone Number</label>
-                        <input type="text" name="phone" value={data.phone} onChange={handleChange} className='px-[12px] h-[60px] rounded-[10px] border-[1px] border-[#008BBF]' />
+                        <input type="text" name="phone" value={data.phone} onChange={handleChange} className='px-[12px] md:h-[60px] h-[40px] rounded-md md:rounded-[10px] border-[1px] border-[#008BBF]' />
                         {error.phone && <p className='text-left text-[red] text-[13px] m-[0px]'>{error.phone}</p>}
                     </div>
-                    <div className='flex justify-center mt-[35px] mb-[12px]'>
+                    <div className='flex justify-center md:mt-[35px] md:mb-[12px] mt-[12px] mb-[12px]'>
                         {!loading ?
-                            <button onClick={mainSubmit} className='w-[200px] text-[#FFFFFF] font-medium bg-[#008BBF] flex items-center justify-center h-[55px] rounded-[10px]' style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }}>SUBMIT</button>
+                            <button onClick={mainSubmit} className='md:w-[200px] w-[150px] text-[#FFFFFF] font-medium bg-[#008BBF] flex items-center justify-center h-[55px] rounded-[10px]' style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }}>SUBMIT</button>
                             :
                             <div className='w-[200px] bg-opacity-[0.7] text-[#FFFFFF] font-medium bg-[#008BBF] flex items-center justify-center h-[55px] rounded-[10px]' style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }}>
                                 Loading...{/* <div className="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full text-red-500" role="status">
