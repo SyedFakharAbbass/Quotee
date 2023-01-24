@@ -222,7 +222,7 @@ const Products = () => {
                     className="flex m-auto content-center w-[100px] md:w-[175px] md:h-[60px] h-[30px] justify-center bg-[#DBF4FF] text-[#008BBF] font-extrabold items-center p-3 rounded-[10px] "
                     style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }}
                   >
-                    <img className="md:pr-2" src="/images/vector1.png" />
+                    <img className="md:pr-2" src="/images/vector7.png" />
                     <span className="flex text-[8px] md:text-[14px]">
                       CONTACT NOW
                     </span>
