@@ -94,6 +94,7 @@ export default function Home() {
           href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300;1,400&display=swap"
           rel="stylesheet"
         ></link>
+        <script src="//code.tidio.co/sawokbzi5eayv6bynfqlqt1csekff2c9.js" async></script>
       </Head>
       <main>
         <Header />
